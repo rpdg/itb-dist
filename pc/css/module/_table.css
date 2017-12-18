@@ -1,0 +1,172 @@
+@import "color";
+@import "form";
+@import "text";
+
+
+@mixin overflow() {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+$odd-row-bg : #fafafa;
+$even-row-bg : #fff;
+$row-hover-bg : #edfaff;
+
+
+.grid {
+	table-layout: fixed;
+	width: 100%;
+	//border: 1px solid #cdcdcd;
+	border-collapse: collapse;
+	line-height: 18px;
+	background-color: $panel-body-bg;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+	/*margin: 10px;*/
+	
+	td, th {
+		padding: 3px 5px;
+		line-height: 2em;
+		vertical-align: middle;
+		border: 1px solid $border-color;
+	}
+	
+	> thead {
+		> tr {
+			background-color: $footer-bar-color;
+			
+			> th {
+				color: $head-text-color;
+				
+				font-size: 14px;
+				font-weight: bold;
+				
+				vertical-align: middle;
+				
+				@include overflow;
+				
+				text-align: center;
+				
+				border-bottom-width: 1px;
+				
+			}
+		}
+	}
+	
+	> tbody {
+		> tr {
+			&.odd {
+				background-color: $odd-row-bg ;
+			}
+			&.even{
+				background-color: $even-row-bg;
+			}
+			
+			&.odd:hover,&.even:hover {
+				background-color: $row-hover-bg;
+			}
+			
+			td {
+		
+				@include overflow;
+				
+			}
+			
+			&.subTHead{
+				background-color: $title-bar-color;
+				
+				th{
+					font:{
+						size: 12px;
+						weight: 100;
+					}
+					
+				}
+			}
+			
+			&.subTBody:nth-of-type(even){
+				background-color: $even-row-bg ;
+			}
+			&.subTBody:nth-of-type(odd){
+				background-color: $odd-row-bg ;
+			}
+		}
+	}
+	
+	> tfoot {
+		> tr {
+			height: 30px;
+			border-top: 1px solid #a8bace;
+			background-color: $footer-bar-color;
+		}
+	}
+}
+
+
+.grid-title-bar{
+	background-color: $title-bar-color;
+	color: $head-text-color;
+	padding: 0.428em 0.857em 0.428em 1em;
+	
+	height: 36px;
+	
+	font: {
+		size: 14px;
+		weight: bold;
+	}
+	border:  solid $border-color;
+	border-width: 1px 1px 0 1px ;
+	
+	button{
+		
+		margin: -3px 3px 0 0;
+		@extend .float-right;
+		@extend .btn-small;
+		
+		.ico{
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			margin: 0 1px;
+			vertical-align: sub;
+		}
+	}
+	
+	.btn-create{
+		@extend .btn-success;
+		
+		.ico-create{
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			margin: 0 1px;
+			vertical-align: text-bottom;
+			background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAALVBMVEUAAAD///////////////////////////////////////////////////////+hSKubAAAADnRSTlMA7xfPjIMkXAJ/IVlfXq8hlJ0AAABZSURBVAjXY2BgCxa0TGBgYDj47t07cQYG3ncgUMCQ+O6dy7t3Ugxx794xvHv3lMHu3Tuld+8eM8g9UepQ8nsIo2HicHULofrYweZsYGAoBFLSDEB7JoPsAQDm/TbTEORHKwAAAABJRU5ErkJggg==");
+		}
+	}
+}
+
+
+.rc-handle-container {
+	position: relative;
+}
+
+.rc-handle {
+	position: absolute;
+	width: 7px;
+	cursor: ew-resize;
+	margin-left: -3px;
+	z-index: 2;
+}
+
+.rc-table-resizing {
+	cursor: ew-resize;
+	
+	thead,
+	thead > th,
+	thead > th > a {
+		cursor: ew-resize;
+	}
+}
+
+

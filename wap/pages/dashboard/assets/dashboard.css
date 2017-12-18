@@ -1,0 +1,53 @@
+body { overflow: hidden; }
+
+#slider { height: 5.6rem; }
+
+#slider img { width: 10rem; height: 5.6rem; background-color: #777777; }
+
+#banner { position: absolute; z-index: 2; width: 100%; }
+
+.mui-inner-wrap { background-color: #fff; }
+
+#message { height: 1.28rem; line-height: 1.28rem; background-color: #eee; padding: 0 0.5rem 0 1.6rem; font-size: 0.3rem; text-overflow: ellipsis; overflow: hidden; background-image: url("/itb-dist/wap/img/ico96-lb.png?__=9c5f992"); background-size: 1.28rem; background-repeat: no-repeat; background-position: left center; white-space: nowrap; }
+
+#myScroll { position: absolute; top: 6.88rem; bottom: 0; overflow: scroll; }
+
+#board { width: 100%; table-layout: fixed; }
+
+#board td { height: 3.1rem; border: 1px solid #ddd; border-collapse: collapse; background-color: #fff; text-align: center; text-transform: capitalize; font-size: 0.35rem; }
+
+#board td:nth-of-type(3n+0) { border-right: none; }
+
+#board td:nth-of-type(3n-2) { border-left: none; }
+
+#board .icoDashboard { display: block; width: 1.28rem; height: 1.28rem; margin: 0 auto 0.2rem; }
+
+.mui-icon-bars:before { display: block; color: #fff; width: 0.64rem; height: 0.64rem; margin: 0.6rem 0 0 0.4rem; }
+
+#imgQR { color: #fff; width: 0.64rem; height: 0.64rem; margin: 0.6rem 0.4rem 0 0; }
+
+#offCanvasSide { background-image: url("/itb-dist/wap/pages/dashboard/assets/bg-leftMenu2.jpg?__=7e51618"); background-size: 100% 100%; background-repeat: no-repeat; }
+
+#imgAvatar { width: 2.547rem; height: 2.547rem; display: block; margin: 1.333rem auto 0.53rem; }
+
+#spUserName { text-transform: uppercase; text-align: center; font-size: 0.45rem; color: #fff; }
+
+#spRealName { text-align: center; font-size: 0.35rem; color: #bbb; margin-bottom: 1.33rem; }
+
+#divITB { display: block; position: absolute; bottom: 0.4rem; left: 0; text-align: center; width: 100%; }
+
+#divITB img { width: 2.2rem; margin: 0 auto 0.2rem; }
+
+#divITB span { display: block; font-size: 0.3rem; }
+
+#offCanvasSideScroll { top: 6.66rem; }
+
+#offCanvasSideScroll .mui-table-view { background-color: #deb5a7; }
+
+#offCanvasSideScroll .mui-table-view li { color: #89351e; }
+
+#offCanvasSideScroll .mui-table-view li img { width: 16px; height: 16px; vertical-align: sub; }
+
+#offCanvasSideScroll .mui-table-view:after, #offCanvasSideScroll .mui-table-view-cell:after { background-color: #89351e; }
+
+/*# sourceMappingURL=dashboard.css.map?__= */

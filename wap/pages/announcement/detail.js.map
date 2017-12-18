@@ -1,0 +1,1 @@
+{"version":3,"sources":["/pages/announcement/detail.ts"],"names":[],"mappings":";;;;AAAA,+BAA4B;AAE5B,SAAG,CAAC,EAAE,CAAC,CAAC","file":"detail.js","sourcesContent":["import {api} from '/js/api';\r\n\r\napi({});\r\n"]}

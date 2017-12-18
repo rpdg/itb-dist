@@ -1,0 +1,121 @@
+// _reset.scss
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video , input , button , select , textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font:{
+		family: "Microsoft Yahei", Tahoma , Arial, sans-serif;
+		size: 12px;
+	}
+	line-height: 1.5em ;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+	display: block;
+}
+
+
+body {
+	color: #333;
+	background-color: #f6f6f6;
+	padding: 20px;
+	
+	&.pop{
+		background-color: #fff;
+	}
+}
+
+ul {
+	list-style: none;
+}
+html,body{
+	height: 100%;
+}
+iframe{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+blockquote, q {
+	quotes: none;
+	&:before,&:after{
+		content: '';
+		content: none;
+	}
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+	
+	&:hover{
+		color: #666;
+		text-decoration: underline;
+	}
+	&:active{
+		color: #933;
+		text-decoration: underline;
+	}
+}
+
+
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+p{
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+.no-scroll{
+	overflow: hidden;
+}
+
+
+
+/*
+::-webkit-scrollbar{height:5px;width:10px;}
+::-webkit-scrollbar-button:vertical{display:none;}
+::-webkit-scrollbar-corner:vertical{background-color:#535353;}
+::-webkit-scrollbar-thumb:vertical{background-color:#8E8E8E;}
+::-webkit-scrollbar-thumb:vertical:hover{background-color:#bbb;}
+::-webkit-scrollbar-track-piece{background:#ccc;}
+::-webkit-scrollbar-track:vertical{background-color:black;}
+*/

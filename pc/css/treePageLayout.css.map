@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "file": "treePageLayout.css?__=",
+    "sources": [
+        "/css/treePageLayout.scss",
+        "/css/module/_color.scss"
+    ],
+    "sourcesContent": [
+        "@import \"/css/module/_color\";\r\n\r\n$left-width: 220px;\r\n\r\n#leftSec{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tbottom: 0;\r\n\toverflow: auto;\r\n\twidth: $left-width;\r\n\tborder-right: 1px solid darken($sidebar-bg , 5%);\r\n}\r\n\r\n#rightSec{\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\tleft: $left-width;\r\n\tbottom: 0;\r\n\tright: 0;\r\n\toverflow: auto;\r\n\tpadding: 2em;\r\n}",
+        "$red : #d71711;\r\n\r\n$border-color: #d0d0d0;\r\n$border-color-hover: #F7BBBA;\r\n$border-color-active: #e51914;\r\n\r\n$title-bar-color: #ecf0f1;\r\n$footer-bar-color: #f2f2f2;\r\n\r\n$panel-body-bg: #fff;\r\n$head-text-color: #555;\r\n\r\n$topbar-bg: #c7140d;\r\n$sidebar-bg: #222;\r\n\r\n"
+    ],
+    "names": [],
+    "mappings": "AAIA,AAAA,QAAQ,CAAA;EACP,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,MAAM,EAAE,CAAC;EACT,QAAQ,EAAE,IAAI;EACd,KAAK,EARO,KAAK;EASjB,YAAY,EAAE,GAAG,CAAC,KAAK,CAAC,OAAwB;CAChD;;AAED,AAAA,SAAS,CAAA;EACR,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,CAAC;EACN,IAAI,EAfQ,KAAK;EAgBjB,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,CAAC;EACR,QAAQ,EAAE,IAAI;EACd,OAAO,EAAE,GAAG;CACZ"
+}

@@ -1,0 +1,30 @@
+var languagePkg = {
+	'en': {
+		carousel : 'carousel ',
+		count : 'count',
+		serial : 'index',
+		newsTitle : 'news title',
+		linkType : 'link type',
+		news : 'news',
+		sponsor : 'sponsor',
+		announcement : 'announcement',
+		linkBinding : 'link binding',
+		showIndex : 'show order',
+		up : 'up',
+		down : 'down',
+	},
+	'cn': {
+		carousel : '轮播',
+		count : '数量',
+		serial : '编号',
+		newsTitle : '新闻标题',
+		linkType : '链接类型',
+		news : '新闻',
+		sponsor : '赞助商',
+		announcement : '公告',
+		linkBinding : '链接绑定',
+		showIndex : '显示顺序',
+		up : '上移',
+		down : '下移',
+	}
+};

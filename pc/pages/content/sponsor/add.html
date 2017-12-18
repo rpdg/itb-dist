@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814ac0c814a" />
+    <style>
+	#ulSubjects{
+		padding: 20px;
+	}
+	.halfWidth {
+		width: 70% !important;
+	}
+</style>
+</head>
+<body class="pop">
+
+<div class="templateContainer">
+	<script type="text/html">
+		<table id="tbMain" class="search-table">
+			<tr>
+				<td class="lead"><%=sponsorTitle%></td>
+				<td colspan="3"><input type="text" name="title"></td>
+			</tr>
+			<tr>
+				<td class="lead"><label for="logoPicture"><%=logo%></label></td>
+				<td colspan="3">
+					<b id="tdUploadLogo" class="fcGroup">
+						<b class="fcItem">
+							<input name="logoPicture" id="logoPicture" type="text" placeholder="" readonly>
+						</b>
+						<b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+							<i class="fileChooserWrap">
+								<button id="btnUploadDialog1" class="btn-mini" data-target="logoPicture" style="width: 100%;"><%=upload%></button>
+							</i>
+						</b>
+					</b>
+					<span id="td_logoPicture"></span>
+				</td>
+			</tr>
+			<tr>
+				<td class="lead"><label for="coverPicture"><%=cover%></label></td>
+				<td colspan="3">
+					<b id="tdUploadCover" class="fcGroup">
+						<b class="fcItem">
+							<input name="coverPicture" id="coverPicture" type="text" placeholder="" readonly>
+						</b>
+						<b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+							<i class="fileChooserWrap">
+								<button id="btnUploadDialog2" class="btn-mini" data-target="coverPicture" style="width: 100%;"><%=upload%></button>
+							</i>
+						</b>
+					</b>
+					<span id="td_coverPicture"></span>
+				</td>
+			</tr>
+		</table>
+		<ol id="ulSubjects">
+		</ol>
+		<p id="buttonSection" class="text-right">
+			<button id="btnSaveMain" class="btn-success"><%=save%></button>
+		</p>
+	</script>
+</div>
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+<script src="/itb-dist/pc/lib/mod.js?__=f81190ff81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d4b44b7d"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7b3777f7"></script>
+<script src="/itb-dist/pc/pages/content/sponsor/add.i18n.js?__=e540663e540663"></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/DisplayOject.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/FormControls.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/app.cfg.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/util/utils.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/util/api.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/Table.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/Popup.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/Panel.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/Combo.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/Tree.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/ui/TabView.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/ts/opg.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/content/sponsor/add.js?__="></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+		console.log('Languages:', Languages);
+		require('pages/content/sponsor/add.ts');
+	}();
+</script>
+</body>
+</html>

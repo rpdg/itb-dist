@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* 这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义； 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能； */
+html, body { height: 100%; font-family: 'Hiragino Sans GB' , 'Microsoft YaHei UI', 'Simsun', sans-serif; background-color: #fff3f3; }
+
+a { color: #333; }
+
+a:hover { text-decoration: none; }
+
+.mui-bar { -webkit-box-shadow: none; box-shadow: none; }
+
+.mui-bar .mui-title { text-transform: uppercase; }
+
+.mui-switch-red.mui-active { border: 2px solid #d71711; background-color: #d71711; }
+
+.switchLanguage.mui-switch.mui-active:before { content: '中文'; }
+
+.switchLanguage.mui-switch:before { content: 'Eng'; }
+
+.mui-content { background-color: transparent; }
+
+.w700 { width: 9.33333rem !important; margin: 0 auto; }
+
+.bgWhite { background-color: #fff !important; }
+
+.pad40 { padding: 0.53333rem; }
+
+.mui-bar.mui-bar-nav { background-color: #d71711; }
+
+.mui-bar.mui-bar-nav * { color: #fff; }
+
+.padRed { display: inline-block; width: 0.05333rem; height: 1em; background-color: #d71711; vertical-align: middle; margin-right: 5px; }
+
+.lyuSearchWrap { padding-top: 10px; background-image: url("/itb-dist/wap/img/bg-searchBar.png?__=7f227307f22730"); background-size: 10rem 1.72rem; background-repeat: no-repeat; background-position: center 0; }
+
+.lyuSearchWrap .lyuSearchBar { width: 9.33333rem !important; margin: 0 auto; }
+
+.lyuSearchWrap .lyuSearchBar input[type='search'] { background-color: #fff; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); height: 40px; }
+
+.lyuSearchWrap .lyuSearchBar .mui-placeholder { top: 4px; }
+
+.lyuSearchWrap .lyuSearchBar .mui-input-row.mui-search .mui-icon-clear { top: 11px; }
+
+#opgAjaxLoading { position: fixed; z-index: 50000000; background-color: rgba(255, 255, 255, 0); width: 100%; height: 100%; top: 0; left: 0; display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center; }
+
+.mask { position: fixed; z-index: 1001; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.3); display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center; }
+
+.mui-plus header.mui-bar { display: none; background: #d71711; }
+
+.mui-plus .mui-bar-nav ~ .mui-content { padding: 0; }
+
+/*hm开头的表示仅为 Hello MUI示例定义*/
+.hm-description { margin: .5em 0; }
+
+.hm-description > li { font-size: 14px; color: #8f8f94; }
+
+/*# sourceMappingURL=app.css.map?__= */

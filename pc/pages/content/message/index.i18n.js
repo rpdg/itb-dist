@@ -1,0 +1,25 @@
+var languagePkg = {
+	'en': {},
+	'cn': {
+		msgType: '消息类型',
+		msgContent: '消息内容',
+		msg0: '普通消息',
+		msg1: '回执消息',
+		msg2: '邀请消息',
+		role: '角色',
+		searchUser: '搜索用户',
+		userKeyword: '用户关键字',
+		sendMsg: '发送消息',
+		sendMsgToThisPage: '发送给此页所有用户',
+		sendMsgToAll: '发送给所有用户',
+		sendBatchMsg: '批量发送消息',
+		roleName: '角色名称',
+		roleDesc: '角色描述',
+		userName: '登录名',
+		realName: '用户姓名',
+		email: 'email',
+		barcode: '一维码',
+		qrcode: '二维码',
+		viewThisUserAllMsg: '查看此人全部消息',
+	}
+};

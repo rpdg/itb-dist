@@ -1,0 +1,8 @@
+var languagePkg = {
+	'enUs': {
+
+	},
+	'zhCn': {
+
+	}
+};

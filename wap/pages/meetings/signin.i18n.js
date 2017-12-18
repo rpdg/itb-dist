@@ -1,0 +1,4 @@
+let languagePkg = {
+	en: {},
+	cn: {}
+};

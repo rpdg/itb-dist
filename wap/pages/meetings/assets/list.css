@@ -1,0 +1,27 @@
+.mui-segmented-control { border: 2px solid #d71711; border-radius: 0; }
+
+.mui-segmented-control .mui-control-item { color: #f48d88; border-color: #d71711; background-color: #d71711; border-bottom: 2px solid #d71711; text-transform: uppercase; }
+
+.mui-segmented-control .mui-control-item.mui-active { color: #fff; background-color: #d71711; border-bottom: 2px solid white; }
+
+.mui-control-content { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
+
+.mui-control-content h1 { color: #888; background-color: #fff; text-align: center; font-size: 0.4rem; font-weight: 900; height: 1.2rem; line-height: 1.2rem; margin: 0; }
+
+.mui-control-content .mui-table-view-cell { background-color: #fff; }
+
+.mui-control-content .mui-table-view-cell > .mui-navigate-right { font-size: 0.34667rem; font-weight: 600; color: black; text-transform: capitalize; height: 1.06667rem; }
+
+.mui-control-content .mui-table-view-cell > .mui-navigate-right .padRed { margin-top: -3px; }
+
+.mui-control-content .mui-table-view-cell > .mui-collapse-content { padding: 0; }
+
+.mui-control-content .mui-table-view-cell .summary { position: relative; background-color: #eee; line-height: 0.66667rem; height: 0.66667rem; padding: 0 1em; color: #666; font-size: 0.34667rem; }
+
+.mui-control-content .mui-table-view-cell .summary > .time { position: absolute; top: 50%; right: 15px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+
+.mui-control-content .mui-table-view-cell .cont { padding: 1em; color: #333; background-color: #f7f7f7; line-height: 2em; border: solid #fff; border-top-width: 1px; font-size: 0.34667rem; }
+
+.mui-control-content .mui-table-view-cell .cont > .pScan { display: block; line-height: 3em; text-align: center; color: #d71711; font-size: 0.37333rem; text-decoration: underline; text-transform: uppercase; }
+
+/*# sourceMappingURL=list.css.map?__= */

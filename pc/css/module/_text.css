@@ -1,0 +1,62 @@
+
+@each $size in 12, 14, 16, 18 {
+	.text-#{$size} {
+		font-size: #{$size}px;
+	}
+}
+
+@each $aln in left right center {
+	.text-#{$aln} {
+		text-align: #{$aln};
+	}
+}
+
+$color-class: (red #e74c3c) (greed #81b53e) (blue #3498db) (gray #888) (light-gray #aaa);
+@each $t-class in $color-class {
+	
+	$class: nth($t-class, 1);
+	$color: nth($t-class, 2);
+	
+	.text-#{$class} {
+		color: $color ;
+	}
+}
+
+h1, .h1{
+	font-size: 36px;
+}
+
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+
+.float-right{
+	float: right;
+}
+.float-left{
+	float: left;
+}
+
+.ico-expandable{
+	font-size: 19px;
+	cursor: pointer;
+	
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+	float: left;
+	
+	&.ellipse:before{
+		line-height: 22px;
+		vertical-align: super;
+		content: '+';
+	}
+	&.expanded:before{
+		line-height: 22px;
+		vertical-align: super;
+		content: '-';
+	}
+}

@@ -1,0 +1,23 @@
+.imgBlock { width: 9.33333rem; height: 3.13333rem; border-radius: 0.10667rem; margin: 0 auto; border: 0.10667rem solid white; background-color: #eee; }
+
+.imgBlock a { display: block; width: 100%; height: 100%; }
+
+#ulBuyerList { width: 9.33333rem; height: 3.13333rem; border-radius: 0.10667rem; margin: 0 auto; }
+
+#ulBuyerList li { height: 1.70667rem; line-height: 1.70667rem; font-size: 0.37333rem; padding: 0 0.66667rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); background-color: #fff; }
+
+#ulBuyerList li a:active { color: #d71711; }
+
+#divBuyerThumbList { width: 9.33333rem; border-radius: 0.10667rem; margin: 0 auto; padding: 0.66667rem 0.33333rem; background-color: #fff; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
+
+#divBuyerThumbList > h1 { font-size: 0.4rem; color: #000; margin-bottom: 1.5em; text-transform: capitalize; }
+
+#divBuyerThumbList > ul { display: flex; margin: 0 auto 1.06667rem; }
+
+#divBuyerThumbList > ul > li { width: 4rem; height: 4rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); text-align: center; color: #888; font-size: 0.32rem; }
+
+#divBuyerThumbList > ul > li:nth-of-type(2n+1) { margin-right: 0.4rem; }
+
+#divBuyerThumbList > ul > li > img { display: block; margin: 1.06667rem auto 1em; max-width: 2.06667rem; max-height: 2.06667rem; }
+
+/*# sourceMappingURL=buyer.css.map?__= */

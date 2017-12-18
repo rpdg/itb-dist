@@ -1,0 +1,1 @@
+{"version":3,"sources":["/pages/buyer/list.ts"],"names":[],"mappings":";;;;AAAA,+BAA2B;AAE3B,SAAG,CAAC,EACH,CAAC,CAAC","file":"list.js","sourcesContent":["import {api} from '/js/api'\r\n\r\napi({\r\n});"]}

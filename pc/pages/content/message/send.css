@@ -1,0 +1,22 @@
+#leftSec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 250px;
+  bottom: 0;
+  padding: 20px;
+  overflow: auto;
+  border-right: 1px solid #2f2f2f;
+}
+
+#rightSec {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  overflow: auto;
+  padding: 2em;
+}
+
+/*# sourceMappingURL=send.css.map?__= */

@@ -1,0 +1,27 @@
+.filterBar { padding: 0 0.53333rem; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); border-radius: 6px; }
+
+.filterBar .mui-btn-block { font-size: 0.29333rem; padding: 8px 0; }
+
+.filterBar #selDate { width: 3.33333rem; }
+
+.filterBar #selMainCatagory { width: 2.66667rem; }
+
+.filterBar #selSubCatagory { width: 2rem; }
+
+.showcase { box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); margin-top: 0.13333rem; border-radius: 6px; padding: 0.4rem; position: absolute; top: 4.4rem; left: 50%; margin-left: -4.66667rem; bottom: 0.48rem; /**/ }
+
+.showcase #myScroll { position: absolute; top: 1.33333rem; left: 0; bottom: 0.48rem; overflow: auto; }
+
+.showcase .mui-table-view:before, .showcase .mui-table-view:after { background-color: transparent; }
+
+#fullSizeViewer { display: none; background-color: rgba(0, 0, 0, 0.85); text-align: center; /*padding: 0 0.3rem;*/ position: fixed; z-index: 1001; top: 0; left: 0; right: 0; bottom: 0; }
+
+#fullSizeViewer .fullSizerViewerWrapper { display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center; height: 100%; }
+
+#fullSizeViewer #closer { position: absolute; color: #fff; font-size: 1rem; top: 0.5rem; right: 0.5rem; }
+
+#fullSizeViewer #divImgFullSize { margin: 2.6rem auto 0; width: 9.5rem; height: 9.5rem; border: none; }
+
+#fullSizeViewer #divImgFullSize #imgFullSize { max-height: 100%; max-width: 100%; border: 3px solid #fff; }
+
+/*# sourceMappingURL=gallery.css.map?__= */

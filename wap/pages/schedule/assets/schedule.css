@@ -1,0 +1,55 @@
+.mui-content { background-color: #494949; padding-bottom: 0.26667rem; }
+
+#searchWrap { height: 1.2rem; padding: 6px; }
+
+#searchWrap * { color: #fff !important; }
+
+#searchWrap input[type='search'] { background-color: #696969; border: 1px solid #999; }
+
+#tbSchedule { width: 100%; table-layout: fixed; border: none; border-collapse: collapse; border-top: 1px solid #fff; }
+
+#tbSchedule tr > td { width: 2.74667rem; height: 2.2rem; border: 1px solid #eee; text-align: center; border-top: none; border-right: none; }
+
+#tbSchedule tr > td:nth-of-type(4n+1) { font-size: 0.4rem; line-height: 0.66667rem; padding: 0.4rem; width: 1.73333rem; border-left: none; color: #999; background-color: #494949; border-bottom: 1px dashed #999; text-transform: uppercase; }
+
+#tbSchedule thead td { color: #fff; font-weight: 600; font-size: 0.93333rem; }
+
+#tbSchedule thead td:nth-of-type(4n+1) { font-size: 0.42667rem; font-weight: 300; }
+
+#tbSchedule thead td:nth-of-type(4n+2) { background-color: #eb5a32; }
+
+#tbSchedule thead td:nth-of-type(4n+3) { background-color: #dd3f31; }
+
+#tbSchedule thead td:nth-of-type(4n) { background-color: #d71711; }
+
+#tbSchedule tbody td { background-color: #fff; }
+
+#tbSchedule tbody td.noTime { background-color: #ddd; color: #aaa; }
+
+#tbSchedule tbody.mine td { height: 2.93333rem; }
+
+#tbSchedule tbody.mine td div { width: 2.53333rem; margin: auto; border-radius: 5px; font-size: 0.29333rem; text-transform: capitalize; }
+
+#tbSchedule tbody.mine td .divAddTo { border: 2px dashed #d71711; color: #d71711; font-size: 0.4rem; }
+
+#tbSchedule tbody.mine td .divAppoint { color: #f1d27e; border: 1px solid #f1d27e; background-color: #fff8df; }
+
+#tbSchedule tbody.mine td .divActivity { color: #fd722d; border: 1px solid #fd722d; background-color: #ffdece; }
+
+#tbSchedule tbody.mine td .divMeeting { color: #92be57; border: 1px solid #92be57; background-color: #e5eed7; }
+
+#tbSchedule tbody.mine td .divWalk { color: #617dc3; border: 1px solid #617dc3; background-color: #d7e3ee; }
+
+#tbSchedule tbody.mine td.r1 div { height: 2.66667rem; line-height: 2.66667rem; }
+
+#tbSchedule tbody.mine td.r2 div { height: 1.26667rem; line-height: 1.26667rem; margin-bottom: 3px; }
+
+#tbSchedule tbody.mine td.r3 div { height: 0.8rem; line-height: 0.8rem; margin-bottom: 3px; }
+
+#tbSchedule tbody.mine td.r4 div { height: 0.58667rem; line-height: 0.58667rem; margin-bottom: 3px; }
+
+#tbSchedule tbody.rest td { height: 0.8rem; text-transform: uppercase; }
+
+#tbSchedule tbody.rest td.lunch { background-color: #ddd; color: #aaa; }
+
+/*# sourceMappingURL=schedule.css.map?__= */

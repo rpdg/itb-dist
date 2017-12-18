@@ -1,0 +1,16 @@
+{
+	"name": "ITB-Wap",
+	"version": "1.0.0",
+	"description": "",
+	"main": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"server:start": "fis3 server start --root ../../git-dist --port 7788",
+		"server:stop": "fis3 server stop --port 7788",
+		"clean": "fis3 server clean --root ../../git-dist/itb-dist/pc",
+		"build:dev": "fis3 release dev  -d ../../git-dist",
+		"build:prd": "fis3 release -c prd  -d ../dist"
+	},
+	"author": "Lyu PF",
+	"license": "ISC"
+}

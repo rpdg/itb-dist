@@ -1,0 +1,1 @@
+{"version":3,"sources":["/pages/gallery/gallery.ts"],"names":[],"mappings":";;;;AAAA,+BAA4B;AAE5B,SAAG,CAAC,EAEH,CAAC,CAAC;AAGH,4BAA4B","file":"gallery.js","sourcesContent":["import {api} from '/js/api';\r\n\r\napi({\r\n\r\n});\r\n\r\n\r\n//mui('#myScroll').scroll();"]}

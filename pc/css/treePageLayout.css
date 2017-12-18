@@ -1,0 +1,21 @@
+#leftSec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 220px;
+  border-right: 1px solid #151515;
+}
+
+#rightSec {
+  position: absolute;
+  top: 0;
+  left: 220px;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  padding: 2em;
+}
+
+/*# sourceMappingURL=treePageLayout.css.map?__= */

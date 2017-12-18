@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ITB Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
+	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=a71f1ad" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=ad1e264" />
+    <style>body { overflow: hidden; }
+
+#slider { height: 5.6rem; }
+
+#slider img { width: 10rem; height: 5.6rem; background-color: #777777; }
+
+#banner { position: absolute; z-index: 2; width: 100%; }
+
+.mui-inner-wrap { background-color: #fff; }
+
+#message { height: 1.28rem; line-height: 1.28rem; background-color: #eee; padding: 0 0.5rem 0 1.6rem; font-size: 0.3rem; text-overflow: ellipsis; overflow: hidden; background-image: url("/itb-dist/wap/img/ico96-lb.png?__=9c5f992"); background-size: 1.28rem; background-repeat: no-repeat; background-position: left center; white-space: nowrap; }
+
+#myScroll { position: absolute; top: 6.88rem; bottom: 0; overflow: scroll; }
+
+#board { width: 100%; table-layout: fixed; }
+
+#board td { height: 3.1rem; border: 1px solid #ddd; border-collapse: collapse; background-color: #fff; text-align: center; text-transform: capitalize; font-size: 0.35rem; }
+
+#board td:nth-of-type(3n+0) { border-right: none; }
+
+#board td:nth-of-type(3n-2) { border-left: none; }
+
+#board .icoDashboard { display: block; width: 1.28rem; height: 1.28rem; margin: 0 auto 0.2rem; }
+
+.mui-icon-bars:before { display: block; color: #fff; width: 0.64rem; height: 0.64rem; margin: 0.6rem 0 0 0.4rem; }
+
+#imgQR { color: #fff; width: 0.64rem; height: 0.64rem; margin: 0.6rem 0.4rem 0 0; }
+
+#offCanvasSide { background-image: url("/itb-dist/wap/pages/dashboard/assets/bg-leftMenu2.jpg?__=7e51618"); background-size: 100% 100%; background-repeat: no-repeat; }
+
+#imgAvatar { width: 2.547rem; height: 2.547rem; display: block; margin: 1.333rem auto 0.53rem; }
+
+#spUserName { text-transform: uppercase; text-align: center; font-size: 0.45rem; color: #fff; }
+
+#spRealName { text-align: center; font-size: 0.35rem; color: #bbb; margin-bottom: 1.33rem; }
+
+#divITB { display: block; position: absolute; bottom: 0.4rem; left: 0; text-align: center; width: 100%; }
+
+#divITB img { width: 2.2rem; margin: 0 auto 0.2rem; }
+
+#divITB span { display: block; font-size: 0.3rem; }
+
+#offCanvasSideScroll { top: 6.66rem; }
+
+#offCanvasSideScroll .mui-table-view { background-color: #deb5a7; }
+
+#offCanvasSideScroll .mui-table-view li { color: #89351e; }
+
+#offCanvasSideScroll .mui-table-view li img { width: 16px; height: 16px; vertical-align: sub; }
+
+#offCanvasSideScroll .mui-table-view:after, #offCanvasSideScroll .mui-table-view-cell:after { background-color: #89351e; }
+
+/*# sourceMappingURL=dashboard.css.map?__= */</style>
+    <link rel="stylesheet" href="/itb-dist/wap/css/icons-extra.css?__=1d8d069" />
+	<script>
+		window.CONFIG = {
+			apiServer: 'http://116.62.34.149:8090/api/'
+		};
+	</script>
+</head>
+<body class="">
+<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
+
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-slide-in mui-draggable">
+	<!--侧滑菜单部分-->
+	<aside id="offCanvasSide" class="mui-off-canvas-left">
+		<img id="imgAvatar" src="/itb-dist/wap/pages/dashboard/assets/avatar.png?__=f33cbac" alt="">
+		<div id="spUserName">user name</div>
+		<div id="spRealName">user name</div>
+		<div id="offCanvasSideScroll">
+			<div class="mui-scroll">
+				<ul id="ulLeftMenu" class="mui-table-view">
+					<script id="tpl-leftMenu" type="text/html">
+						<li id="lmWishList" class="mui-table-view-cell">
+							<img src="/itb-dist/wap/pages/dashboard/assets/ico32-doc.png?__=004e263" alt="">
+							<%=leftMenu.Wishlist%>
+						</li>
+						<li class="mui-table-view-cell">
+							<img src="/itb-dist/wap/pages/dashboard/assets/ico32-doc.png?__=004e263" alt="">
+							<%=leftMenu.Score%>
+						</li>
+						<li class="mui-table-view-cell">
+							<img src="/itb-dist/wap/pages/dashboard/assets/ico32-global.png?__=ec35639" alt="">
+							<%=leftMenu.Language%>
+							<div id="swLgn" class="switchLanguage mui-switch <%=$data['$current']=='en'?'mui-active':''%> mui-switch-red">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+						<li id="lmSignOut" class="mui-table-view-cell">
+							<img src="/itb-dist/wap/pages/dashboard/assets/ico32-exit.png?__=5ddfaa9" alt="">
+							<%=leftMenu.Logout%>
+						</li>
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="divITB">
+			<img src="/itb-dist/wap/img/logo-itb.png?__=83a39e6" id="imgITB">
+			<span>Version 1.0 for 2018 Exhibition</span>
+		</div>
+	</aside>
+	<!--主界面部分-->
+	<div class="mui-inner-wrap">
+		<div id="offCanvasContentScroll" class="mui-content">
+			<div id="banner">
+				<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+				<span class=""></span>
+				<a id="imgQR" href="../meetings/signin.html" class="mui-icon-extra mui-icon-extra-sweep mui-pull-right"></a>
+			</div>
+			<div id="slider">
+				<script id="tpl-slider" type="text/html">
+					<div class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<% for(var i=0, l= $data.length, pic ; i< l, pic = $data[i]; i++){ %>
+							<%if(i===0){%>
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="../news/news.html?id=<%=$data[l-1].id%>">
+									<img src="<%=$data[l-1].coverpicture%>">
+								</a>
+							</div>
+							<%}%>
+							<div class="mui-slider-item">
+								<a href="../news/news.html?id=<%=pic.id%>">
+									<img src="<%=pic.coverpicture%>">
+								</a>
+							</div>
+							<%}%>
+							<%if(i===l){%>
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="../news/news.html?id=<%=$data[0].id%>">
+									<img src="<%=$data[0].coverpicture%>">
+								</a>
+							</div>
+							<%}%>
+						</div>
+						<div class="mui-slider-indicator">
+							<% for(var i=0, l= $data.length, pic ; i< l, pic = $data[i]; i++){ %>
+							<div class="mui-indicator <%=i===0?'mui-active':''%>"></div>
+							<%}%>
+						</div>
+					</div>
+				</script>
+			</div>
+			<div id="message">1看看中国字看看中国字看看中国字看看中国字看看中国字看看中国字看看中国字</div>
+			<div id="myScroll">
+				<table id="board">
+					<script id="tpl-board" type="text/html">
+						<% for(var i=0, l= menus.length, menu ; i< l, menu = menus[i]; i++){ %>
+						<%if(i%3===0){%>
+						<tr><%}%>
+							<td>
+								<a href="<%=menu.url %>">
+									<img src="<%=menu.icon %>" alt="" class="icoDashboard">
+									<%=menu.txt %>
+								</a>
+							</td>
+							<%if(i%3===2){%>
+						</tr><%}%>
+						<% } %>
+					</script>
+				</table>
+			</div>
+		</div>
+		<!-- off-canvas backdrop -->
+		<div class="mui-off-canvas-backdrop"></div>
+	</div>
+</div>
+<script src="/itb-dist/wap/js/libs.js?__=b71f713"></script>
+<script src="/itb-dist/wap/pages/dashboard/index.i18n.js?__=f0236a0"></script>
+<script type="text/javascript" src="/itb-dist/wap/js/util.js?__="></script>
+<script type="text/javascript" src="/itb-dist/wap/js/api.js?__="></script>
+<script type="text/javascript" src="/itb-dist/wap/pages/dashboard/index.js?__="></script>
+<script>
+
+
+	/*window.addEventListener('pageshow', function (e) {
+		// 通过persisted属性判断是否存在 BF Cache
+		if (e.persisted) {
+			location.reload();
+		}
+	});*/
+	let Languages = require('js/util.ts').Languages;
+	Languages.init(languagePkg, function (lngPackage) {
+		let templateElem = document.getElementById('tpl-mainSection');
+		let mainSection = document.getElementById('mainSection');
+		if (mainSection && templateElem) {
+			document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+		}
+	});
+
+
+	mui.init({
+		swipeBack: true //启用右滑关闭功能
+	});
+	mui.ready(() => {
+		require('pages/dashboard/index.ts');
+	});
+	$('body').on('tap', 'a', function () {
+		location.href = this.href;
+	});
+</script>
+</body>
+</html>

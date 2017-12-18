@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.atom { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); width: 8.93333rem; background-color: #fff; border-radius: 0.2rem; margin: 0.66667rem auto 0; }
+
+.atom > .news { padding: 0.42667rem; }
+
+.atom > .news > h1 { font-size: 0.34667rem; font-weight: 900; color: #d71711; }
+
+.atom > .news > time { font-size: 0.26667rem; color: #aaa; }
+
+.atom > .news > p { display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/ -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/ -webkit-line-clamp: 3; /** 显示的行数 **/ overflow: hidden; /** 隐藏超出的内容 **/ font-size: 0.29333rem; color: #333; }
+
+.atom > .btnLink { background-color: #d71711; color: #fff; font-size: 0.32rem; height: 1rem; width: 100%; border-bottom-left-radius: 0.2rem; border-bottom-right-radius: 0.2rem; }
+
+.detail { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); width: 8.93333rem; background-color: #fff; border-radius: 0.2rem; margin: 0.66667rem auto; padding: 0.66667rem 0.6rem; }
+
+.detail > h1 { font-size: 0.42667rem; font-weight: 900; color: #d71711; }
+
+.detail > time { font-size: 0.29333rem; color: #aaa; }
+
+.detail > p { font-size: 0.32rem; color: #333; }
+
+/*# sourceMappingURL=announcement.css.map?__= */
