@@ -59,7 +59,7 @@ define('pages/content/photo/index.ts', function(require, exports, module) {
       $('#btnAddType').click(function () {
           var checkedRadio = tree.jq.find(':radio:checked');
           var sp = checkedRadio.closest('span');
-          if (~~sp.data('depth') === 1) {
+          if (~~sp.data('depth') === 2) {
               return top.opg.warn(lpg.addCategoryWarn);
           }
           var nameInput = $('<input type="text" name="name">');

@@ -1,0 +1,31 @@
+input[type='datetime'] {
+  width: 80px;
+}
+
+#occupyTime {
+  height: 5em;
+  width: 100%;
+}
+
+.pop .search-table .lead + td {
+  width: 40%;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+.guestForm {
+  padding: 20px;
+}
+
+.guestForm label {
+  display: block;
+  line-height: 2.2em;
+}
+
+.guestForm label input {
+  width: 400px;
+}
+
+/*# sourceMappingURL=subject.css.map?__= */

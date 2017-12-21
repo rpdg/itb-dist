@@ -1,0 +1,59 @@
+#leftSec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  overflow: auto;
+  width: 240px;
+  border-right: 1px solid #2f2f2f;
+}
+
+#leftSec .cWrap {
+  position: absolute;
+  top: 0;
+  bottom: 60px;
+  overflow: auto;
+}
+
+#leftSec #pButton {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+}
+
+#rightSec {
+  position: absolute;
+  top: 0;
+  left: 240px;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  padding: 2em;
+}
+
+#rightSec #photoManage {
+  display: none;
+}
+
+#photos {
+  border: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+
+#photos > li {
+  display: inline-block;
+  border: 1px solid #d0d0d0;
+  margin: 15px;
+}
+
+#photos > li img {
+  display: block;
+  max-width: 200px;
+}
+
+#photos > li p {
+  text-indent: 1em;
+}
+
+/*# sourceMappingURL=index.css.map?__= */

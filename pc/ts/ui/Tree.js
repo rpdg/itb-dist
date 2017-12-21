@@ -163,7 +163,7 @@ define('ts/ui/Tree.ts', function(require, exports, module) {
           else {
               list = data[this.arrSrc];
           }
-          this.add(list, 0);
+          this.add(list, 1);
           this.prevItemId = this.selectedItemId;
           this.selectedItemId = -1;
           this.prevLi = this.currentLi;

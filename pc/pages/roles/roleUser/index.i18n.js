@@ -5,7 +5,7 @@ var languagePkg = {
 		role : '角色',
 		roleName : '角色名称',
 		roleDesc : '角色描述',
-		userNameKeyword : '用户名',
+		userNameKeyword : '用户关键字',
 		userName : '登录名',
 		realName : '用户姓名',
 	}

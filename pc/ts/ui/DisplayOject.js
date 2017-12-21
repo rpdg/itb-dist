@@ -126,6 +126,12 @@ define('ts/ui/DisplayOject.ts', function(require, exports, module) {
       });
       Object.defineProperty(AjaxDisplayObject.prototype, "data", {
           get: function () {
+              /*let d = this._data;
+              let obj = {};
+              for(let key in d){
+                  if(key.indexOf(':')===-1)
+                      obj[key] = d[key];
+              }*/
               return this._data;
           },
           set: function (data) {

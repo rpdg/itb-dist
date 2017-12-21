@@ -30,6 +30,7 @@ define('pages/main/main.ts', function(require, exports, module) {
       StageSetting: '../system/period/index.html',
       TimeSetting: '../system/timeSlot/index.html',
       PairingIntegralSetting: '../system/integralMatch/index.html',
+      ExhibitionInfoManagment: '../content/exhibition/index.html',
   };
   opg_ts_1.default.api.GetCurrentUserInfoAndMenus(function (data) {
       var permissions = data.menus;

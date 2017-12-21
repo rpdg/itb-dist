@@ -6,7 +6,11 @@ define('pages/content/news/index.ts', function(require, exports, module) {
   var Combo_1 = require("ts/ui/Combo.ts");
   var Languages_1 = require("ts/util/Languages.ts");
   var store_1 = require("ts/util/store.ts");
+  var utils_1 = require("ts/util/utils.ts");
+  var store_2 = require("ts/util/store.ts");
+  var cache = store_2.Cache.getInstance();
   console.log('Languages:', Languages_1.Languages);
+  var infoPage = '/itb-dist/pc/pages/content/news/add.html?__=d99c031';
   opg_ts_1.default.api({
       'list!post': 'Information/QueryInformations',
       setStick: 'Information/SetInformationStick',
@@ -85,8 +89,9 @@ define('pages/content/news/index.ts', function(require, exports, module) {
               text: lpg.process,
               src: 'id',
               width: 180,
+              align: 'left',
               render: function (id, index, row) {
-                  var html = '';
+                  var html = "<button data-id=\"" + id + "\" data-index=\"" + row[':index'] + "\" class=\"btn-mini btn-info btnEdit\">" + lpg.edit + "</button> ";
                   if (!row.stick) {
                       html += "<button data-id=\"" + id + "\" class=\"btn-mini btn-success btnSetStick\">" + lpg.stick + "</button> ";
                   }
@@ -104,6 +109,24 @@ define('pages/content/news/index.ts', function(require, exports, module) {
           },
       ],
       pagination: true,
+  });
+  //edit
+  tb.tbody.on('click', '.btnEdit', function () {
+      var btn = $(this), id = btn.data('id'), index = btn.data('index');
+      var row = tb.data[index];
+      row.enableStick = row.stick ? 1 : 0;
+      cache.set('row', row);
+      var src = utils_1.url.setParam(infoPage, { id: id });
+      var pop = opg_ts_1.default.popTop("<iframe src=\"" + src + "\" />", {
+          title: lpg.edit + ": " + row.title,
+          btnMax: true,
+          width: 800,
+          height: 550,
+          onClose: function () {
+              cache.remove('row');
+              tb.update();
+          },
+      });
   });
   //offline
   tb.tbody.on('click', '.btnOffline', function () {
@@ -125,7 +148,6 @@ define('pages/content/news/index.ts', function(require, exports, module) {
       var btn = $(this), informationId = btn.data('id');
       opg_ts_1.default.api.cancelStick({ informationId: informationId }, function () { return tb.update(); });
   });
-  var infoPage = '/itb-dist/pc/pages/content/news/add.html?__=7654fb1';
   //Add
   $('#btnAdd').click(function () {
       var pop = opg_ts_1.default.popTop("<iframe src=\"" + infoPage + "\" />", {
@@ -135,7 +157,7 @@ define('pages/content/news/index.ts', function(require, exports, module) {
           height: 400,
           onClose: function () {
               tb.update();
-          }
+          },
       });
   });
   //# sourceMappingURL=/itb-dist/pc/pages/content/news/index.js.map?__=

@@ -10,5 +10,6 @@ var languagePkg = {
 		selectPhoto: '选择图片',
 		upload: '上传',
 		addSubject: '添加子项',
+		editSubject: '编辑子项'
 	}
 };

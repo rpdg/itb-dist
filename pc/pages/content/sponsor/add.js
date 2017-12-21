@@ -5,10 +5,17 @@ define('pages/content/sponsor/add.ts', function(require, exports, module) {
   var opg_ts_1 = require("ts/opg.ts");
   var Languages_1 = require("ts/util/Languages.ts");
   var Combo_1 = require("ts/ui/Combo.ts");
+  var utils_1 = require("ts/util/utils.ts");
+  var store_1 = require("ts/util/store.ts");
   var lpg = Languages_1.Languages.package;
   console.log('Languages:', Languages_1.Languages);
+  var cache = store_1.Cache.getInstance();
+  var row = cache.get('row');
+  console.log(row);
   opg_ts_1.default.api({
+      getSubjects: 'Information/InformationById',
       'addMain!post': 'Information/AddInfomationSubject',
+      'updateMain!post': 'Information/UpInfomationSubject',
       'upload!UPLOAD': 'upload/files',
   });
   var sponsorId;
@@ -48,7 +55,39 @@ define('pages/content/sponsor/add.ts', function(require, exports, module) {
       });
   });
   var tbMain = $('#tbMain');
+  var btnAddSubject = $('#btnAddSubject');
   var ulSubjects = $('#ulSubjects');
+  if (row) {
+      sponsorId = row.id;
+      tbMain.jsonToFields(row);
+      btnAddSubject.show();
+      listSubjects();
+  }
+  function listSubjects() {
+      opg_ts_1.default.api.getSubjects({ informationId: sponsorId }, function (data) {
+          ulSubjects.bindList({
+              list: data,
+              template: '<li><button class="btn-mini btn-info btnEditSub" data-id="${id}">' + lpg.edit + '</button> <button class="btn-mini btn-danger btnDelSub" data-id="${id}">' + lpg.del + '</button><hr>${content}</li>'
+          });
+      });
+  }
+  //edit subjects
+  ulSubjects.on('click', '.btnEditSub', function () {
+      var btn = $(this), subId = btn.data('id');
+      var src = utils_1.url.setParam(subjectPage, { id: sponsorId, subId: subId });
+      var pop = top.opg.confirm("<iframe src=\"" + src + "\" />", function (i, ifr) {
+          ifr.doSave(pop, listSubjects);
+          return true;
+      }, {
+          title: "" + lpg.editSubject,
+          width: 500,
+          height: 450,
+          buttons: {
+              ok: "" + lpg.save,
+              cancel: "" + lpg.cancel,
+          },
+      });
+  });
   $('#btnSaveMain').click(function () {
       var param = tbMain.fieldsToJson({
           title: {
@@ -59,26 +98,35 @@ define('pages/content/sponsor/add.ts', function(require, exports, module) {
       });
       if (param) {
           param.informationType = 2;
-          opg_ts_1.default.api.addMain(param, function (data) {
-              sponsorId = data;
-              $('input,button', tbMain).prop('disabled', true);
-              $('#buttonSection').html("\n\t\t\t\t<button id=\"btnAddSubject\" class=\"btn-info\">" + lpg.addSubject + "</button>\n\t\t\t");
-              $('#btnAddSubject').click(function () {
-                  var pop = top.opg.confirm("<iframe src=\"" + subjectPage + "?id=" + sponsorId + "\" />", function (i, ifr) {
-                      ifr.doSave(pop, ulSubjects);
-                      return true;
-                  }, {
-                      title: "" + lpg.addSubject,
-                      width: 500,
-                      height: 450,
-                      buttons: {
-                          ok: "" + lpg.save,
-                          cancel: "" + lpg.cancel,
-                      },
-                  });
+          if (sponsorId) {
+              param.id = sponsorId;
+              param.stick = param.enableStick;
+              opg_ts_1.default.api.updateMain(param, function (data) {
               });
-          });
+          }
+          else {
+              opg_ts_1.default.api.addMain(param, function (data) {
+                  sponsorId = data;
+                  //$('input,button', tbMain).prop('disabled', true);
+                  btnAddSubject.show();
+              });
+          }
       }
+  });
+  btnAddSubject.click(function () {
+      var src = utils_1.url.setParam(subjectPage, { id: sponsorId });
+      var pop = top.opg.confirm("<iframe src=\"" + src + "\" />", function (i, ifr) {
+          ifr.doSave(pop, listSubjects);
+          return true;
+      }, {
+          title: "" + lpg.addSubject,
+          width: 500,
+          height: 450,
+          buttons: {
+              ok: "" + lpg.save,
+              cancel: "" + lpg.cancel,
+          },
+      });
   });
   //# sourceMappingURL=/itb-dist/pc/pages/content/sponsor/add.js.map?__=
   

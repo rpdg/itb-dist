@@ -7,10 +7,13 @@ define('pages/content/sponsor/addSubject.ts', function(require, exports, module)
   var lpg = Languages_1.Languages.package;
   console.log('Languages:', Languages_1.Languages);
   opg_ts_1.default.api({
+      getSubject: 'Information/GetInformationSubContentById',
       'addSubject!post': 'Information/AddInformationSubContent',
+      'updateSubject!post': 'Information/UpInformationSubContent',
       'upload!UPLOAD': 'upload/files',
   });
   var informationId = opg_ts_1.default.request['id'];
+  var subjectId = opg_ts_1.default.request['subId'];
   var fileName;
   var imgUrl;
   var editor;
@@ -88,7 +91,14 @@ define('pages/content/sponsor/addSubject.ts', function(require, exports, module)
               panel.empty();
       }
   });
-  window['doSave'] = function (pop, ulSubjects) {
+  if (subjectId) {
+      opg_ts_1.default.api.getSubject({ id: subjectId }, function (data) {
+          //debugger;
+          $('#lbFormatType').jsonToFields(data[0]);
+          selType.trigger('change').prop('disabled', true);
+      });
+  }
+  window['doSave'] = function (pop, listSubjects) {
       var content;
       switch (formatType) {
           case 0:
@@ -125,10 +135,19 @@ define('pages/content/sponsor/addSubject.ts', function(require, exports, module)
           opg_ts_1.default.warn(lpg.nullInputWarn);
       }
       else {
-          opg_ts_1.default.api.addSubject({ formatType: formatType, informationId: informationId, content: content }, function (data) {
-              ulSubjects.append("<li>[" + format[formatType] + "]: " + content + "</li>");
-              pop.close();
-          });
+          if (subjectId) {
+              opg_ts_1.default.api.updateSubject({ content: content, id: subjectId }, function (data) {
+                  listSubjects();
+                  pop.close();
+              });
+          }
+          else {
+              opg_ts_1.default.api.addSubject({ formatType: formatType, informationId: informationId, content: content }, function (data) {
+                  //ulSubjects.append(`<li>[${format[formatType]}]: ${content}</li>`);
+                  pop.close();
+                  listSubjects();
+              });
+          }
       }
       return true;
   };

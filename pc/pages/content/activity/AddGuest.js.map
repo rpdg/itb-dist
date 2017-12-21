@@ -1,0 +1,1 @@
+{"version":3,"sources":["/pages/content/activity/AddGuest.ts"],"names":[],"mappings":";;;;AAEA;IAEC,kBAAY,EAAQ;QACnB,GAAG,CAAC,KAAK,CAAC,IAAI,CAAC,CAAC;IACjB,CAAC;IACF,eAAC;AAAD,CAAC","file":"AddGuest.js","sourcesContent":["import Table from 'ts/ui/Table';\r\n\r\nexport default class AddGuest {\r\n\r\n\tconstructor(tb:Table) {\r\n\t\topg.alert('ok');\r\n\t}\r\n}"]}

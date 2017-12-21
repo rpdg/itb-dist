@@ -14,5 +14,6 @@ var languagePkg = {
 		upload: '上传',
 		stick: '置顶',
 		addSubject: '添加子项',
+		editSubject: '编辑子项'
 	}
 };

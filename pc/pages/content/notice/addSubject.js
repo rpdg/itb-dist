@@ -7,13 +7,14 @@ define('pages/content/notice/addSubject.ts', function(require, exports, module) 
   var lpg = Languages_1.Languages.package;
   console.log('Languages:', Languages_1.Languages);
   opg_ts_1.default.api({
+      getSubject: 'Information/GetInformationSubContentById',
       'addSubject!post': 'Information/AddInformationSubContent',
+      'updateSubject!post': 'Information/UpInformationSubContent',
       'upload!UPLOAD': 'upload/files',
   });
   var informationId = opg_ts_1.default.request['id'];
+  var subjectId = opg_ts_1.default.request['subId'];
   var imgUrl;
-  var editor;
-  var editorWrap = $("<script type=\"text/plain\" id=\"myEditor1\"></script>");
   var format = {
       0: lpg.pureText,
       1: lpg.picture,
@@ -23,11 +24,6 @@ define('pages/content/notice/addSubject.ts', function(require, exports, module) 
   var formatType;
   var panel = $('#panel');
   var selType = $('#selType').on('change', function () {
-      if (editor) {
-          editor.destroy();
-          editor = null;
-          location.reload(true);
-      }
       formatType = ~~selType.val();
       switch (formatType) {
           case 0:
@@ -40,7 +36,14 @@ define('pages/content/notice/addSubject.ts', function(require, exports, module) 
               panel.empty();
       }
   });
-  window['doSave'] = function (pop, ulSubjects) {
+  if (subjectId) {
+      opg_ts_1.default.api.getSubject({ id: subjectId }, function (data) {
+          //debugger;
+          $('#lbFormatType').jsonToFields(data[0]);
+          selType.trigger('change').prop('disabled', true);
+      });
+  }
+  window['doSave'] = function (pop, listSubjects) {
       var content;
       switch (formatType) {
           case 0:
@@ -71,10 +74,18 @@ define('pages/content/notice/addSubject.ts', function(require, exports, module) 
           opg_ts_1.default.warn(lpg.nullInputWarn);
       }
       else {
-          opg_ts_1.default.api.addSubject({ formatType: formatType, informationId: informationId, content: content }, function (data) {
-              ulSubjects.append("<li>[" + format[formatType] + "]: " + content + "</li>");
-              pop.close();
-          });
+          if (subjectId) {
+              opg_ts_1.default.api.updateSubject({ content: content, id: subjectId }, function (data) {
+                  listSubjects();
+                  pop.close();
+              });
+          }
+          else {
+              opg_ts_1.default.api.addSubject({ formatType: formatType, informationId: informationId, content: content }, function (data) {
+                  listSubjects();
+                  pop.close();
+              });
+          }
       }
       return true;
   };

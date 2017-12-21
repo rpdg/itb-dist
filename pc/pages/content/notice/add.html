@@ -12,6 +12,9 @@
 	#ulSubjects{
 		padding: 20px;
 	}
+	#ulSubjects >li{
+		margin-bottom: 30px;
+	}
 	.halfWidth {
 		width: 70% !important;
 	}
@@ -31,11 +34,11 @@
 			<tr>
 				<td class="lead"><label for="beginDate"><%=publishTimeBegin%></label></td>
 				<td>
-					<input id="beginDate" name="beginDate" type="datetime"/>
+					<input id="beginDate" name="publishbegindate" type="datetime"/>
 				</td>
 				<td class="lead"><label for="endDate"><%=publishTimeEnd%></label></td>
 				<td>
-					<input id="endDate" name="endDate" type="datetime">
+					<input id="endDate" name="publishenddate" type="datetime">
 				</td>
 			</tr>
 			<tr>
@@ -45,11 +48,12 @@
 				</td>
 			</tr>
 		</table>
-		<ol id="ulSubjects">
-		</ol>
 		<p id="buttonSection" class="text-right">
 			<button id="btnSaveMain" class="btn-success"><%=save%></button>
+			<button id="btnAddSubject" style="display: none;" class="btn-info"><%=addSubject%></button>
 		</p>
+		<ol id="ulSubjects">
+		</ol>
 	</script>
 </div>
 <div id="opgAjaxLoading">
@@ -64,7 +68,7 @@
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c2d8260c"></script>
 <script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d4b44b7d"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7b3777f7"></script>
-<script src="/itb-dist/pc/pages/content/notice/add.i18n.js?__=3fe684b3fe684b"></script>
+<script src="/itb-dist/pc/pages/content/notice/add.i18n.js?__=19083f719083f7"></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/ui/DisplayOject.js?__="></script>

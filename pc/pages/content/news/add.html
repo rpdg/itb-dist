@@ -9,8 +9,11 @@
 	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814ac0c814a" />
     <link rel="stylesheet" href="/itb-dist/pc/css/jquery.datetimepicker.css?__=087d36f087d36f" />
     <style>
-	#ulSubjects{
+	#ulSubjects {
 		padding: 20px;
+	}
+	#ulSubjects >li{
+		margin-bottom: 30px;
 	}
 	.halfWidth {
 		width: 70% !important;
@@ -37,11 +40,11 @@
 			<tr>
 				<td class="lead"><label for="beginDate"><%=publishTimeBegin%></label></td>
 				<td>
-					<input id="beginDate" name="beginDate" type="datetime"/>
+					<input id="beginDate" name="publishbegindate" type="datetime"/>
 				</td>
 				<td class="lead"><label for="endDate"><%=publishTimeEnd%></label></td>
 				<td>
-					<input id="endDate" name="endDate" type="datetime">
+					<input id="endDate" name="publishenddate" type="datetime">
 				</td>
 			</tr>
 			<tr>
@@ -49,7 +52,7 @@
 				<td colspan="3">
 					<b id="tdUpload" class="fcGroup">
 						<b class="fcItem">
-							<input name="coverPicture" id="coverPicture" type="text" placeholder="" readonly>
+							<input name="coverpicture" id="coverPicture" type="text" placeholder="" readonly>
 						</b>
 						<b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
 							<i class="fileChooserWrap">
@@ -66,12 +69,13 @@
 					<input id="enableStick" name="enableStick" type="checkbox" value="1"/>
 				</td>
 			</tr>
-		</table>
-		<ol id="ulSubjects">
-		</ol>
+		</table>
 		<p id="buttonSection" class="text-right">
 			<button id="btnSaveMain" class="btn-success"><%=save%></button>
+			<button id="btnAddSubject" style="display: none;" class="btn-info"><%=addSubject%></button>
 		</p>
+		<ol id="ulSubjects">
+		</ol>
 	</script>
 </div>
 <div id="opgAjaxLoading">
@@ -86,7 +90,7 @@
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c2d8260c"></script>
 <script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d4b44b7d"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7b3777f7"></script>
-<script src="/itb-dist/pc/pages/content/news/add.i18n.js?__=518f19b518f19b"></script>
+<script src="/itb-dist/pc/pages/content/news/add.i18n.js?__=21766ba21766ba"></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/ui/DisplayOject.js?__="></script>
