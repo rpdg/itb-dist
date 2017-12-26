@@ -68,6 +68,14 @@ define('pages/content/notice/add.ts', function(require, exports, module) {
               type: 'ns',
               require: true,
           },
+          publishbegindate: {
+              name: Languages_1.Languages.package.publishTimeBegin,
+              require: true,
+          },
+          publishenddate: {
+              name: Languages_1.Languages.package.publishTimeEnd,
+              require: true,
+          },
       });
       if (param) {
           param.informationType = 1;

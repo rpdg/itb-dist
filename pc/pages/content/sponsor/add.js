@@ -40,7 +40,7 @@ define('pages/content/sponsor/add.ts', function(require, exports, module) {
               var iptCoverPicture = $("#" + target);
               iptCoverPicture.val(data[0].downloadLink);
               var tdCover = $("#td_" + target);
-              tdCover.html("<img src=\"" + data[0].downloadLink + "\" style=\"max-height: 100px;\"/>");
+              tdCover.html("<img src=\"" + data[0].downloadLink + "\" />");
               pop.close();
           });
           return true;

@@ -42,7 +42,7 @@ define('pages/content/news/add.ts', function(require, exports, module) {
           var formData = new FormData(uploadForm[0]);
           opg_ts_1.default.api.upload(formData, function (data) {
               iptCoverPicture.val(data[0].downloadLink);
-              tdCover.html("<img src=\"" + data[0].downloadLink + "\" style=\"max-height: 100px;\"/>");
+              tdCover.html("<img src=\"" + data[0].downloadLink + "\"/>");
               pop.close();
           });
           return true;
@@ -95,6 +95,14 @@ define('pages/content/news/add.ts', function(require, exports, module) {
           title: {
               name: Languages_1.Languages.package.title,
               type: 'ns',
+              require: true,
+          },
+          publishbegindate: {
+              name: Languages_1.Languages.package.publishTimeBegin,
+              require: true,
+          },
+          publishenddate: {
+              name: Languages_1.Languages.package.publishTimeEnd,
               require: true,
           },
       });

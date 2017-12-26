@@ -2,7 +2,7 @@
     "version": 3,
     "file": "main.css?__=",
     "sources": [
-        "/pages/main/main.scss",
+        "/pages/login/main.scss",
         "/css/module/_color.scss"
     ],
     "sourcesContent": [

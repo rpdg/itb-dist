@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "file": "dashboard.css?__=",
+    "sources": [
+        "/pages/itb/dashboard/assets/dashboard.scss"
+    ],
+    "sourcesContent": [
+        "aside {\r\n\tposition: fixed;\r\n\tbackground-color: #fff;\r\n\tborder: 1px solid #ccc;\r\n\t\r\n\t&#left {\r\n\t\ttop: 10px;\r\n\t\tleft: 10px;\r\n\t\twidth: 450px;\r\n\t\tbottom: 10px;\r\n\t}\r\n\t&#rightTop {\r\n\t\ttop: 10px;\r\n\t\tleft: 470px;\r\n\t\tright: 10px;\r\n\t\tbottom: 50%;\r\n\t\tbackground-color: transparent;\r\n\t\tborder: none;\r\n\t\tpadding-bottom: 10px;\r\n\t\t\r\n\t\t> div {\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 100%;\r\n\t\t\tbackground-color: #fff;\r\n\t\t\tborder: 1px solid #ccc;\r\n\t\t}\r\n\t}\r\n\t&#rightBottom {\r\n\t\ttop: 50%;\r\n\t\tleft: 470px;\r\n\t\tright: 10px;\r\n\t\tbottom: 10px;\r\n\t}\r\n}"
+    ],
+    "names": [],
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACL,QAAQ,EAAE,KAAK;EACf,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,cAAc;CA8BtB;;AAjCD,AAKC,KALI,AAKJ,KAAM,CAAC;EACN,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,IAAI;EACV,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACZ;;AAVF,AAWC,KAXI,AAWJ,SAAU,CAAC;EACV,GAAG,EAAE,IAAI;EACT,IAAI,EAAE,KAAK;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;EACX,gBAAgB,EAAE,WAAW;EAC7B,MAAM,EAAE,IAAI;EACZ,cAAc,EAAE,IAAI;CAQpB;;AA1BF,AAoBI,KApBC,AAWJ,SAAU,GASP,GAAG,CAAC;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,cAAc;CACtB;;AAzBH,AA2BC,KA3BI,AA2BJ,YAAa,CAAC;EACb,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,KAAK;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACZ"
+}

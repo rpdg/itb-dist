@@ -59,7 +59,7 @@ define('pages/content/media/addSubject.ts', function(require, exports, module) {
               panel.empty().append(editorWrap);
               editor = UE.getEditor('myEditor1', {
                   //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
-                  toolbars: [['FullScreen', 'Source', 'Undo', 'Redo', 'Bold', 'Italic', 'Underline']],
+                  toolbars: [['FullScreen', 'Source', 'Undo', 'Redo', 'Bold', 'Italic', 'Underline', '|', 'forecolor', 'backcolor']],
                   //focus时自动清空初始化时的内容
                   autoClearinitialContent: true,
                   //关闭字数统计

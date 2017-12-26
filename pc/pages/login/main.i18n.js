@@ -1,7 +1,7 @@
 var languagePkg = {
 	'en': {
 		"fullScreen": "Full screen",
-		"language": "Language(语言)",
+		"language": "语言切换",
 		"exit": "Exit",
 		menu :{
 			ContentManagement : 'Content Management',
@@ -32,7 +32,7 @@ var languagePkg = {
 	},
 	'cn': {
 		"fullScreen": "全屏切换",
-		"language": "Language(语言)",
+		"language": "Language",
 		"exit": "安全退出",
 		menu :{
 			ContentManagement: '内容管理',
@@ -58,7 +58,27 @@ var languagePkg = {
 			PairingIntegralSetting: '配对积分设置',
 			DisableWordsSetting: '禁用词设定',
 			AddNews : '添加新闻',
-			AddNotice : '添加公告'
+			AddNotice : '添加公告',
+			ExhibitorManagement : '展商入口' ,
+			BuyerManagement : '买家入口' ,
+			VistorManagement : '参观者入口' ,
+			GuestManagement : '游客入口' ,
+			PressManagement : '媒体入口' ,
+			ITBManagement : 'ITB 入口' ,
+			StaffManagment : '志愿者入口' ,
+			Wishlist : '心愿单' ,
+			Schedule : '日程表' ,
+			Exhibitors : '展商' ,
+			Buyers : '买家' ,
+			Events : '活动' ,
+			MessageBox : '消息' ,
+			PhotoGallary : '照片集' ,
+			Press : '媒体' ,
+			ExhibitionInfo : '展会信息' ,
+			Navigation : '导航' ,
+			MyScore : '我的积分' ,
+			MyTrip : '我的旅行' ,
+			MyBooth : '我的摊位'
 		}
 	}
 };

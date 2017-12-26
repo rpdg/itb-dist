@@ -31,7 +31,7 @@ define('pages/login/index.ts', function(require, exports, module) {
   });
   function Login(param) {
       opg_ts_1.default.api.login(param, function (data) {
-          var url = '/itb-dist/pc/pages/main/main.html?__=3818e8b';
+          var url = '/itb-dist/pc/pages/login/main.html?__=c15d74c';
           var previousLoginName = store_ts_1.store.get('user');
           //debugger;
           if (previousLoginName && previousLoginName === param.username) {

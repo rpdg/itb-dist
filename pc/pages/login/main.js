@@ -1,4 +1,4 @@
-define('pages/main/main.ts', function(require, exports, module) {
+define('pages/login/main.ts', function(require, exports, module) {
 
   "use strict";
   Object.defineProperty(exports, "__esModule", { value: true });
@@ -31,6 +31,7 @@ define('pages/main/main.ts', function(require, exports, module) {
       TimeSetting: '../system/timeSlot/index.html',
       PairingIntegralSetting: '../system/integralMatch/index.html',
       ExhibitionInfoManagment: '../content/exhibition/index.html',
+      Wishlist: '../itb/wishlist/index.html',
   };
   opg_ts_1.default.api.GetCurrentUserInfoAndMenus(function (data) {
       var permissions = data.menus;
@@ -48,8 +49,8 @@ define('pages/main/main.ts', function(require, exports, module) {
           var that = $(this);
           if (that.hasClass('ellipse')) {
               that.removeClass('ellipse');
-              subMenu.css('width', 180);
-              divTd.css('left', 180);
+              subMenu.css('width', 200);
+              divTd.css('left', 200);
           }
           else {
               that.addClass('ellipse');
@@ -93,7 +94,7 @@ define('pages/main/main.ts', function(require, exports, module) {
                   g: function (v, i, row) {
                       var arr = [];
                       if (row.childMenus && row.childMenus.length) {
-                          row.childMenus.map(function (v, i) {
+                          row.childMenus.forEach(function (v, i) {
                               arr.push(v['name']);
                           });
                       }
@@ -113,6 +114,14 @@ define('pages/main/main.ts', function(require, exports, module) {
               t: function (v) { return menuPack[v] || v; },
           },
       }).find(mainMenuSelector).click();
+      var aLogo = $('#aLogo');
+      aLogo.click(function () {
+          subMenu.find('.cur').eq(0).removeClass('cur');
+      });
+      if (permissions.length === 1) {
+          subMenu.find('.cur').eq(0).removeClass('cur');
+          mainFrame.attr('src', aLogo.attr('href'));
+      }
       var wViewport = window.document.documentElement.clientWidth, wMenu = mainMenu.outerWidth();
       console.log(wViewport - wMenu);
       if (wViewport - wMenu < 0) {
@@ -190,7 +199,7 @@ define('pages/main/main.ts', function(require, exports, module) {
       //  stop bubbling so we don't get bounce back
       evt.stopPropagation();
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/main/main.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/login/main.js.map?__=
   
 
 });

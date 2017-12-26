@@ -46,7 +46,7 @@ define('pages/content/sponsor/addSubject.ts', function(require, exports, module)
               btn.one('click', function () {
                   var formData = new FormData(form_1[0]);
                   opg_ts_1.default.api.upload(formData, function (data) {
-                      p_1.html("<img src=\"" + data[0].downloadLink + "\" style=\"max-height: 100px;\"/>");
+                      p_1.html("<img src=\"" + data[0].downloadLink + "\" />");
                       imgUrl = data[0].downloadLink;
                   });
               });
@@ -59,7 +59,7 @@ define('pages/content/sponsor/addSubject.ts', function(require, exports, module)
               panel.empty().append(editorWrap);
               editor = UE.getEditor('myEditor1', {
                   //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
-                  toolbars: [['FullScreen', 'Source', 'Undo', 'Redo', 'Bold', 'Italic', 'Underline']],
+                  toolbars: [['FullScreen', 'Source', 'Undo', 'Redo', 'Bold', 'Italic', 'Underline', '|', 'forecolor', 'backcolor']],
                   //focus时自动清空初始化时的内容
                   autoClearinitialContent: true,
                   //关闭字数统计
@@ -105,7 +105,7 @@ define('pages/content/sponsor/addSubject.ts', function(require, exports, module)
               content = panel.find('textarea').eq(0).val();
               break;
           case 1:
-              content = "<img src=\"" + imgUrl + "\" style=\"max-height: 100px;\"/>";
+              content = "<img src=\"" + imgUrl + "\" />";
               break;
           case 2:
               var txt_1, url_1;

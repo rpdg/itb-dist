@@ -29,6 +29,11 @@
   float: left;
 }
 
+#header #logo > a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #header #logo img {
   height: 38px;
   margin-top: -4px;
@@ -164,7 +169,8 @@
   padding-left: 1em;
   font-size: 14px;
   text-decoration: none;
-  color: #666;
+  text-shadow: -1px -1px 0 black;
+  color: #999;
   transition: text-indent 200ms ease;
 }
 
@@ -212,7 +218,7 @@
 
 <header id="header">
 	<section id="logo">
-		<img src="/itb-dist/pc/pages/main/logo-itb.png?__=83a39e683a39e6" alt="">
+		<a id="aLogo" href="../itb/dashboard/index.html" target="mainFrame"><img src="/itb-dist/pc/pages/login/assets/logo-itb.png?__=828e24d828e24d" alt=""></a>
 	</section>
 	<div id="mainSection" class="ico-more-vert">
 		<script id="tpl-mainSection" type="text/html">
@@ -252,7 +258,7 @@
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c2d8260c"></script>
 <script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d4b44b7d"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7b3777f7"></script>
-<script src="/itb-dist/pc/pages/main/main.i18n.js?__=81411448141144"></script>
+<script src="/itb-dist/pc/pages/login/main.i18n.js?__=d7b8273d7b8273"></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/ui/DisplayOject.js?__="></script>
@@ -267,7 +273,7 @@
 <script type="text/javascript" src="/itb-dist/pc/ts/ui/Tree.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/ui/TabView.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/opg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/main/main.js?__="></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/login/main.js?__="></script>
 <script>
 	!function () {
 		var Languages = require('ts/util/Languages.ts').Languages;
@@ -284,7 +290,7 @@
 			});
 		});
 		console.log('Languages:', Languages);
-		require('pages/main/main.ts');
+		require('pages/login/main.ts');
 	}();
 </script>
 </body>

@@ -101,7 +101,7 @@ define('pages/content/message/index.ts', function(require, exports, module) {
           }
       });
   });
-  var addPage = '/itb-dist/pc/pages/content/message/send.html?__=2255ea9';
+  var addPage = '/itb-dist/pc/pages/content/message/send.html?__=2274576';
   //send
   tb.tbody.on('click', '.btn-warning', function () {
       var btn = $(this), id = btn.data('id'), name = btn.data('name');

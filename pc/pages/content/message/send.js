@@ -22,8 +22,10 @@ define('pages/content/message/send.ts', function(require, exports, module) {
               require: true,
           },
       });
-      if (param)
-          return param;
+      if (param) {
+          param.msgType = 0;
+      }
+      return param;
   };
   //# sourceMappingURL=/itb-dist/pc/pages/content/message/send.js.map?__=
   

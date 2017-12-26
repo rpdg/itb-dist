@@ -1,0 +1,38 @@
+aside {
+  position: fixed;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+aside#left {
+  top: 10px;
+  left: 10px;
+  width: 450px;
+  bottom: 10px;
+}
+
+aside#rightTop {
+  top: 10px;
+  left: 470px;
+  right: 10px;
+  bottom: 50%;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 10px;
+}
+
+aside#rightTop > div {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+aside#rightBottom {
+  top: 50%;
+  left: 470px;
+  right: 10px;
+  bottom: 10px;
+}
+
+/*# sourceMappingURL=dashboard.css.map?__= */

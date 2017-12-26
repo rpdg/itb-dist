@@ -95,6 +95,14 @@ define('pages/content/activity/edit.ts', function(require, exports, module) {
               type: 'ns',
               require: true,
           },
+          publishbegindate: {
+              name: Languages_1.Languages.package.publishTimeBegin,
+              require: true,
+          },
+          publishenddate: {
+              name: Languages_1.Languages.package.publishTimeEnd,
+              require: true,
+          },
       });
       if (param) {
           param.enableStick = param.enableStick ? 1 : 0;
