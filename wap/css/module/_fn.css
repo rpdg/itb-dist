@@ -3,8 +3,8 @@
 	@return ($px / $base) * 1rem;
 }
 
-@mixin shadow($alpha:0.3) {
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, $alpha);
+@mixin shadow($alpha:0.3 , $dist:10px) {
+	box-shadow: 0 0 $dist 0 rgba(0, 0, 0, $alpha);
 }
 
 @mixin lineClip($lines:3) {
@@ -14,11 +14,20 @@
 	overflow: hidden; /** 隐藏超出的内容 **/
 }
 
-@mixin centered($w , $h){
+@mixin centered($w , $h) {
 	position: fixed;
 	width: p2m($w);
 	height: p2m($h);
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+@mixin flexAlignContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	align-content: stretch;
+	justify-content: space-between;
 }

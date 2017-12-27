@@ -1,4 +1,8 @@
 let languagePkg = {
 	en: {},
-	cn: {}
+	cn: {
+		pageTitle: '我的消息',
+		unread: '未读',
+		read: '已读',
+	}
 };

@@ -7,7 +7,16 @@ define('pages/dashboard/index.ts', function(require, exports, module) {
   api_1.api({
       getcurrentuserInfo: 'user/getcurrentuserInfo',
       GetCurrentUserInfoAndMenus: 'user/GetCurrentUserInfoAndMenus?type=0',
-      getSlider: 'canrousel/GetAllCanrousel'
+      getSlider: 'canrousel/GetAllCanrousel',
+      getMsg: 'message/GetMessageByCurrentUser?status=0',
+  });
+  api_1.api.getMsg(function (data) {
+      if (data.length) {
+          $('#myMsg1,#myMsg2').text(data.length);
+      }
+      else {
+          $('#myMsg1,#myMsg2').hide();
+      }
   });
   var menu = {
       Wishlist: {
@@ -16,43 +25,43 @@ define('pages/dashboard/index.ts', function(require, exports, module) {
       },
       Schedule: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-calendar.png?__=5ef52f5',
-          url: '/itb-dist/wap/pages/schedule/mine.html?__=d0d0c28'
+          url: '/itb-dist/wap/pages/schedule/mine.html?__=b9e8d58'
       },
       MessageBox: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-chat.png?__=f1f97c1',
-          url: '/itb-dist/wap/pages/msgBox/msgBox.html?__=69e2b77'
+          url: '/itb-dist/wap/pages/msgBox/msgBox.html?__=5819b43'
       },
       Exhibitors: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-house.png?__=d594dcd',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=8dd63ba'
+          url: '/itb-dist/wap/pages/exhibitors/exhibitors1.html?__=5aa1d5d'
       },
       Buyers: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-user.png?__=3c2d5cf',
-          url: '/itb-dist/wap/pages/buyer/buyer1.html?__=7e51697'
+          url: '/itb-dist/wap/pages/buyer/buyer1.html?__=d40c1ad'
       },
       Events: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-bloom.png?__=710c8e4',
-          url: '/itb-dist/wap/pages/meetings/list.html?__=59c2cdc'
+          url: '/itb-dist/wap/pages/meetings/list.html?__=cdd2d63'
       },
       Navigation: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-paper.png?__=90af55a',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=8dd63ba'
+          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
       },
       PhotoGallary: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-camera.png?__=892346f',
-          url: '/itb-dist/wap/pages/gallery/gallery.html?__=df0c4c5'
+          url: '/itb-dist/wap/pages/gallery/gallery.html?__=f1ee51d'
       },
       ExhibitionInfo: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-paste.png?__=0805019',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=8dd63ba'
+          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
       },
       Press: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-media.png?__=dbfc801',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=8dd63ba'
+          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
       },
       MyScore: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-config.png?__=31f9465',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=8dd63ba'
+          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
       },
   };
   api_1.api.GetCurrentUserInfoAndMenus(function (data) {
@@ -79,16 +88,13 @@ define('pages/dashboard/index.ts', function(require, exports, module) {
   });
   mui('#myScroll').scroll();
   console.log(util_1.Languages.package['leftMenu']);
-  document.getElementById('ulLeftMenu').innerHTML = template('tpl-leftMenu', util_1.Languages.package);
+  //document.getElementById('ulLeftMenu').innerHTML = template('tpl-leftMenu', Languages.package);
   mui('#swLgn').switch();
   document.getElementById('swLgn').addEventListener('toggle', function (event) {
       util_1.Store.set(util_1.Languages.configKeyName, util_1.Languages.names[util_1.Languages.current === util_1.Languages.names.cn ? 'en' : 'cn']);
       setTimeout(function () {
           location.href = './index.html?t=' + (new Date()).getTime();
       }, 300);
-  });
-  document.getElementById('message').addEventListener('tap', function () {
-      location.href = '../announcement/announcement.html';
   });
   document.getElementById('lmWishList').addEventListener('tap', function () {
       location.href = '../wishlist/result.html';

@@ -53,7 +53,7 @@
 <body class="">
 <div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
 
-<div id="mainSection">
+<div id="mainSection" class="templateContainer">
 	<script id="tpl-mainSection" type="text/html">
 		<div id="swLgn" class="switchLanguage mui-switch <%=$data['$current']=='en'?'mui-active':''%> mui-switch-red">
 			<div class="mui-switch-handle"></div>
@@ -93,17 +93,17 @@
 	});*/
 	let Languages = require('js/util.ts').Languages;
 	Languages.init(languagePkg, function (lngPackage) {
-		let templateElem = document.getElementById('tpl-mainSection');
-		let mainSection = document.getElementById('mainSection');
-		if (mainSection && templateElem) {
-			document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-		}
+		$('.templateContainer').each(function (index , elem) {
+			let tmpl = $('script' , this).html();
+			let render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
 	});
 
 
-	mui.init({
-		swipeBack: true //启用右滑关闭功能
-	});
+	mui.init({});
+
+
 	mui.ready(() => {
 		require('pages/login/index.ts');
 	});

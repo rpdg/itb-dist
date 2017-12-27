@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=ad1e264ad1e264" />
     <link rel="stylesheet" href="/itb-dist/wap/css/swiper.css?__=a73efe5a73efe5" />
     <link rel="stylesheet" type="text/css" href="/itb-dist/wap/css/icons-extra.css?__=1d8d0691d8d069" />
-    <link rel="stylesheet" href="/itb-dist/wap/pages/wishlist/assets/wishlist.css?__=771e6f3771e6f3" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/wishlist/assets/wishlist.css?__=fa63d2dfa63d2d" />
 	<script>
 		window.CONFIG = {
 			apiServer: 'http://116.62.34.149:8090/api/'
@@ -63,16 +63,49 @@
 		<div id="unlike" class="rd"></div>
 	</div>
 </div>
+<script id="tpl-detail" type="text/html">
+	<div class="detailContainer">
+		<div class="detail">
+			<img src="/itb-dist/wap/img/banner1.jpg?__=9eb3ceb9eb3ceb" class="headImg">
+			<div class="detailText">
+				<p class="pTitle"><b class="padRed"></b> <%=title%></p>
+				<p class="pMsg">fsdfd</p>
+				<p class="pTxt">bder ermuyi</p>
+				<p class="pMsg">fsdfd</p>
+				<p class="pTxt">bder ermuyi</p>
+				<p class="pMsg">fsdfd</p>
+				<p class="pTxt">bder ermuyi</p>
+			</div>
+		</div>
+	</div>
+</script>
 <script id="tpl-result" type="text/html">
 	<div class="resultContainer">
-		<h1>Result</h1>
-		<img src="" class="imgRs">
-		<span>selected</span>
-		<p class="res"><%=result%></p>
+		<h1><%=resultTitle%></h1>
+		<img src="/itb-dist/wap/pages/score/assets/ico-hands.png?__=fe5b69afe5b69a" class="imgRs">
+		<div class="progressBar"><div class="progress" style="width: <%=result%>%;"></div></div>
+		<p class="res"><%=result%>%</p>
+		<table>
+			<tr>
+				<td><img src="/itb-dist/wap/pages/score/assets/ico-atMost.png?__=afb623dafb623d" alt="at"></td>
+				<td><img src="/itb-dist/wap/pages/score/assets/ico-atLeast.png?__=380c09c380c09c" alt="at"></td>
+				<td><img src="/itb-dist/wap/pages/score/assets/ico-selected.png?__=dec7ca7dec7ca7" alt="at"></td>
+			</tr>
+			<tr>
+				<td class="t"><%=atMost%></td>
+				<td class="t"><%=atLeast%></td>
+				<td class="t"><%=selected%></td>
+			</tr>
+			<tr>
+				<td class="r">20</td>
+				<td class="r">5</td>
+				<td class="r">9</td>
+			</tr>
+		</table>
 	</div>
 </script>
 <script src="/itb-dist/wap/js/libs.js?__=b71f713b71f713"></script>
-<script src="/itb-dist/wap/pages/wishlist/wishlist.i18n.js?__=64ed9cc64ed9cc"></script>
+<script src="/itb-dist/wap/pages/wishlist/wishlist.i18n.js?__=fdca97dfdca97d"></script>
 <script type="text/javascript" src="/itb-dist/wap/js/util.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/js/api.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/pages/wishlist/wishlist.js?__="></script>
@@ -86,17 +119,14 @@
 	});*/
 	let Languages = require('js/util.ts').Languages;
 	Languages.init(languagePkg, function (lngPackage) {
-		let templateElem = document.getElementById('tpl-mainSection');
-		let mainSection = document.getElementById('mainSection');
-		if (mainSection && templateElem) {
-			document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-		}
+		$('.templateContainer').each(function (index , elem) {
+			let tmpl = $('script' , this).html();
+			let render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
 	});
 
-
-	mui.init({
-		swipeBack: true //启用右滑关闭功能
-	});
+
 	mui.ready(() => {
 		require('pages/wishlist/wishlist.ts');
 	});

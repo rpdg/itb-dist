@@ -1,8 +1,8 @@
 body { overflow: hidden; }
 
-#slider { height: 5.6rem; }
+#slider { height: 8.4rem; }
 
-#slider img { width: 10rem; height: 5.6rem; background-color: #777777; }
+#slider img { width: 10rem; height: 8.4rem; background-color: #777777; }
 
 #banner { position: absolute; z-index: 2; width: 100%; }
 
@@ -10,7 +10,7 @@ body { overflow: hidden; }
 
 #message { height: 1.28rem; line-height: 1.28rem; background-color: #eee; padding: 0 0.5rem 0 1.6rem; font-size: 0.3rem; text-overflow: ellipsis; overflow: hidden; background-image: url("/itb-dist/wap/img/ico96-lb.png?__=9c5f992"); background-size: 1.28rem; background-repeat: no-repeat; background-position: left center; white-space: nowrap; }
 
-#myScroll { position: absolute; top: 6.88rem; bottom: 0; overflow: scroll; }
+#myScroll { position: absolute; top: 8.4rem; bottom: 0; overflow: scroll; }
 
 #board { width: 100%; table-layout: fixed; }
 
@@ -22,9 +22,11 @@ body { overflow: hidden; }
 
 #board .icoDashboard { display: block; width: 1.28rem; height: 1.28rem; margin: 0 auto 0.2rem; }
 
-.mui-icon-bars:before { display: block; color: #fff; width: 0.64rem; height: 0.64rem; margin: 0.6rem 0 0 0.4rem; }
+#icoMenu { position: absolute; top: 0.6rem; left: 0.6rem; }
 
-#imgQR { color: #fff; width: 0.64rem; height: 0.64rem; margin: 0.6rem 0.4rem 0 0; }
+.mui-icon-bars:before { display: block; color: #fff; width: 0.64rem; height: 0.64rem; }
+
+#imgLOGO { width: 1.33333rem; height: 1.33333rem; position: absolute; top: 0.33333rem; right: 0.33333rem; }
 
 #offCanvasSide { background-image: url("/itb-dist/wap/pages/dashboard/assets/bg-leftMenu2.jpg?__=7e51618"); background-size: 100% 100%; background-repeat: no-repeat; }
 

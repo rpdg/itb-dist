@@ -20,62 +20,56 @@
 <div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
 <header class="mui-bar mui-bar-nav">
 	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="../dashboard/index.html"></a>
-	<h1 class="mui-title">list</h1>
+	<h1 class="mui-title templateContainer">
+		<script type="text/html">
+			<%=pageTitle%>
+		</script>
+	</h1>
 </header>
 <div class="mui-content">
-	<div>
-		<div id="segmentedControl" class="mui-segmented-control">
-			<a class="mui-control-item mui-active" href="#item1">
-				activity
-			</a>
-			<a class="mui-control-item" href="#item2">
-				conference
-			</a>
-		</div>
-		<div style="padding: 20px;">
-			<div id="item1" class="mui-control-content mui-active">
-				<h1>1st day AM</h1>
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell mui-collapse">
-						<a class="mui-navigate-right" href="#"><b class="padRed"></b> activity name</a>
-						<div class="mui-collapse-content">
-							<div class="summary">start time: <div class="time">2107/09/30 12:00</div></div>
-							<div class="cont">
-								private static String getCaptive PortalServer HttpsUrl
-								return getSetting(context, Settings.Global.CAPTIVE_PORTAL_HTTPS_URL, DEFAULT_HTTPS_URL);
-								可以看到，系统不会自动加入”generate_204″的后缀了，这意味着url可以设计的更加灵活，同时也意味
-								着在设置的时候需要填入完整的url：
-								<a class="pScan" href="signin.html">
-									Sign scan
-								</a>
-							</div>
-						</div>
-					</li>
-					<li class="mui-table-view-cell mui-collapse">
-						<a class="mui-navigate-right" href="#"><b class="padRed"></b> activity name</a>
-						<div class="mui-collapse-content">
-							<div class="summary">start time: <div class="time">2107/09/30 12:00</div></div>
-							<div class="cont">
-								private static String getCaptive PortalServer HttpsUrl
-								return getSetting(context, Settings.Global.CAPTIVE_PORTAL_HTTPS_URL, DEFAULT_HTTPS_URL);
-								可以看到，系统不会自动加入”generate_204″的后缀了，这意味着url可以设计的更加灵活，同时也意味
-								着在设置的时候需要填入完整的url：
-								<p class="pScan">
-									Sign scan
-								</p>
-							</div>
-						</div>
-					</li>
-				</ul>
+	<div class="templateContainer">
+		<script type="text/html">
+			<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#divActivity">
+					<%=activity%>
+				</a>
+				<a class="mui-control-item" href="#divConference">
+					<%=conference%>
+				</a>
 			</div>
-			<div id="item2" class="mui-control-content">
-				bbbbaaa
+			<div style="padding: 20px;">
+				<div id="divActivity" class="mui-control-content mui-active">
+				</div>
+				<div id="divConference" class="mui-control-content">
+				</div>
 			</div>
-		</div>
+		</script>
 	</div>
 </div>
+<script id="tpl-activity" type="text/html">
+	<h1>1st day AM</h1>
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell mui-collapse">
+			<a class="mui-navigate-right" href="#"><b class="padRed"></b> activity name</a>
+			<div class="mui-collapse-content">
+				<div class="summary">start time:
+					<div class="time">2107/09/30 12:00</div>
+				</div>
+				<div class="cont">
+					private static String getCaptive PortalServer HttpsUrl
+					return getSetting(context, Settings.Global.CAPTIVE_PORTAL_HTTPS_URL, DEFAULT_HTTPS_URL);
+					可以看到，系统不会自动加入”generate_204″的后缀了，这意味着url可以设计的更加灵活，同时也意味
+					着在设置的时候需要填入完整的url：
+					<a class="pScan" href="signin.html">
+						Sign scan
+					</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+</script>
 <script src="/itb-dist/wap/js/libs.js?__=b71f713b71f713"></script>
-<script src="/itb-dist/wap/pages/meetings/list.i18n.js?__=64ed9cc64ed9cc"></script>
+<script src="/itb-dist/wap/pages/meetings/list.i18n.js?__=2f337322f33732"></script>
 <script type="text/javascript" src="/itb-dist/wap/js/util.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/js/api.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/pages/meetings/list.js?__="></script>
@@ -88,17 +82,14 @@
 	});*/
 	let Languages = require('js/util.ts').Languages;
 	Languages.init(languagePkg, function (lngPackage) {
-		let templateElem = document.getElementById('tpl-mainSection');
-		let mainSection = document.getElementById('mainSection');
-		if (mainSection && templateElem) {
-			document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-		}
+		$('.templateContainer').each(function (index , elem) {
+			let tmpl = $('script' , this).html();
+			let render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
 	});
 
-
-	mui.init({
-		swipeBack: true //启用右滑关闭功能
-	});
+
 	mui.ready(() => {
 		require('pages/meetings/list.ts');
 	});

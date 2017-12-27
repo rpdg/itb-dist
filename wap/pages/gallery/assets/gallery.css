@@ -1,12 +1,12 @@
 .filterBar { padding: 0 0.53333rem; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); border-radius: 6px; }
 
-.filterBar .mui-btn-block { font-size: 0.29333rem; padding: 8px 0; }
+.filterBar .mui-btn { font-size: 0.29333rem; display: inline-block; overflow: hidden; border: 0; }
 
-.filterBar #selDate { width: 3.33333rem; }
+.filterBar #sel1 { width: 2rem; }
 
-.filterBar #selMainCatagory { width: 2.66667rem; }
+.filterBar #sel2 { width: 3.33333rem; }
 
-.filterBar #selSubCatagory { width: 2rem; }
+.filterBar #sel3 { width: 2.66667rem; }
 
 .showcase { box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); margin-top: 0.13333rem; border-radius: 6px; padding: 0.4rem; position: absolute; top: 4.4rem; left: 50%; margin-left: -4.66667rem; bottom: 0.48rem; /**/ }
 

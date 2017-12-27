@@ -18,6 +18,8 @@
 
 .mui-table-view .mui-table-view-cell:after { background-color: transparent; }
 
+.mui-table-view .mui-table-view-cell .mui-input-group:after { background-color: transparent; }
+
 .mui-table-view .mui-table-view-cell h3 { height: 0.93333rem; line-height: 0.93333rem; margin-bottom: 0; color: #d71711; text-indent: 1.06667rem; text-transform: uppercase; font-size: 0.37333rem; font-weight: 600; background-repeat: no-repeat; background-position: 12px center; background-size: 0.42667rem 0.42667rem; }
 
 .mui-table-view .mui-table-view-cell h3.h3type { background-image: url("/itb-dist/wap/pages/msgBox/assets/ico32-bloom.png?__=436ccbd436ccbd"); }

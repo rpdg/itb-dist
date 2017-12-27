@@ -29,7 +29,36 @@
 #tbSchedule thead td {
   color: #fff;
   background-color: #c71111;
+}
+
+#tbSchedule thead td span, #tbSchedule thead td time {
+  display: inline-block;
+}
+
+#tbSchedule thead td > .x {
+  width: 90px;
+  height: 50px;
+  vertical-align: middle;
   font-size: 29px;
+  text-transform: uppercase;
+}
+
+#tbSchedule thead td > time {
+  width: 100px;
+  height: 50px;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 1em;
+}
+
+#tbSchedule thead td > time > .d {
+  width: 99px;
+  font-size: 16px;
+}
+
+#tbSchedule thead td > time > .dt {
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 #tbSchedule thead td:nth-of-type(4n+1) {
@@ -110,7 +139,7 @@
 }
 
 #tbSchedule tbody.rest td.lunch {
-  background-color: #ddd;
+  background-color: #f0f0f0;
   color: #aaa;
 }
 

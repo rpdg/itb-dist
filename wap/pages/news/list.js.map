@@ -1,0 +1,1 @@
+{"version":3,"sources":["/pages/news/list.ts"],"names":[],"mappings":";;;;AAAA,+BAA4B;AAG5B,SAAG,CAAC,EAEH,CAAC,CAAC","file":"list.js","sourcesContent":["import {api} from '/js/api';\r\nimport {request} from '/js/util';\r\n\r\napi({\r\n\r\n});\r\n\r\n\r\n"]}

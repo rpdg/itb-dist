@@ -22,9 +22,12 @@ let languagePkg = {
 	},
 	cn: {
 		leftMenu:{
+			MyInfo : '我的信息',
 			Wishlist : '心愿单',
-			Score : '分数',
-			Language : '语言',
+			ScanQr : '扫二维码',
+			Score : '我的积分',
+			Notice : '消息',
+			Language : '切换语言',
 			Logout : '退出登录',
 		},
 		menu :{

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+#newsList.mui-table-view { background-color: transparent; }
+
+#newsList.mui-table-view:after, #newsList.mui-table-view:before { background-color: transparent; }
+
+.atom { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); width: 8.93333rem; background-color: #fff; border-radius: 0.13333rem; margin: 0.66667rem auto 0; }
+
+.atom .topStick { position: absolute; height: 1.26667rem; width: 1.06667rem; margin-left: 7.6rem; }
+
+.atom > .news { padding: 0.13333rem; }
+
+.atom > .news img { min-height: 100px; max-width: 100%; border-radius: 0.13333rem; background-color: #000; }
+
+.atom > .news .title { position: relative; height: 1.33333rem; margin-top: -1.46667rem; overflow: hidden; background-color: rgba(0, 0, 0, 0.5); padding-left: 0.26667rem; border-bottom-left-radius: 0.13333rem; border-bottom-right-radius: 0.13333rem; }
+
+.atom > .news .title > h1 { font-size: 0.37333rem; font-weight: 900; color: #fff; padding-left: 0.26667rem; padding-top: 0.13333rem; }
+
+.atom > .news .title > time { font-size: 0.26667rem; color: #aaa; padding-left: 0.26667rem; }
+
+.atom > .news .summary { padding: 0.26667rem 0.13333rem; }
+
+.atom > .news > p { display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/ -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/ -webkit-line-clamp: 3; /** 显示的行数 **/ overflow: hidden; /** 隐藏超出的内容 **/ font-size: 0.29333rem; color: #333; }
+
+.atom > .btnLink { color: #d71711; font-size: 0.32rem; text-transform: uppercase; height: 1rem; width: 100%; padding-left: 0.26667rem; }
+
+.atom > .btnLink a { color: #d71711; font-size: 0.32rem; text-transform: uppercase; }
+
+.detail { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); width: 8.93333rem; background-color: #fff; border-radius: 0.13333rem; margin: 0.66667rem auto; padding: 0.66667rem 0.6rem; }
+
+.detail #main > h1 { font-size: 0.42667rem; font-weight: 900; color: #000; }
+
+.detail #main > time { font-size: 0.26667rem; color: #aaa; margin-bottom: 2em; }
+
+.detail #main > p { margin-top: 1em; }
+
+.detail #sub > p { font-size: 0.29333rem; color: #333; }
+
+.detail #sub a { color: #00d; text-decoration: underline; }
+
+.detail img { max-width: 100%; max-height: none !important; }
+
+/*# sourceMappingURL=news.css.map?__= */

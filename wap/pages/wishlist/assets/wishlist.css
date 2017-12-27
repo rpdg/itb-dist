@@ -27,14 +27,42 @@
 
 .rate .rd#unlike { float: right; background-image: url("/itb-dist/wap/pages/wishlist/assets/ico-hate.png?__=2163fb42163fb4"); background-repeat: no-repeat; background-position: center center; background-size: 1.26667rem 1.08rem; }
 
-.mui-content { height: 13.33333rem; background-image: url("/itb-dist/wap/pages/wishlist/assets/bg-bottom.png?__=48ecbe548ecbe5"); background-repeat: no-repeat; background-position: center bottom; background-size: 7.33333rem 0.85333rem; }
+.mui-content { height: 13.2rem; background-image: url("/itb-dist/wap/pages/wishlist/assets/bg-bottom.png?__=48ecbe548ecbe5"); background-repeat: no-repeat; background-position: center bottom; background-size: 7.33333rem 0.85333rem; }
 
-.resultContainer { background-color: #fff; border-radius: 20px; padding: 0.93333rem; text-align: center; position: fixed; width: 7.86667rem; height: 12.8rem; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.detailContainer { margin-top: 2.33333rem; }
 
-.resultContainer h1 { text-align: center; text-transform: uppercase; font-size: 0.66667rem; line-height: 0.93333rem; width: 4.4rem; margin: 0 auto; border-bottom: 5px double #d71711; }
+.detailContainer > .detail { background-color: #fff; border-radius: 0.26667rem; padding-bottom: 0.66667rem; width: 7.86667rem; text-align: center; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
 
-.resultContainer .imgRs { display: block; width: 2.66667rem; height: 2.4rem; margin: 0.26667rem auto; }
+.detailContainer > .detail > .headImg { width: 7.26667rem; height: 5.6rem; margin: -2.61333rem auto 0; border-radius: 0.16rem; box-shadow: 0 0 20px 0 black; }
 
-.resultContainer .res { font-size: 0.93333rem; line-height: 1.5em; }
+.detailContainer > .detail > .detailText { text-align: left; padding: 0.33333rem; }
+
+.detailContainer > .detail > .detailText .pTitle { color: #000; font-size: 0.42667rem; text-transform: uppercase; }
+
+.detailContainer > .detail > .detailText .pMsg { color: #d71711; font-size: 0.42667rem; margin: 0.21333rem 0 0.13333rem; text-indent: 1.52em; background-image: url("/itb-dist/wap/pages/msgBox/assets/ico32-book.png?__=269fedf269fedf"); background-repeat: no-repeat; background-position: left 3px; background-size: 0.42667rem 0.42667rem; }
+
+.detailContainer > .detail > .detailText .pTxt { color: #555; font-size: 0.42667rem; text-indent: 1.52em; margin-bottom: 0.26667rem; }
+
+.resultContainer { background-color: #fff; border-radius: 20px; padding: 0.93333rem; text-align: center; position: fixed; width: 7.86667rem; height: 12.8rem; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6); }
+
+.resultContainer h1 { text-align: center; text-transform: uppercase; font-size: 0.8rem; line-height: 0.93333rem; width: 3.33333rem; margin: 0 auto; border-bottom: 5px double #d71711; }
+
+.resultContainer .imgRs { display: block; width: 2.45333rem; height: 1.82667rem; margin: 1.06667rem auto 0.66667rem; }
+
+.resultContainer .progressBar { width: 3.33333rem; height: 0.10667rem; margin: 0 auto; background-color: #ddd; border-radius: 20px; }
+
+.resultContainer .progressBar .progress { background-color: #d71711; height: 0.10667rem; border-radius: 20px; }
+
+.resultContainer .res { font-size: 0.93333rem; line-height: 1.5em; color: #d71711; margin-top: 0.4rem; margin-bottom: 2.66667rem; }
+
+.resultContainer table { width: 100%; }
+
+.resultContainer table td { text-align: left; width: 35%; }
+
+.resultContainer table td.t { color: #999; font-size: 0.34667rem; }
+
+.resultContainer table td.r { color: #222; font-size: 0.61333rem; line-height: 1.06667rem; }
+
+.resultContainer table td img { height: 0.42667rem; }
 
 /*# sourceMappingURL=wishlist.css.map?__= */

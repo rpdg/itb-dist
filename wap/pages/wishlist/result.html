@@ -70,17 +70,14 @@
 	});*/
 	let Languages = require('js/util.ts').Languages;
 	Languages.init(languagePkg, function (lngPackage) {
-		let templateElem = document.getElementById('tpl-mainSection');
-		let mainSection = document.getElementById('mainSection');
-		if (mainSection && templateElem) {
-			document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-		}
+		$('.templateContainer').each(function (index , elem) {
+			let tmpl = $('script' , this).html();
+			let render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
 	});
 
-
-	mui.init({
-		swipeBack: true //启用右滑关闭功能
-	});
+
 	mui.ready(() => {
 		require('pages/wishlist/result.ts');
 	});

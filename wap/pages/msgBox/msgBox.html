@@ -9,7 +9,7 @@
 	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
 	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=a71f1ada71f1ad" />
     <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=ad1e264ad1e264" />
-    <link rel="stylesheet" href="/itb-dist/wap/pages/msgBox/assets/msgBox.css?__=389dc55389dc55" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/msgBox/assets/msgBox.css?__=91cefdd91cefdd" />
 	<script>
 		window.CONFIG = {
 			apiServer: 'http://116.62.34.149:8090/api/'
@@ -20,63 +20,62 @@
 <div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
 <header class="mui-bar mui-bar-nav">
 	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="../dashboard/index.html"></a>
-	<h1 class="mui-title">Message Box</h1>
+	<h1 class="mui-title templateContainer">
+		<script type="text/html">
+			<%=pageTitle%>
+		</script>
+	</h1>
 </header>
 <div class="mui-content">
-	<div>
-		<div id="segmentedControl" class="mui-segmented-control">
-			<a class="mui-control-item mui-active" href="#item1">
-				Unread
-			</a>
-			<a class="mui-control-item" href="#item2">
-				Read
-			</a>
-		</div>
-		<div style="padding: 20px;">
-			<div id="item1" class="mui-control-content mui-active">
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell mui-collapse">
-						<a class="mui-navigate-right" href="#"><b class="padRed"></b> Need to confirm</a>
-						<div class="mui-collapse-content">
-							<form class="mui-input-group">
-								<div style="padding: 10px 0 0;">
-									<h3 class="h3type">Activity</h3>
-									<p class="txt">opening soon</p>
-									<h3 class="h3time">start time</h3>
-									<p class="txt">2018/05/31 12:30</p>
-									<p class="pMsg">we hope you can intend we hope you can intend we hope you can intend we hope you can intend we hope you can intend </p>
-								</div>
-								<div class="mui-popup-buttons">
-									<span class="mui-popup-button">Agree</span>
-									<span class="mui-popup-button">Deny</span>
-								</div>
-							</form>
-						</div>
-					</li>
-					<li class="mui-table-view-cell mui-collapse">
-						<a class="mui-navigate-right" href="#">文字排版</a>
-						<div class="mui-collapse-content">
-							<h1>h1. Heading</h1>
-							<h2>h2. Heading</h2>
-							<h3>h3. Heading</h3>
-							<h4>h4. Heading</h4>
-							<h5>h5. Heading</h5>
-							<h6>h6. Heading</h6>
-							<p>
-								p. 目前最接近原生App效果的框架。
-							</p>
-						</div>
-					</li>
-				</ul>
+	<div class="templateContainer">
+		<script type="text/html">
+			<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#divUnread">
+					<%=unread%>
+				</a>
+				<a class="mui-control-item" href="#divRead">
+					<%=read%>
+				</a>
 			</div>
-			<div id="item2" class="mui-control-content">
-				bbbbaaa
+			<div id="msgWhole" style="padding: 20px;">
+				<div id="divUnread" class="mui-control-content mui-active">
+					<ul id="ulUnread" class="mui-table-view">
+					</ul>
+				</div>
+				<div id="divRead" class="mui-control-content">
+					<ul id="ulRead" class="mui-table-view">
+					</ul>
+				</div>
 			</div>
-		</div>
+		</script>
 	</div>
 </div>
+<script id="tpl-msg" type="text/html">
+	<% for (var i=0,l=$data.length,item; i< l , item= $data[i] ; i++) { %>
+	<li class="mui-table-view-cell mui-collapse">
+		<a class="mui-navigate-right" href="#" data-id="<%=item.id%>"><b class="padRed"></b> <%=item.msgtitle%></a>
+		<div class="mui-collapse-content">
+			<form class="mui-input-group">
+				<div style="padding: 10px 0 0;">
+					<!--<h3 class="h3type">Activity</h3>
+					<p class="txt">opening soon</p>
+					<h3 class="h3time">start time</h3>
+					<p class="txt">2018/05/31 12:30</p>-->
+					<p class="pMsg"><%=item.msgcontent%></p>
+				</div>
+				<%if(item.msgtype == 2){%>
+				<div class="mui-popup-buttons">
+					<span class="mui-popup-button">Agree</span>
+					<span class="mui-popup-button">Deny</span>
+				</div>
+				<% } %>
+			</form>
+		</div>
+	</li>
+	<% } %>
+</script>
 <script src="/itb-dist/wap/js/libs.js?__=b71f713b71f713"></script>
-<script src="/itb-dist/wap/pages/msgBox/msgBox.i18n.js?__=64ed9cc64ed9cc"></script>
+<script src="/itb-dist/wap/pages/msgBox/msgBox.i18n.js?__=6fc8a2c6fc8a2c"></script>
 <script type="text/javascript" src="/itb-dist/wap/js/util.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/js/api.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/pages/msgBox/msgBox.js?__="></script>
@@ -89,17 +88,14 @@
 	});*/
 	let Languages = require('js/util.ts').Languages;
 	Languages.init(languagePkg, function (lngPackage) {
-		let templateElem = document.getElementById('tpl-mainSection');
-		let mainSection = document.getElementById('mainSection');
-		if (mainSection && templateElem) {
-			document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-		}
+		$('.templateContainer').each(function (index , elem) {
+			let tmpl = $('script' , this).html();
+			let render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
 	});
 
-
-	mui.init({
-		swipeBack: true //启用右滑关闭功能
-	});
+
 	mui.ready(() => {
 		require('pages/msgBox/msgBox.ts');
 	});
