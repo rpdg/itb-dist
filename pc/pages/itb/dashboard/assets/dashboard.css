@@ -1,7 +1,9 @@
+@charset "UTF-8";
 aside {
   position: fixed;
   background-color: #fff;
   border: 1px solid #ccc;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 aside#left {
@@ -11,21 +13,82 @@ aside#left {
   bottom: 10px;
 }
 
-aside#rightTop {
-  top: 10px;
-  left: 470px;
-  right: 10px;
-  bottom: 50%;
-  background-color: transparent;
-  border: none;
-  padding-bottom: 10px;
+aside#left .announcement {
+  margin: 20px 12px;
 }
 
-aside#rightTop > div {
+aside#left .announcement > h1 {
+  color: #d71711;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 48px;
+}
+
+aside#left .announcement #an1 > h2 {
+  line-height: 28px;
+  margin-top: 1em;
+}
+
+aside#left .announcement #an1 > h2 > a {
+  font-size: 16px;
+}
+
+aside#left .announcement #an1 > time {
+  color: #aaa;
+  font-size: 12px;
+}
+
+aside#left .announcement #an1 > .anContent {
+  font-size: 14px;
+  margin: 0.5em auto 2em;
+  display: -webkit-box;
+  /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical;
+  /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2;
+  /** 显示的行数 **/
+  overflow: hidden;
+  /** 隐藏超出的内容 **/
+}
+
+aside#left .announcement #aMore {
+  color: #d71711;
+  float: right;
+}
+
+aside#left .swiper-container {
+  width: 448px;
+  height: 240px;
+}
+
+aside#left .swiper-container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+aside#left .swiper-container .swiper-slide img {
+  width: 448px;
+  height: 240px;
+}
+
+aside#rightTop {
+  position: static;
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  border: 1px solid #ccc;
 }
 
 aside#rightBottom {
@@ -33,6 +96,17 @@ aside#rightBottom {
   left: 470px;
   right: 10px;
   bottom: 10px;
+}
+
+.rightTopWrap {
+  position: fixed;
+  top: 10px;
+  left: 470px;
+  right: 10px;
+  bottom: 50%;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=dashboard.css.map?__= */

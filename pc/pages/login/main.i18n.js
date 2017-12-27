@@ -59,13 +59,7 @@ var languagePkg = {
 			DisableWordsSetting: '禁用词设定',
 			AddNews : '添加新闻',
 			AddNotice : '添加公告',
-			ExhibitorManagement : '展商入口' ,
-			BuyerManagement : '买家入口' ,
-			VistorManagement : '参观者入口' ,
-			GuestManagement : '游客入口' ,
-			PressManagement : '媒体入口' ,
-			ITBManagement : 'ITB 入口' ,
-			StaffManagment : '志愿者入口' ,
+			WebManagment : 'ITB 入口' ,
 			Wishlist : '心愿单' ,
 			Schedule : '日程表' ,
 			Exhibitors : '展商' ,
@@ -77,8 +71,12 @@ var languagePkg = {
 			ExhibitionInfo : '展会信息' ,
 			Navigation : '导航' ,
 			MyScore : '我的积分' ,
+			LogisticsManagement : '后勤管理',
 			MyTrip : '我的旅行' ,
-			MyBooth : '我的摊位'
+			MyBooth : '我的展位',
+			InvitationLetter : '邀请函',
+			ServiceToRent : '服务租用',
+			ApplicationForBoothActivity : '展位活动申请'
 		}
 	}
 };

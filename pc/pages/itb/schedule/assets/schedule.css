@@ -1,0 +1,117 @@
+#tbSchedule {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+}
+
+#tbSchedule tr > td {
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid #eee;
+  text-align: center;
+  border-top: none;
+  border-right: none;
+}
+
+#tbSchedule tr > td:nth-of-type(4n+1) {
+  width: 105px;
+  font-size: 14px;
+  border-left: none;
+  color: #999;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+  box-shadow: inset -1px 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#tbSchedule thead td {
+  color: #fff;
+  background-color: #c71111;
+  font-size: 29px;
+}
+
+#tbSchedule thead td:nth-of-type(4n+1) {
+  font-size: 24px;
+}
+
+#tbSchedule tbody td {
+  background-color: #fff;
+  vertical-align: top;
+}
+
+#tbSchedule tbody td.noTime {
+  background-color: #ddd;
+  color: #aaa;
+}
+
+#tbSchedule tbody.mine td {
+  padding: 2px;
+}
+
+#tbSchedule tbody.mine td section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  align-content: stretch;
+  justify-content: space-between;
+}
+
+#tbSchedule tbody.mine td div {
+  width: 100%;
+  height: 60px;
+  padding: 6px;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: capitalize;
+  vertical-align: top;
+  padding-top: 32px;
+}
+
+#tbSchedule tbody.mine td .divAddTo {
+  border: 1px dashed #d71711;
+  color: #d71711;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#tbSchedule tbody.mine td .divAppoint {
+  color: #f1d27e;
+  border: 1px solid #f1d27e;
+  background-color: #fff8df;
+}
+
+#tbSchedule tbody.mine td .divActivity {
+  color: #fd722d;
+  border: 1px solid #fd722d;
+  background-color: #ffdece;
+}
+
+#tbSchedule tbody.mine td .divMeeting {
+  color: #92be57;
+  border: 1px solid #92be57;
+  background-color: #e5eed7;
+}
+
+#tbSchedule tbody.mine td .divWalk {
+  color: #617dc3;
+  border: 1px solid #617dc3;
+  background-color: #d7e3ee;
+}
+
+#tbSchedule tbody.rest td {
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+#tbSchedule tbody.rest td.lunch {
+  background-color: #ddd;
+  color: #aaa;
+}
+
+/*# sourceMappingURL=schedule.css.map?__= */

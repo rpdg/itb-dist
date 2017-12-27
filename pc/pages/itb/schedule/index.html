@@ -7,54 +7,96 @@
 	<meta name="renderer" content="webkit">
 	<title>ITB</title>
 	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814a" />
-    <link rel="stylesheet" href="/itb-dist/pc/css/swiper.css?__=962c5b3" />
-    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/dashboard/assets/dashboard.css?__=51f4878" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/schedule/assets/schedule.css?__=550f496" />
 </head>
 <body>
-<aside id="left" class="templateContainer">
-	<script type="text/html">
-		<div id="swiper" class="swiper-container">
-		</div>
-		<div class="announcement">
-			<h1><%=announcement%></h1>
-			<div id="an1"></div>
-			<p><a id="aMore" href="#"><%=readMore%></a></p>
-		</div>
-	</script>
-</aside>
-<div class="rightTopWrap">
-	<aside id="rightTop">
-	</aside>
-</div>
-<aside id="rightBottom">
-</aside>
-<script id="tpl-swiper" type="text/html">
-	<div class="swiper-wrapper">
-		<% for(var i=0, l= $data.length, pic ; i< l, pic = $data[i]; i++){ %>
-		<div class="swiper-slide">
-			<a href="../news/detail.html?id=<%=pic.id%>">
-				<img src="<%=pic.coverpicture%>">
-			</a>
-		</div>
-		<%}%>
-	</div>
-	<!-- Add Arrows -->
-	<div class="swiper-button-next swiper-button-white"></div>
-	<div class="swiper-button-prev swiper-button-white"></div>
-	<!-- Add Pagination -->
-	<div class="swiper-pagination swiper-pagination-white"></div>
-</script>
-<script id="tpl-news" type="text/html">
-	<% for(var i=0, l= $data.length, an ; i< l, an = $data[i]; i++){ %>
-		<h2><a href="<%=an.id%>"><%=an.title%></a></h2>
-		<time><%=an.publishbegindate%></time>
-		<%if(an.subjects && an.subjects.length){ %>
-			<div class="anContent">
-				<%=an.subjects[0].content%>
-			</div>
-		<%}%>
-	<%}%>
-</script>
+<table id="tbSchedule">
+	<thead>
+	<tr>
+		<td>2018</td>
+		<td>27</td>
+		<td>28</td>
+		<td>29</td>
+	</tr>
+	</thead>
+	<tbody class="mine">
+	<tr>
+		<td>9:30 AM</td>
+		<td>
+			<section>
+				<div class="divAppoint">appointment</div>
+				<div class="divActivity">activity</div>
+			</section>
+		</td>
+		<td>
+			<section>
+				<div class="divAppoint">appointment</div>
+				<div class="divMeeting">meeting</div>
+				<div class="divActivity">activity</div>
+			</section>
+		</td>
+		<td>
+			<section>
+				<div class="divAppoint">appointment</div>
+				<div class="divActivity">activity</div>
+				<div class="divWalk">walk in</div>
+				<div class="divMeeting">meeting</div>
+			</section>
+		</td>
+	</tr>
+	<tr>
+		<td>10:30 am</td>
+		<td>
+			<section>
+				<div class="divAppoint">appointment</div>
+				<div class="divActivity">appointment</div>
+			</section>
+		</td>
+		<td></td>
+		<td>
+			<section>
+				<div class="divAddTo"> + Add To</div>
+			</section>
+		</td>
+	</tr>
+	<tr>
+		<td>11:30 am</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	</tbody>
+	<tbody class="rest">
+	<tr>
+		<td>12:00</td>
+		<td colspan="3" class="lunch">lunch time</td>
+	</tr>
+	</tbody>
+	<tbody class="mine">
+	<tr>
+		<td>13:30</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>14:30</td>
+		<td></td>
+		<td></td>
+		<td>
+			<section>
+				<div class="divAddTo"> + Add To</div>
+			</section>
+		</td>
+	</tr>
+	<tr>
+		<td>15:30</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	</tbody>
+</table>
 <div id="opgAjaxLoading">
 	<div id="opgAjaxLoadingText">
 		<div id="square-spin"></div>
@@ -67,14 +109,14 @@
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
 <script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
-<script src="/itb-dist/pc/pages/itb/dashboard/index.i18n.js?__=7701277"></script>
+<script src="/itb-dist/pc/pages/itb/schedule/index.i18n.js?__=725550a"></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/app.cfg.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/utils.js?__="></script>
 <script type="text/javascript" src="/itb-dist/pc/ts/util/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/itb/dashboard/index.js?__="></script>
-<script src="/itb-dist/pc/lib/swiper.js?__=e21ee4c"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/schedule/index.js?__="></script>
+<script src="/itb-dist/pc/lib/dialog-plus.js?__=e9750be"></script>
 <script>
 	!function () {
 		var Languages = require('ts/util/Languages.ts').Languages;
@@ -91,7 +133,7 @@
 			});
 		});
 		console.log('Languages:', Languages);
-		require('pages/itb/dashboard/index.ts');
+		require('pages/itb/schedule/index.ts');
 	}();
 </script>
 </body>
