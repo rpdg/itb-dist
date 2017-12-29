@@ -1,0 +1,1 @@
+{"version":3,"sources":["/pages/navigation/index.ts"],"names":[],"mappings":";;;;AAAA,+BAA4B;AAG5B,+BAA0B;AAE1B,SAAG,CAAC,EAEH,CAAC,CAAC;AAEH,IAAI,cAAI,EAAE,CAAC","file":"index.js","sourcesContent":["import {api} from '/js/api';\r\nimport {Languages} from '/js/util';\r\nimport {request} from '/js/util';\r\nimport FMap from './FMap';\r\n\r\napi({\r\n\r\n});\r\n\r\nnew FMap();"]}

@@ -45,7 +45,7 @@ define('pages/dashboard/index.ts', function(require, exports, module) {
       },
       Navigation: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-paper.png?__=90af55a',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
+          url: '/itb-dist/wap/pages/navigation/index.html?__=e0e593b'
       },
       PhotoGallary: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-camera.png?__=892346f',
@@ -53,15 +53,15 @@ define('pages/dashboard/index.ts', function(require, exports, module) {
       },
       ExhibitionInfo: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-paste.png?__=0805019',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
+          url: '../exhibitionInfo/index.html'
       },
       Press: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-media.png?__=dbfc801',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
+          url: '../press/index.html'
       },
       MyScore: {
           icon: '/itb-dist/wap/pages/dashboard/assets/ico96-config.png?__=31f9465',
-          url: '/itb-dist/wap/pages/wishlist/wishlist.html?__=65a8dcf'
+          url: '../myScore/index.html'
       },
   };
   api_1.api.GetCurrentUserInfoAndMenus(function (data) {
@@ -96,9 +96,9 @@ define('pages/dashboard/index.ts', function(require, exports, module) {
           location.href = './index.html?t=' + (new Date()).getTime();
       }, 300);
   });
-  document.getElementById('lmWishList').addEventListener('tap', function () {
+  /*document.getElementById('lmWishList').addEventListener('tap', function () {
       location.href = '../wishlist/result.html';
-  });
+  });*/
   document.getElementById('lmSignOut').addEventListener('tap', function () {
       location.href = '../login/index.html';
   });

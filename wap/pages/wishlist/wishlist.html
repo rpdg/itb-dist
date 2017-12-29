@@ -7,11 +7,11 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
-	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=a71f1ada71f1ad" />
-    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=ad1e264ad1e264" />
-    <link rel="stylesheet" href="/itb-dist/wap/css/swiper.css?__=a73efe5a73efe5" />
-    <link rel="stylesheet" type="text/css" href="/itb-dist/wap/css/icons-extra.css?__=1d8d0691d8d069" />
-    <link rel="stylesheet" href="/itb-dist/wap/pages/wishlist/assets/wishlist.css?__=fa63d2dfa63d2d" />
+	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=a71f1ad" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=ad1e264" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/swiper.css?__=a73efe5" />
+    <link rel="stylesheet" type="text/css" href="/itb-dist/wap/css/icons-extra.css?__=1d8d069" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/wishlist/assets/wishlist.css?__=5792d9b" />
 	<script>
 		window.CONFIG = {
 			apiServer: 'http://116.62.34.149:8090/api/'
@@ -30,7 +30,7 @@
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<div class="cont">
-					<img src="/itb-dist/wap/img/banner1.jpg?__=9eb3ceb9eb3ceb" alt="">
+					<img src="/itb-dist/wap/img/banner1.jpg?__=9eb3ceb" alt="">
 					<h1>
 						<span class="pointer">
 							<span class="mui-icon mui-icon-location-filled"></span>
@@ -66,7 +66,7 @@
 <script id="tpl-detail" type="text/html">
 	<div class="detailContainer">
 		<div class="detail">
-			<img src="/itb-dist/wap/img/banner1.jpg?__=9eb3ceb9eb3ceb" class="headImg">
+			<img src="/itb-dist/wap/img/banner1.jpg?__=9eb3ceb" class="headImg">
 			<div class="detailText">
 				<p class="pTitle"><b class="padRed"></b> <%=title%></p>
 				<p class="pMsg">fsdfd</p>
@@ -82,14 +82,14 @@
 <script id="tpl-result" type="text/html">
 	<div class="resultContainer">
 		<h1><%=resultTitle%></h1>
-		<img src="/itb-dist/wap/pages/score/assets/ico-hands.png?__=fe5b69afe5b69a" class="imgRs">
+		<img src="/itb-dist/wap/pages/score/assets/ico-hands.png?__=fe5b69a" class="imgRs">
 		<div class="progressBar"><div class="progress" style="width: <%=result%>%;"></div></div>
 		<p class="res"><%=result%>%</p>
 		<table>
 			<tr>
-				<td><img src="/itb-dist/wap/pages/score/assets/ico-atMost.png?__=afb623dafb623d" alt="at"></td>
-				<td><img src="/itb-dist/wap/pages/score/assets/ico-atLeast.png?__=380c09c380c09c" alt="at"></td>
-				<td><img src="/itb-dist/wap/pages/score/assets/ico-selected.png?__=dec7ca7dec7ca7" alt="at"></td>
+				<td><img src="/itb-dist/wap/pages/score/assets/ico-atMost.png?__=afb623d" alt="at"></td>
+				<td><img src="/itb-dist/wap/pages/score/assets/ico-atLeast.png?__=380c09c" alt="at"></td>
+				<td><img src="/itb-dist/wap/pages/score/assets/ico-selected.png?__=dec7ca7" alt="at"></td>
 			</tr>
 			<tr>
 				<td class="t"><%=atMost%></td>
@@ -104,12 +104,12 @@
 		</table>
 	</div>
 </script>
-<script src="/itb-dist/wap/js/libs.js?__=b71f713b71f713"></script>
-<script src="/itb-dist/wap/pages/wishlist/wishlist.i18n.js?__=fdca97dfdca97d"></script>
+<script src="/itb-dist/wap/js/libs.js?__=b71f713"></script>
+<script src="/itb-dist/wap/pages/wishlist/wishlist.i18n.js?__=fdca97d"></script>
 <script type="text/javascript" src="/itb-dist/wap/js/util.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/js/api.js?__="></script>
 <script type="text/javascript" src="/itb-dist/wap/pages/wishlist/wishlist.js?__="></script>
-<script src="/itb-dist/wap/lib/swiper.js?__=505eb84505eb84"></script>
+<script src="/itb-dist/wap/lib/swiper.js?__=505eb84"></script>
 <script>
 	/*window.addEventListener('pageshow', function (e) {
 		// 通过persisted属性判断是否存在 BF Cache
