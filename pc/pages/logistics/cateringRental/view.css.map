@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "file": "view.css?__=1552033897847",
+    "sources": [
+        "/pages/logistics/cateringRental/view.scss"
+    ],
+    "sourcesContent": [
+        "#listtable {\r\n  width:100%;\r\n}\r\n#listtable thead th {\r\n  background-color: #ecf0f1;\r\n  color: #000;\r\n  border-bottom-width: 0;\r\n}\r\n\r\n/* Column Style */\r\n#listtable td {\r\n  color: #000;\r\n}\r\n/* Heading and Column Style */\r\n#listtable tr, #listtable th {\r\n  border-width: 1px;\r\n  border-style: solid;\r\n  border-color: #000;\r\n}\r\n\r\n/* Padding and font style */\r\n#listtable td, #listtable th {\r\n  padding: 5px 10px;\r\n  font-size: 12px;\r\n  font-family: Verdana;\r\n  font-weight: bold;\r\n}"
+    ],
+    "names": [],
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,KAAK,EAAC,IAAI;CACX;;AACD,AAAA,UAAU,CAAC,KAAK,CAAC,EAAE,CAAC;EAClB,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,IAAI;EACX,mBAAmB,EAAE,CAAC;CACvB;;AAED,kBAAkB;AAClB,AAAA,UAAU,CAAC,EAAE,CAAC;EACZ,KAAK,EAAE,IAAI;CACZ;;AACD,8BAA8B;AAC9B,AAAA,UAAU,CAAC,EAAE,EAAE,UAAU,CAAC,EAAE,CAAC;EAC3B,YAAY,EAAE,GAAG;EACjB,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,IAAI;CACnB;;AAED,4BAA4B;AAC5B,AAAA,UAAU,CAAC,EAAE,EAAE,UAAU,CAAC,EAAE,CAAC;EAC3B,OAAO,EAAE,QAAQ;EACjB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,OAAO;EACpB,WAAW,EAAE,IAAI;CAClB"
+}

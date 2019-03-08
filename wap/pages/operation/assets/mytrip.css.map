@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "file": "mytrip.css?__=1552030651276",
+    "sources": [
+        "/pages/operation/assets/mytrip.scss"
+    ],
+    "sourcesContent": [
+        ".title {\r\n   color:#D71711;\r\n   font-weight:bold;\r\n   font-size:18px;\r\n}"
+    ],
+    "names": [],
+    "mappings": "AAAA,AAAA,MAAM,CAAC,EACJ,KAAK,EAAC,OAAO,EACb,WAAW,EAAC,IAAI,EAChB,SAAS,EAAC,IAAI,GAChB"
+}

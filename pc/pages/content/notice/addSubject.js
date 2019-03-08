@@ -41,6 +41,10 @@ define('pages/content/notice/addSubject.ts', function(require, exports, module) 
           //debugger;
           $('#lbFormatType').jsonToFields(data[0]);
           selType.trigger('change').prop('disabled', true);
+          formatType = ~~selType.val();
+          if (formatType == 0) {
+              panel.find('textarea').text(data[0].content);
+          }
       });
   }
   window['doSave'] = function (pop, listSubjects) {
@@ -89,7 +93,7 @@ define('pages/content/notice/addSubject.ts', function(require, exports, module) 
       }
       return true;
   };
-  //# sourceMappingURL=/itb-dist/pc/pages/content/notice/addSubject.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/notice/addSubject.js.map?__=1552033897847
   
 
 });

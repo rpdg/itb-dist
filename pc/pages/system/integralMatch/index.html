@@ -1,12 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
-
-    
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/css/jquery.datetimepicker.css?__=087d36f" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/system/integralMatch/assets/index.css?__=1928b03" />
+	
 </head>
-<body>
+<body>
+
+<div id="mainTab">
+    <div id="d1" class="tabDivision">
+        <div class="templateContainer">
+            <script type="text/html">
+
+                <table id="formWishlist" class="search-table">
+                    <tr>
+                        <td class="lead"><label for="type"><%=type%></label></td>
+                        <td>
+                            <select id="type" name="type">
+                                <option value="0"><%=type1%></option>
+                                <option value="1"><%=type2%></option>
+                            </select>
+                        </td>
+                        <td class="lead"><label for="barcode"><%=barcode%></label></td>
+                        <td><input id="barcode" name="barcode" type="text"/></td>
+                        <td class="lead"><label for="name"><%=name%></label></td>
+                        <td><input id="name" name="name" type="text"/></td>
+                    </tr>
+                </table>
+
+
+                <table id="tbWishlist"></table>
+
+
+            </script>
+        </div>
+    </div>
+
+
+    <div id="d2" class="tabDivision">
+        <div class="templateContainer">
+            <script type="text/html">
+
+                <table id="formSchedule" class="search-table">
+                    <tr>
+                        <td class="lead"><label for="type2"><%=type%></label></td>
+                        <td>
+                            <select id="type2" name="type2">
+                                <option value="0"><%=type1%></option>
+                                <option value="1"><%=type2%></option>
+                            </select>
+                        </td>
+                        <td class="lead"><label for="barcode2"><%=barcode%></label></td>
+                        <td><input id="barcode2" name="barcode" type="text"/></td>
+                        <td class="lead"><label for="name2"><%=name%></label></td>
+                        <td><input id="name2" name="name" type="text"/></td>
+                    </tr>
+                </table>
+
+
+                <table id="tbSchedule"></table>
+
+
+            </script>
+        </div>
+    </div>
+
+
+    <div id="d3" class="tabDivision">
+
+        <div class="templateContainer">
+            <script type="text/html">
+
+                <table id="formScore" class="search-table">
+                    <tr>
+                        <td class="lead"><label for="barcode3"><%=barcode%></label></td>
+                        <td><input id="barcode3" name="barcode" type="text"/></td>
+                        <td class="lead"><label for="name3"><%=name%></label></td>
+                        <td><input id="name3" name="name" type="text"/></td>
+                    </tr>
+                </table>
+
+                <table id="tbScore"></table>
+            </script>
+        </div>
+    </div>
+
+    <div id="d4" class="tabDivision">
+        <div class="templateContainer">
+            <script type="text/html">
+
+                <table id="formQualifyDate" class="search-table">
+                    <tr>
+                        <td class="lead"><label for="barcode4"><%=barcode%></label></td>
+                        <td><input id="barcode4" name="barcode4" type="text"/></td>
+                        <td class="lead"><label for="name4"><%=name%></label></td>
+                        <td><input id="name4" name="name4" type="text"/></td>
+                    </tr>
+                </table>
+
+
+                <table id="tbQualifyDate"></table>
+
+
+            </script>
+        </div>
+    </div>
+
+    <div id="d5" class="tabDivision">
+        <div class="templateContainer">
+            <script type="text/html">
+                <table id="formBuyerSchedule" class="search-table">
+                    <tr>
+                        <td class="lead"><label for="barcode5"><%=barcode%></label></td>
+                        <td><input id="barcode5" name="barcode" type="text"/></td>
+                        <td class="lead"><label for="name5"><%=sessionCount%></label></td>
+                        <td><input id="name5" name="name" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lead"><label for="exBarcode"><%=exBarcode%></label></td>
+                        <td>
+                            <input id="exBarcode" name="exBarcode" type="text" style="width: 82%"/>
+                            <button class="btn-mini btn-success" id="btnExBarCode">
+                                <%=add%>
+                            </button>
+                        </td>
+                        <td class="lead"></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <table id="tbExhibitions"></table>
+
+            </script>
+        </div>
+    </div>
+
+    <div id="d6" class="tabDivision">
+        <div class="templateContainer">
+            <script type="text/html">
+                <table id="formExhibitionSchedule" class="search-table">
+                    <tr>
+                        <td class="lead"><label for="barcode6"><%=exBarcode%></label></td>
+                        <td><input id="barcode6" name="barcode" type="text"/></td>
+                        <td class="lead"><label for="name6"><%=sessionCount%></label></td>
+                        <td><input id="name6" name="name" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lead"><label for="buyerRange"><%=buyerRange%></label></td>
+                        <td>
+                            <input id="buyerRange" name="buyerRange" type="text" />
+                        </td>
+                        <td class="lead"><label for="exRandom"><%=exRandom%></label></td>
+                        <td> <input id="exRandom" name="exRandom" type="checkbox" /></td>
+                    </tr>
+                </table>
+            </script>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/system/integralMatch/index.i18n.js?__=bfac5e6"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/integralMatch/ViewWishList.js?__=cb73458"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/integralMatch/ViewSchedule.js?__=f49c9d6"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/integralMatch/PersonalScore.js?__=b48493e"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/integralMatch/QualifyDate.js?__=407a976"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/integralMatch/ManualBuyerSchedule.js?__=8b3463f"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/integralMatch/ManualExhibitionSchedule.js?__=413bdfd"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/integralMatch/index.js?__=f3ac93f"></script>
+<script src="/itb-dist/pc/lib/jquery.datetimepicker.js?__=6f0a657"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/system/integralMatch/index.ts');
+	}();
+</script>
+
+
+
+
+
 
 
 </body>

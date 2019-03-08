@@ -1,0 +1,42 @@
+.totalsumstyle {
+  color: #ff0000;
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.apply {
+  text-align: center;
+  font-weight: bold;
+}
+
+.agree {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+
+.deny {
+  color: #ff0000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fontbold {
+  font-size: 14px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.fonttitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c7140c;
+}
+
+.fontinfo {
+  font-size: 14px;
+  color: red;
+}
+
+/*# sourceMappingURL=index.css.map?__=1552033897847 */

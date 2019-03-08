@@ -28,8 +28,11 @@
             <td><label id="is_dynamic_label" for="is_dynamic"><input id="is_dynamic" type="checkbox" name="is_dynamic" /><span><var id="lang_dynamicmap"></var></span></label></td>
         </tr>
     </table>
-    <div style="width:100%;height:340px;margin:5px auto;border:1px solid gray" id="container"></div>
-</div>
+    <div style="width:100%;height:340px;margin:5px auto;border:1px solid gray" id="container"></div>
+
+</div>
+
+
 
 <script type="text/javascript" src="/itb-dist/pc/lib/ueditor/dialogs/internal.js?__=c0f9b68"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=true"></script>
@@ -81,7 +84,8 @@
             } else {
                 url = mapNode.getAttribute("src");
                 styleStr = mapNode.style.cssText;
-            }
+            }
+
             centerPos = getPars(url,"center").split(",");
             markerPos = getPars(url, "markers").split(",");
             point = new BMap.Point(Number(centerPos[0]),Number(centerPos[1]));
@@ -110,7 +114,8 @@
         var size = map.getSize();
         var mapWidth = size.width;
         var mapHeight = size.height;
-        var point = marker.getPoint();
+        var point = marker.getPoint();
+
         if($G('is_dynamic').checked) {
             var URL = editor.options.UEDITOR_HOME_URL,
                 url = [URL + (/\/$/.test(URL) ? '':'/') + "dialogs/map/show.html" +

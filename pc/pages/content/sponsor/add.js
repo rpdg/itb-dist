@@ -17,9 +17,10 @@ define('pages/content/sponsor/add.ts', function(require, exports, module) {
       'addMain!post': 'Information/AddInfomationSubject',
       'updateMain!post': 'Information/UpInfomationSubject',
       'upload!UPLOAD': 'upload/files',
+      'deleteSubject!get': 'Information/DelInformationContentById',
   });
   var sponsorId;
-  var subjectPage = '/itb-dist/pc/pages/content/sponsor/addSubject.html?__=';
+  var subjectPage = '/itb-dist/pc/pages/content/sponsor/addSubject.html?__=1552033897847';
   Combo_1.Combo.makeClearableInput($('#logoPicture'), $({}));
   var tdLogo = $('#td_logoPicture');
   $('.ipt-eraser', '#tdUploadLogo').on('click', function () {
@@ -88,6 +89,15 @@ define('pages/content/sponsor/add.ts', function(require, exports, module) {
           },
       });
   });
+  //delete subjects
+  ulSubjects.on('click', '.btnDelSub', function () {
+      var btn = $(this), id = btn.data('id');
+      opg_ts_1.default.confirm(lpg.deleteConfirm, function () {
+          opg_ts_1.default.api.delSubject({ id: id }, function () {
+              btn.parent().remove();
+          });
+      });
+  });
   $('#btnSaveMain').click(function () {
       var param = tbMain.fieldsToJson({
           title: {
@@ -128,7 +138,7 @@ define('pages/content/sponsor/add.ts', function(require, exports, module) {
           },
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/sponsor/add.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/sponsor/add.js.map?__=1552033897847
   
 
 });

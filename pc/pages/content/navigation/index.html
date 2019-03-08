@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+	
+</head>
+<body>
+
+
+
+
+<div id="mainSection">
+	<script id="tpl-mainSection" type="text/html">
+		<table id="tbSearch" class="search-table">
+			<tr>
+				<td class="lead"><label for="title"><%=sponsorTitle%></label></td>
+				<td><input id="title" name="title" type="text"/></td>
+				<td class="lead"></td>
+				<td></td>
+			</tr>
+		</table>
+	</script>
+
+</div>
+
+
+<table id="tb"></table>
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/content/navigation/index.i18n.js?__=8c32b55"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/content/navigation/index.js?__=2bdf6ed"></script>
+<script>
+	//alert(1)
+
+
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/content/navigation/index.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

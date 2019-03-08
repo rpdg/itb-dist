@@ -16,7 +16,7 @@ define('pages/content/sponsor/index.ts', function(require, exports, module) {
       'setStatus!post': 'Information/EnableOrDisableInformationById',
   });
   var lpg = Languages_1.Languages.package;
-  var infoPage = '/itb-dist/pc/pages/content/sponsor/add.html?__=';
+  var infoPage = '/itb-dist/pc/pages/content/sponsor/add.html?__=1552033897847';
   var moduleName = lpg.sponsor;
   var panel = opg_ts_1.default.wrapPanel('#tbSearch', {
       title: "" + moduleName + lpg.search,
@@ -66,6 +66,7 @@ define('pages/content/sponsor/index.ts', function(require, exports, module) {
           {
               text: "" + lpg.sponsorTitle,
               src: 'title',
+              width: 400
           },
           {
               text: lpg.status,
@@ -142,7 +143,7 @@ define('pages/content/sponsor/index.ts', function(require, exports, module) {
           }
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/sponsor/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/sponsor/index.js.map?__=1552033897847
   
 
 });

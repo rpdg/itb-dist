@@ -6,13 +6,14 @@ define('js/api.ts', function(require, exports, module) {
   //noinspection TypeScriptUnresolvedVariable
   //cfg.apiServer = window.apiServer ;
   var apiServer = window['CONFIG'].apiServer || '/api/';
-  var loginPage = '/itb-dist/wap/pages/login/index.html?__=';
+  var loginPage = '/itb-dist/wap/pages/login/index.html?__=1552030651276';
   var onServerError = function (code, errorMsg, callback) {
       if (code === 401 && location.pathname != loginPage) {
           location.href = loginPage;
       }
       else {
-          mui.alert("api." + this.name + " error " + code + " (" + errorMsg + ")", 'error: ', 'OK');
+          //mui.alert(`api.${this.name} error ${code} (${errorMsg})`, 'error: ', 'OK');
+          mui.alert("api." + this.name + " error (" + errorMsg + ")", 'error: ', 'OK');
       }
   };
   var loading = {
@@ -41,7 +42,7 @@ define('js/api.ts', function(require, exports, module) {
           };
       }
   })();
-  console.log(xToken);
+  //console.log(xToken);
   var ServerFn = /** @class */ (function () {
       function ServerFn(url, name, method, restful) {
           if (method === void 0) { method = 'GET'; }
@@ -49,7 +50,7 @@ define('js/api.ts', function(require, exports, module) {
           this.name = name;
           this.method = method;
           this.restful = restful;
-          this.timeOut = 3000;
+          this.timeOut = 30000;
           if (url.indexOf('http://') === 0 || url.indexOf('https://') === 0)
               this.url = url;
           else
@@ -174,7 +175,7 @@ define('js/api.ts', function(require, exports, module) {
       return api;
   };
   exports.api = api;
-  //# sourceMappingURL=/itb-dist/wap/js/api.js.map?__=
+  //# sourceMappingURL=/itb-dist/wap/js/api.js.map?__=1552030651276
   
 
 });

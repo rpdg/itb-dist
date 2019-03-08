@@ -1,0 +1,17 @@
+.wrap { margin: 0.53333rem; border-radius: 0.2rem; overflow: hidden; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
+
+.wrap #btnSelect { background-color: #d71711; color: white; width: 100%; height: 1.46667rem; }
+
+.wrap table { width: 100%; background-color: #fff; table-layout: fixed; }
+
+.wrap table.list > tbody > tr:nth-of-type(odd) { background-color: #eee; }
+
+.wrap table tr { height: 1.13333rem; line-height: 1.13333rem; }
+
+.wrap table tr th { font-weight: 900; }
+
+.wrap table tr td, .wrap table tr th { font-size: 0.32rem; text-align: center; }
+
+#imgQR { color: #fff; width: 0.8rem; height: 0.8rem; margin-top: 0.3rem; }
+
+/*# sourceMappingURL=result.css.map?__=1552030651276 */

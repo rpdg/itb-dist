@@ -17,9 +17,10 @@ define('pages/content/news/add.ts', function(require, exports, module) {
       'updateMain!post': 'Information/UpInfomationSubject',
       getSubjects: 'Information/InformationById',
       'upload!UPLOAD': 'upload/files',
+      'deleteSubject!get': 'Information/DelInformationContentById',
   });
   var newsId;
-  var subjectPage = '/itb-dist/pc/pages/content/news/addSubject.html?__=';
+  var subjectPage = '/itb-dist/pc/pages/content/news/addSubject.html?__=1552033897847';
   jQuery.datetimepicker.setLocale(Languages_1.Languages.current);
   $('#beginDate,#endDate').each(function (i, elem) {
       $(elem).datetimepicker({
@@ -90,6 +91,15 @@ define('pages/content/news/add.ts', function(require, exports, module) {
           },
       });
   });
+  //delete subjects
+  ulSubjects.on('click', '.btnDelSub', function () {
+      var btn = $(this), id = btn.data('id');
+      opg_ts_1.default.confirm(lpg.deleteConfirm, function () {
+          opg_ts_1.default.api.deleteSubject({ id: id }, function () {
+              btn.parent().remove();
+          });
+      });
+  });
   $('#btnSaveMain').click(function () {
       var param = tbMain.fieldsToJson({
           title: {
@@ -139,7 +149,7 @@ define('pages/content/news/add.ts', function(require, exports, module) {
           },
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/news/add.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/news/add.js.map?__=1552033897847
   
 
 });

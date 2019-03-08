@@ -38,7 +38,7 @@ define('pages/system/forbiddenWords/edit.ts', function(require, exports, module)
           table.update();
       });
   };
-  //# sourceMappingURL=/itb-dist/pc/pages/system/forbiddenWords/edit.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/system/forbiddenWords/edit.js.map?__=1552033897847
   
 
 });

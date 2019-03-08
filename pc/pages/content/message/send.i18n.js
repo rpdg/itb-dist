@@ -1,5 +1,14 @@
 var languagePkg = {
 	'en': {
+		msgType : 'Message type',
+		msgContent : 'Content',
+		msgTitle : 'Subject',
+		msg0: 'General Message',
+		msg1: 'Return Message',
+		msg2: 'Invitation Message',
+		role: 'Role',
+		searchUser: 'Search user',
+		userKeyword: 'Keyword',
 	},
 	'cn': {
 		msgType : '消息类型',

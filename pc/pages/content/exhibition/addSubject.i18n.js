@@ -1,6 +1,14 @@
 var languagePkg = {
 	'en': {
-
+pureText : 'Text Only',
+		picture : 'Picture',
+		link : 'Hyperlink',
+		richText : 'Rich Text',
+		attachment : 'Attachment',
+		plsSelect : 'Please select the item Type',
+		linkText : 'Hyperlink Text',
+		linkHref : 'Hyperlink URL',
+		nullInputWarn: 'Empty item is not allowed',
 	},
 	'cn': {
 		pureText : '纯文字',

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/logistics/myTrip/trip.css?__=26d06b6" />
+    <link rel="stylesheet" href="/itb-dist/pc/css/jquery.datetimepicker.css?__=087d36f" />
+	
+</head>
+<body>
+
+
+<div id="mainSection">
+
+
+        <script id="tpl-mainSection" type="text/html">
+        <table id="tbMain" class="search-table">
+            <tr>
+                <td colspan="4">
+                    <table style="width:100%;border:0;">
+                        <tr style="width:100%;border:0;">
+                            <td style=" border:0;width:200px;"><img src="/itb-dist/pc/pages/logistics/myTrip/hotel/traffic.jpg?__=1ce37a0" style="width:200px;height:150px;" /></td>
+                            <td style=" border:0;vertical-align:top;text-align: left;font-size:14px;font-weight: bold;  word-wrap:break-word;">
+                                <label class="fonttitle"><%=formtitle%></label><br/><br/>
+                                <%=formtitle2%><br/><%=formtitle3%><br/><%=formtitle4%>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <label class="fontinfo"><%=forminfo%></label><br/>
+                    <label class="fontinfo2"><%=forminfo2%></label><br/>
+                    <label class="fontinfo2"><%=forminfo3%></label><br/>
+                    <label class="fontinfo2"><%=forminfo4%></label><br/>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="lead"><label for="comemethod"><%=comemethod%></label></td>
+                <td><select  id="comemethod" name="comemethod">
+                    <option value="">-请选择-</option>
+                    <option value="<%=comemethodtype[0]%>"><%=comemethodtype[0]%></option>
+                    <option value="<%=comemethodtype[1]%>"><%=comemethodtype[1]%></option>
+                </select></td>
+                <td class="lead"><label for="comecity"><%=comecity%></label></td>
+                <td><input type="text" name="comecity" id="comecity" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="comedate"><%=comedate%></label></td>
+                <td><input type="datetime" name="comedate" id="comedate" /></td>
+                <td class="lead"><label for="comemethodinfo"><%=comemethodinfo%></label></td>
+                <td><input type="text" name="comemethodinfo" id="comemethodinfo" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="comearrivedate"><%=comearrivedate%></label></td>
+                <td><input type="datetime" name="comearrivedate" id="comearrivedate" /></td>
+                <td class="lead"></td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td class="lead"><label for="leavemethod"><%=leavemethod%></label></td>
+                <td><select  id="leavemethod" name="leavemethod">
+                    <option value="">-请选择-</option>
+                    <option value="<%=leavemethodtype[0]%>"><%=leavemethodtype[0]%></option>
+                    <option value="<%=leavemethodtype[1]%>"><%=leavemethodtype[1]%></option>
+                </select></td>
+                <td class="lead"><label for="leavecity"><%=leavecity%></label></td>
+                <td><input type="text" name="leavecity" id="leavecity" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="leavedate"><%=leavedate%></label></td>
+                <td><input type="datetime" name="leavedate" id="leavedate" /></td>
+                <td class="lead"><label for="leavemethodinfo"><%=leavemethodinfo%></label></td>
+                <td><input type="text" name="leavemethodinfo" id="leavemethodinfo" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="leavearrivedate"><%=leavearrivedate%></label></td>
+                <td><input type="datetime" name="leavearrivedate" id="leavearrivedate" /></td>
+                <td class="lead"></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="paymethod"><%=paymethod%></label></td>
+                <td><select  id="paymethod" name="paymethod">
+                    <option value="<%=paymethodtype[0]%>"><%=paymethodtype[0]%></option>
+                    <option value="<%=paymethodtype[1]%>"><%=paymethodtype[1]%></option>
+                </select></td>
+                <td class="lead"><label for="zhifubaoname"><%=zhifubaoname%></label></td>
+                <td><input type="text" name="zhifubaoname" id="zhifubaoname" class="zhifubao"/></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="zhifubaoaccount"><%=zhifubaoaccount%></label></td>
+                <td><input type="text" name="zhifubaoaccount" id="zhifubaoaccount" class="zhifubao"/></td>
+                <td class="lead"><label for="bankaccountname"><%=bankaccountname%></label></td>
+                <td><input type="text" name="bankaccountname" id="bankaccountname" class="bank"/></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="bankaccount"><%=bankaccount%></label></td>
+                <td><input type="text" name="bankaccount" id="bankaccount" class="bank"/></td>
+                <td class="lead"><label for="bankname"><%=bankname%></label></td>
+                <td><input type="text" name="bankname" id="bankname" class="bank"/></td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <label class="fontinfo"><%=forminfo5%></label><br/>
+                    <label class="fontinfo2"><%=forminfo6%></label><br/>
+                    <img src="/itb-dist/pc/pages/logistics/myTrip/hotel/crcode.jpg?__=2242091" style="width: 185px;border:0px;" />
+                    <label class="fontinfo2"><%=forminfo7%></label><br/>
+                    <label class="fontinfo2"><%=forminfo8%></label><br/>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="4">
+                    <label class="fontinfo"><%=forminfo9%></label><br/>
+                    <label class="fontinfo2"><%=forminfo10%></label><br/>
+                    <label class="fontinfo2"><%=forminfo11%></label><br/>
+                    <label class="fontinfo2"><%=forminfo12%></label><br/>
+                    <label class="fontinfo2"><%=forminfo13%></label><br/>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="4">
+                    <label class="fontinfo"><%=forminfo14%></label><br/>
+                    <label class="fontinfo2"><%=forminfo15%></label><br/>
+                    <label class="fontinfo2"><%=forminfo16%></label><br/>
+                    <label class="fontinfo2"><%=forminfo17%></label><br/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <label class="fontinfo"><%=forminfo18%></label><br/>
+                    <label class="fontinfo2"><%=forminfo19%></label><br/>
+                    <label class="fontinfo2"><%=forminfo20%></label><br/>
+                    <label class="fontinfo2"><%=forminfo20_1%></label><br/>
+                    <label class="fontinfo2"><%=forminfo20_2%></label><br/>
+                    <label class="fontinfo2"><%=forminfo21%></label><br/>
+                    <label class="fontinfo2"><%=forminfo22%></label><br/>
+                </td>
+            </tr>
+
+
+
+        </table>
+
+
+        <p id="buttonSection" class="text-center">
+            <button id="btnSaveMain" class="btn-success"><%=sendApply%></button>
+            <button id="btnReset" class="btn-danger"><%=reset%></button>
+        </p>
+
+        <table id="tbMain2" class="search-table">
+            <tr>
+                <td colspan="4">
+                    <table style="width:100%;border:0;">
+                        <tr style="width:100%;border:0;">
+                            <td style=" border:0;width:200px;"><img src="/itb-dist/pc/pages/logistics/myTrip/hotel/traffic.jpg?__=1ce37a0" style="width:200px;height:150px;" /></td>
+                            <td style=" border:0;vertical-align:top;text-align: left;font-size:14px;font-weight: bold;  word-wrap:break-word;">
+                                <label class="fonttitle"><%=formtitle%></label><br/><br/>
+                                <%=formtitle2%><br/><%=formtitle3%><br/><%=formtitle4%>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </script>
+
+
+
+
+
+
+
+</div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="cntb" style="display: none;">
+<table id="tb"></table>
+<p>&nbsp;</p>
+</div>
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/logistics/myTrip/trip.i18n.js?__=3c86d0b"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/logistics/myTrip/trip.js?__=1e574c4"></script>
+<script src="/itb-dist/pc/lib/jquery.datetimepicker.js?__=6f0a657"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/logistics/myTrip/trip.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

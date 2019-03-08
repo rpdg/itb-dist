@@ -67,7 +67,7 @@ define('pages/roles/roleUser/index.ts', function(require, exports, module) {
       pagination: true,
   });
   var cache = store_1.Cache.getInstance();
-  var infoPage = '/itb-dist/pc/pages/roles/roleUser/info.html?__=df3f991'.split('?')[0];
+  var infoPage = '/itb-dist/pc/pages/roles/roleUser/info.html?__=d441584'.split('?')[0];
   //Add
   $('#btnAdd').click(function () {
       var pop = top.opg.confirm("<iframe src=\"" + infoPage + "?roleId=" + selRole.getValue() + "\" />", function (i, ifr) {
@@ -92,7 +92,7 @@ define('pages/roles/roleUser/index.ts', function(require, exports, module) {
           title: "" + lpg.please + lpg.confirm,
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/roles/roleUser/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/roles/roleUser/index.js.map?__=1552033897847
   
 
 });

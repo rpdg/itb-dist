@@ -44,7 +44,8 @@ define('pages/content/carousel/index.ts', function(require, exports, module) {
           },
           {
               text: "" + lpg.newsTitle,
-              src: 'title',
+              src: 'ctitle',
+              width: 400
           },
           {
               text: "" + lpg.linkType,
@@ -123,7 +124,7 @@ define('pages/content/carousel/index.ts', function(require, exports, module) {
           },
       });
   });
-  var infoPage = '/itb-dist/pc/pages/content/carousel/add.html?__=f3519e3';
+  var infoPage = '/itb-dist/pc/pages/content/carousel/add.html?__=ecd0977';
   //Add
   $('#btnAdd').click(function () {
       var pop = top.opg.confirm("<iframe src=\"" + infoPage + "\" />", function (i, ifr) {
@@ -139,7 +140,7 @@ define('pages/content/carousel/index.ts', function(require, exports, module) {
           },
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/carousel/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/carousel/index.js.map?__=1552033897847
   
 
 });

@@ -1,6 +1,6 @@
-let languagePkg = {
+var languagePkg = {
 	en: {
-		schedule : 'schedule'
+		schedule : 'Your Calendar'
 	},
 	cn: {
 		schedule : '日程表'

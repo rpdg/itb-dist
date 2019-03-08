@@ -1,8 +1,10 @@
 body { overflow: hidden; }
 
-#slider { height: 8.4rem; }
+#slider { height: 9.33333rem; background-color: #fff; }
 
-#slider img { width: 10rem; height: 8.4rem; background-color: #777777; }
+#slider img { height: 3.06667rem; display: block; margin: 0 auto; padding: 20px; }
+
+#slider .ct { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; padding: 0 1em; position: relative; height: 1.3rem; line-height: 1.3rem; margin-top: -1.3rem; color: #fff; background-color: rgba(0, 0, 0, 0.6); }
 
 #banner { position: absolute; z-index: 2; width: 100%; }
 
@@ -10,37 +12,49 @@ body { overflow: hidden; }
 
 #message { height: 1.28rem; line-height: 1.28rem; background-color: #eee; padding: 0 0.5rem 0 1.6rem; font-size: 0.3rem; text-overflow: ellipsis; overflow: hidden; background-image: url("/itb-dist/wap/img/ico96-lb.png?__=9c5f992"); background-size: 1.28rem; background-repeat: no-repeat; background-position: left center; white-space: nowrap; }
 
-#myScroll { position: absolute; top: 8.4rem; bottom: 0; overflow: scroll; }
+#myScroll { position: absolute; top: 3.06667rem; bottom: 0; overflow: scroll; background-color: #efefef; }
 
 #board { width: 100%; table-layout: fixed; }
 
-#board td { height: 3.1rem; border: 1px solid #ddd; border-collapse: collapse; background-color: #fff; text-align: center; text-transform: capitalize; font-size: 0.35rem; }
+#board td { height: 3.1rem; border: 1px solid #ddd; border-collapse: collapse; background-color: #474747; text-align: center; text-transform: capitalize; font-size: 0.35rem; }
 
-#board td:nth-of-type(3n+0) { border-right: none; }
+#board td:nth-of-type(3n + 0) { border-right: none; }
 
 #board td:nth-of-type(3n-2) { border-left: none; }
 
+#board td > a { color: #fff; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+
+#board td > a:active, #board td > a:hover { background-color: #888; }
+
 #board .icoDashboard { display: block; width: 1.28rem; height: 1.28rem; margin: 0 auto 0.2rem; }
 
-#icoMenu { position: absolute; top: 0.6rem; left: 0.6rem; }
+#icoMenu { position: absolute; top: 0.6rem; left: 0.6rem; color: #555; }
 
-.mui-icon-bars:before { display: block; color: #fff; width: 0.64rem; height: 0.64rem; }
+.mui-icon-bars:before, .mui-icon-extra-sweep:before { font-size: 32px; display: block; color: #555; width: 0.8rem; height: 0.8rem; }
+
+.mui-icon .mui-badge { margin-left: -0.3em !important; }
+
+#imgQR { width: 0.8rem; height: 0.8rem; margin: 0.6rem 0.8rem 0 0; }
 
 #imgLOGO { width: 1.33333rem; height: 1.33333rem; position: absolute; top: 0.33333rem; right: 0.33333rem; }
 
-#offCanvasSide { background-image: url("/itb-dist/wap/pages/dashboard/assets/bg-leftMenu2.jpg?__=7e51618"); background-size: 100% 100%; background-repeat: no-repeat; }
+#offCanvasSide { background-image: url("/itb-dist/wap/pages/dashboard/assets/bg-leftMenu2.jpg?__=e97d6c5"); background-size: 100% 100%; background-repeat: no-repeat; }
 
-#imgAvatar { width: 2.547rem; height: 2.547rem; display: block; margin: 1.333rem auto 0.53rem; }
+.onlyForExhibition { display: none; }
 
-#spUserName { text-transform: uppercase; text-align: center; font-size: 0.45rem; color: #fff; }
+#imgAvatar { width: 1.4rem; height: 1.4rem; display: block; margin: 0.3rem auto 0.2rem; }
 
-#spRealName { text-align: center; font-size: 0.35rem; color: #bbb; margin-bottom: 1.33rem; }
+#spUserName { text-align: center; font-size: 0.45rem; color: #fff; }
 
-#divITB { display: block; position: absolute; bottom: 0.4rem; left: 0; text-align: center; width: 100%; }
+#spRealName { text-align: center; font-size: 0.35rem; color: #bbb; margin-bottom: 0.5rem; }
+
+#divITB { display: block; margin-top: 9rem; left: 0; text-align: center; width: 100%; }
 
 #divITB img { width: 2.2rem; margin: 0 auto 0.2rem; }
 
 #divITB span { display: block; font-size: 0.3rem; }
+
+#lmMyScore2, #lmMyScore { display: none; }
 
 #offCanvasSideScroll { top: 6.66rem; }
 
@@ -52,4 +66,8 @@ body { overflow: hidden; }
 
 #offCanvasSideScroll .mui-table-view:after, #offCanvasSideScroll .mui-table-view-cell:after { background-color: #89351e; }
 
-/*# sourceMappingURL=dashboard.css.map?__= */
+#topPopover { position: fixed; top: 16px; right: 10px; height: 100px; width: 160px; }
+
+#topPopover .mui-popover-arrow { left: auto; right: 6px; }
+
+/*# sourceMappingURL=dashboard.css.map?__=1552033839575 */

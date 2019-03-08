@@ -1,5 +1,9 @@
 var languagePkg = {
-	en: {},
+	en: {
+		role : 'Role',
+		roleName : 'Role Name',
+		roleDesc : 'Role Desc',
+	},
 	cn: {
 		role : '角色',
 		roleName : '角色名称',

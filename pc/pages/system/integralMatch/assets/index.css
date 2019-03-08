@@ -1,0 +1,23 @@
+@charset "UTF-8";
+#mainTab {
+  width: 100%;
+  height: 100%;
+}
+
+#mainTab .panel-foot .btn-export {
+  margin-left: 10px;
+}
+
+.th-asc {
+  cursor: pointer;
+}
+
+.th-asc:after {
+  content: '▲';
+}
+
+.th-desc:after {
+  content: '▼';
+}
+
+/*# sourceMappingURL=index.css.map?__=1552033897847 */

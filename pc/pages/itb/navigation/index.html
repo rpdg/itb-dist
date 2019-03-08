@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/navigation/assets/bootstrap.min.css?__=2f62408" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/navigation/assets/navigation.css?__=994ae0d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/navigation/assets/iconfont/iconfont.css?__=ec19928" />
+    <style>
+	#mainSection {
+		position: absolute;
+		z-index: 10;
+		width: 300px;
+	}
+
+
+	.btn-layer {
+		padding: 0;
+	}
+</style>
+	
+<script>
+	window.MapConfig = {
+		server: '/itb-dist/wap/pages/navigation/assets/data/',
+		id: '10347',
+		name: 'ITB',
+		key: '7be95456a5867df0cb3b276dadeb52ad',
+	};
+</script>
+
+</head>
+<body>
+
+
+
+<!--搜索框-->
+<!--<div class="search" >-->
+	<!--<input type="text" class="form-control"  placeholder=""  id="seachText">-->
+	<!--<ul id="hotwords" class="hotwords" >-->
+	<!--</ul>-->
+<!--</div>-->
+
+<div id="divSearch" class="templateContainer" style="margin-bottom: 20px;">
+	<script type="text/html">
+		<label><input id="iptKeyword" type="text" name="keyword" style="width: 200px;"></label>
+		<button id="btnSearch" class="btn-primary btn-small"><i class="ico-find"></i> <%=search%></button>
+	</script>
+</div>
+
+<div id="fengMap">
+
+</div>
+
+
+<!-- 楼层按钮组 -->
+<div class="btn-group-vertical group-layer" data-toggle="buttons" style="	margin-top: 30px;">
+	<label class="btn btn-primary btn-layer"><i class="icon iconfont">&#xe61c;</i></label>
+	<span id="top" class="btn btn-default"><i class="icon iconfont">&#xe65e;</i></span>
+	<div class="btn-group-vertical layer-list" data-toggle="buttons"></div>
+	<span id="down" class="btn btn-default disabled"><i class="icon iconfont">&#xe65f;</i></span>
+</div>
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/itb/navigation/index.i18n.js?__=0a1fe5b"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/navigation/index.js?__=6b31fbc"></script>
+<script src="/itb-dist/pc/pages/itb/navigation/assets/fengmap.min.js?__=ac0522c"></script>
+<script src="/itb-dist/pc/lib/jquery.nicescroll.js?__=c984421"></script>
+<script src="/itb-dist/pc/pages/itb/navigation/assets/layerGroup.js?__=abf096c"></script>
+<script src="/itb-dist/pc/pages/itb/navigation/assets/layerList.js?__=744f1b6"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/itb/navigation/index.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

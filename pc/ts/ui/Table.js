@@ -2,9 +2,12 @@ define('ts/ui/Table.ts', function(require, exports, module) {
 
   "use strict";
   var __extends = (this && this.__extends) || (function () {
-      var extendStatics = Object.setPrototypeOf ||
-          ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-          function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+      var extendStatics = function (d, b) {
+          extendStatics = Object.setPrototypeOf ||
+              ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+              function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+          return extendStatics(d, b);
+      };
       return function (d, b) {
           extendStatics(d, b);
           function __() { this.constructor = d; }
@@ -79,8 +82,29 @@ define('ts/ui/Table.ts', function(require, exports, module) {
           th[i] = '<th style="' + colCss[i] + '">' + (col.text || 'column_' + i) + '</th>';
       }
       var thead = '<thead><tr>' + th.join('') + '</tr></thead>';
-      var tfoot = (sets.pagination) ? '<tfoot><tr><td colspan="' + (l || '1') + '"></td></tr></tfoot>' : '';
-      tb.prepend(thead + '<tbody id="' + tb[0].id + '_tbody"></tbody>' + tfoot);
+      if (sets.fixFooter) {
+          var tfoot = (sets.pagination) ? '<div class="gridPaginationFooter"></div>' : '';
+          tb.prepend(thead + '<tbody id="' + tb[0].id + '_tbody"></tbody>').after(tfoot);
+          var $by = $(document.body), $win_1 = $(window);
+          function positionFooter() {
+              var $tf = $('.gridPaginationFooter');
+              var wh = $win_1.height();
+              var dh = $tf.offset().top + $tf.outerHeight() - wh;
+              var dw = tb.width();
+              if ($win_1.scrollTop() > dh) {
+                  $tf.css({ position: "fixed", bottom: 0, width: dw + 'px' });
+              }
+              else {
+                  $tf.css({ position: "static" });
+              }
+              //console.log(dh , wh , $by.height() , $win.height() , $win.scrollTop() , $tf , $tf.offset().top , $tf.outerHeight())
+          }
+          $win_1.scroll(positionFooter).resize(positionFooter);
+      }
+      else {
+          var tfoot = (sets.pagination) ? '<tfoot><tr><td colspan="' + (l || '1') + '"></td></tr></tfoot>' : '';
+          tb.prepend(thead + '<tbody id="' + tb[0].id + '_tbody"></tbody>' + tfoot);
+      }
   }
   function setupTitleBar(tb, sets) {
       var html = "<div class=\"grid-title-bar\">\n\t\t" + sets.title + "\n\t</div>", bar = $(html);
@@ -140,6 +164,7 @@ define('ts/ui/Table.ts', function(require, exports, module) {
               });
           }
           if (cfg.pagination) {
+              this.fixFooter = !!(cfg.fixFooter);
               var that_1 = this;
               var pageDefaults = {
                   append_number_input: true,
@@ -231,7 +256,7 @@ define('ts/ui/Table.ts', function(require, exports, module) {
               }
           }
           else {
-              this.tfoot = this.table.find("tfoot td:eq(0)");
+              this.tfoot = this.fixFooter ? this.table.next('.gridPaginationFooter') : this.table.find("tfoot td:eq(0)");
               this.tPager = $('<div class="pagination_container"></div>').appendTo(this.tfoot);
               this.tPager.pagination(rowCount, this.pagination);
               this.iptPageGo = this.tfoot.find('.iptPageGo');
@@ -246,7 +271,7 @@ define('ts/ui/Table.ts', function(require, exports, module) {
                           this.pageTemplate = '共<span class="bt">${rowCount}</span>条记录 , 第<span class="bf">${pageNum}</span> / <span class="bc">${pageCount}</span>页';
                       }
                       else {
-                          this.pageTemplate = 'total: <span class="bt">${rowCount}</span> , <span class="bf">${pageNum}</span> / <span class="bc">${pageCount}</span>';
+                          this.pageTemplate = 'total: <span class="bt">${rowCount}</span> record(s), <span class="bf">${pageNum}</span> / <span class="bc">${pageCount}</span> page(s)';
                       }
                   }
                   this.pageCounter.html(jsonFormat(this.pageTemplate, { rowCount: rowCount, pageNum: pageNum, pageCount: pageCount }));
@@ -314,7 +339,7 @@ define('ts/ui/Table.ts', function(require, exports, module) {
       return Table;
   }(DisplayOject_1.AjaxDisplayObject));
   exports.default = Table;
-  //# sourceMappingURL=/itb-dist/pc/ts/ui/Table.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/ui/Table.js.map?__=1552033897847
   
 
 });

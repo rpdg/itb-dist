@@ -1,0 +1,4 @@
+var languagePkg = {
+	en: {},
+    cn: {}
+};

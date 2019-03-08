@@ -83,7 +83,7 @@ div.alignment,#custom{margin-left: 23px;margin-left: 28px\9;}
     border: 3px solid #1094fa;
 }
 #imgManager li.selected .icon {
-    background-image: url(/itb-dist/pc/lib/ueditor/dialogs/background/images/success.png?__=b80425bb80425b);
+    background-image: url(/itb-dist/pc/lib/ueditor/dialogs/background/images/success.png?__=b80425b);
     background-position: 75px 75px;
 }
 #imgManager li.selected .icon:hover {

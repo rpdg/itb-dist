@@ -6,10 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 	<meta name="renderer" content="webkit">
 	<title>ITB</title>
-	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814ac0c814a" />
-    <link rel="stylesheet" href="/itb-dist/pc/pages/content/message/send.css?__=fcbcb83fcbcb83" />
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/content/message/send.css?__=dcc7282" />
+	
 </head>
-<body>
+<body>
+
+
 <div class="templateContainer">
 	<script type="text/html">
 		<div id="form">
@@ -29,36 +32,33 @@
 				<textarea name="msgContent" style="width: 100%;height: 10em;" placeholder=""></textarea>
 			</p>
 		</div>
-	</script>
-</div>
+	</script>
+
+</div>
+
+
+
+
+
 <div id="opgAjaxLoading">
 	<div id="opgAjaxLoadingText">
 		<div id="square-spin"></div>
 		loading ...
 	</div>
-</div>
-<script src="/itb-dist/pc/lib/mod.js?__=f81190ff81190f"></script>
-<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0a5a8ab0"></script>
-<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c509717c"></script>
-<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c2d8260c"></script>
-<script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d4b44b7d"></script>
-<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7b3777f7"></script>
-<script src="/itb-dist/pc/pages/content/message/send.i18n.js?__=cc1a002cc1a002"></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/DisplayOject.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/FormControls.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/app.cfg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/utils.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Table.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Popup.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Panel.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Combo.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Tree.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/TabView.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/opg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/content/message/send.js?__="></script>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/content/message/send.i18n.js?__=0e0be88"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/content/message/send.js?__=58cf9a7"></script>
 <script>
 	!function () {
 		var Languages = require('ts/util/Languages.ts').Languages;
@@ -67,16 +67,26 @@
 			var mainSection = document.getElementById('mainSection');
 			if (mainSection && templateElem) {
 				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-			}
+			}
+
 			$('.templateContainer').each(function (index , elem) {
 				var tmpl = $('script' , this).html();
 				var render = template.compile(tmpl);
 				elem.innerHTML = render(lngPackage);
 			});
-		});
-		console.log('Languages:', Languages);
+		});
+
+		console.log('Languages:', Languages);
+
 		require('pages/content/message/send.ts');
 	}();
-</script>
+</script>
+
+
+
+
+
+
+
 </body>
 </html>

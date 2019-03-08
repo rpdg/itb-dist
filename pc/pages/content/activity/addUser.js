@@ -78,10 +78,10 @@ define('pages/content/activity/addUser.ts', function(require, exports, module) {
       };
       opg_ts_1.default.api.addUsers(param, function () {
           tb.update();
-          pop.close();
+          //pop.close();
       });
   };
-  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/addUser.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/addUser.js.map?__=1552033897847
   
 
 });

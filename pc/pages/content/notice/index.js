@@ -59,12 +59,13 @@ define('pages/content/notice/index.ts', function(require, exports, module) {
       },
       columns: [
           {
-              text: 'ID', width: 120,
+              text: 'ID', width: 50,
               src: 'id',
           },
           {
               text: "" + lpg.noticeTitle,
               src: 'title',
+              width: 400
           },
           {
               text: lpg.publisher,
@@ -146,7 +147,7 @@ define('pages/content/notice/index.ts', function(require, exports, module) {
       var btn = $(this), informationId = btn.data('id');
       opg_ts_1.default.api.cancelStick({ informationId: informationId }, function () { return tb.update(); });
   });
-  var infoPage = '/itb-dist/pc/pages/content/notice/add.html?__=fb303f1';
+  var infoPage = '/itb-dist/pc/pages/content/notice/add.html?__=ded2cc0';
   //Add
   $('#btnAdd').click(function () {
       var pop = opg_ts_1.default.popTop("<iframe src=\"" + infoPage + "\" />", {
@@ -159,7 +160,7 @@ define('pages/content/notice/index.ts', function(require, exports, module) {
           }
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/notice/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/notice/index.js.map?__=1552033897847
   
 
 });

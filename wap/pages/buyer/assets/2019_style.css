@@ -1,0 +1,67 @@
+#icoCart { margin-right: 0.3rem; }
+
+#cartCount { position: fixed; z-index: 3; margin-left: -0.3rem; margin-top: 0.1rem; top: 0; background: #fff; color: red; display: inline-block; width: 0.6rem; height: 0.6rem; font-size: 0.2rem; border-radius: 10rem; text-indent: 0; line-height: 1.8; text-align: center; font-weight: 900; transform: scale(0.6); }
+
+#divResult li { -webkit-transition-property: all; -webkit-transition-duration: 0.3s; }
+
+#toggleViewStyle { padding: 15px; display: block; position: fixed; z-index: 9; top: 42px; width: 100%; background-color: #fff3f3; }
+
+#toggleViewStyle img { width: 24px; height: 24px; vertical-align: bottom; }
+
+#toggleViewStyle.list > .tgList { background-color: #fbb; }
+
+#toggleViewStyle.thumb > .tgThumb { background-color: #fbb; }
+
+.wrap { margin-top: 56px; }
+
+.divListView { background-color: #eee; padding-top: 1rem; }
+
+.divListView h1 { margin: 0 5px 5px; border-left: 2px solid #d71711; padding-left: 8px; }
+
+.divListView .result-list { margin-bottom: 1rem; border-bottom: 2px solid #ddd; }
+
+.divListView .result-list > li { padding: 1em; background-repeat: no-repeat; background-position: 2px 4px; background-size: 16px 16px; }
+
+.divListView .result-list > li:nth-of-type(odd) { background-color: #fff; }
+
+.divListView .result-list > li .icon-add { width: 0.7rem; height: 0.7rem; float: right; margin: -0.3em 0.5em; }
+
+.divListView .result-list > li .icon-heart { width: 0.7rem; height: 0.7rem; float: right; margin: -0.3em 0.5em; }
+
+.divListView .result-list > li .imgHold { display: none; }
+
+.sideBar { position: fixed; z-index: 600; top: 0; bottom: 0; left: 100vw; width: 75vw; background-color: white; -webkit-transition-property: all; -webkit-transition-duration: 0.3s; display: flex; flex-direction: column; }
+
+.shown { left: 25vw !important; }
+
+#mask1 { z-index: 599; display: none; }
+
+.mui-icon-search:before { color: #d71711; }
+
+hr { border: none; border-top: 1px solid #ddd; }
+
+.sideSec { padding: 10px; }
+
+.sideSec label { border-left: 2px solid #d71711; }
+
+.sideSec label select { width: auto; max-width: 70vw; }
+
+#divSideSearch { bottom: 10px; margin-top: 3em; }
+
+#slippyList { flex: 1; overflow: scroll; }
+
+#slippyList li { display: block; position: relative; margin: 0; padding: 0 1em; margin-bottom: 1px; max-width: 100%; line-height: 3.5; cursor: default; border-top: 1px solid #eee; white-space: nowrap; word-break: keep-all; text-overflow: ellipsis; overflow-x: hidden; }
+
+#slippyList li.slip-reordering { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45); border: 1px dashed #aaa !important; background-color: #f5dad9; }
+
+#slippyList li .liText { display: inline-block; width: 50vw; height: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+#slippyList li .ico-remove { float: left; display: block; width: 0.5rem; height: 0.5rem; text-align: center; cursor: pointer; font-size: 0.7rem; font-weight: 900; color: #fff; line-height: 0.6; background-color: #d71711; border-radius: 100rem; margin-top: 0.3rem; margin-right: 0.2rem; }
+
+#slippyList li .ico-handle { float: right; font-size: 22px; color: #ccc; line-height: 2; }
+
+.h3-title { font-size: 20px; text-align: center; line-height: 3; border-bottom: 1px solid #ddd; background-color: #eee; margin: 0; }
+
+.h3-title2 { font-size: 10px; text-align: center; line-height: 3; margin: 10; }
+
+/*# sourceMappingURL=2019_style.css.map?__=1552030651276 */

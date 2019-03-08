@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ITB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
+	
+	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=5eb3e79" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=a8d5d58" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/score/assets/description.css?__=8f7325e" />
+
+	<script>
+		window.CONFIG = {
+			apiServer: 'http://120.27.236.138:8080/api/'
+		};
+	</script>
+
+	
+</head>
+<body class="">
+<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
+
+<div id="outterFrame">
+
+<div class="mui-bar mui-bar-nav">
+    <a class="mui-icon mui-icon-left-nav mui-pull-left" href='../dashboard/index.html'></a>
+    <h1 class="mui-title templateContainer">
+        <script type="text/html">
+            <%=pageTitle%>
+        </script>
+    </h1>
+</div>
+
+
+<div class="mui-content" >
+    <div class="mui-card" id="cn1" style="display: none;">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell"><b>ITB CHINA 2018将启动买家积分计划！</b></li>
+            <li class="mui-table-view-cell">全程接待特邀买家和尊享豪礼特邀买家，在完成以下项目后，将分别获得相应积分。这些积分是买家差旅报销及获得额外奖励的依据。参加更多洽谈，赚取更多积分，获得更多好礼！</li>
+        </ul>
+    </div>
+
+    <div class="mui-card" id="cn2" style="display: none;">
+
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">按时完成“买家感兴趣的参展商”配对选择，获得 <span style="color:blue;" >3000分</span></li>
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">准时出席ITB为买家与展商已预约的洽谈，每次成功签到获得 <span style="color:blue;" >1000分</span></li>
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">现场拜访更多参展商展位进行洽谈（非预约），每次成功签到获得 <span style="color:blue;" >500分</span></li>
+
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">参加ITB指定的同期活动，每次成功签到获得 <span style="color:blue;" >1000分</span></li>
+        </ul>
+
+    </div>
+
+    <div class="mui-card" id="cn3" style="display: none;">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell" style="color:red;">举例：买家在开展期间，准时出席与展商的一个预约洽谈，使用ITB商贸配对系统，通过扫二维码完成现场签到，买家的配对系统账户中将获得1000积分。以此类推。</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="mui-card" id="cn4" style="display: none;">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell"><span style="background-color: pink;">奖励方案（特邀买家标准奖励）</span></li>
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">尊享豪礼买家获得价值RMB 1500元的礼品 <span style="color:blue;" >12000分</span></li>
+        </ul>
+
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">全程接待买家获得往返上海参会的差旅报销 <span style="color:blue;">21000分</span></li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="mui-card" id="cn5" style="display: none;">
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell"><span style="background-color: pink;">奖励方案（额外奖励）</span></li>
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">获得星巴克咖啡券，价值RMB 100元 <span style="color:blue;" >24000分</span></li>
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">获得星巴克咖啡券，价值RMB 200元 <span style="color:blue;">27000分</span></li>
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">获得三亚金都蔚景温德姆酒店免费住房券3晚 <span style="color:blue;">积分最高的第6-12名</span></li>
+
+        </ul>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">大奖：获得ITB Berlin 2019机酒接待免费参观。主办方承担国内往返柏林的国际机票（经济舱），柏林当地的3晚住宿，ITB BERLIN的入场券等 <span style="color:blue;">积分最高的第1-5名</span></li>
+        </ul>
+
+    </div>
+
+    <div class="mui-card" id="cn6" style="display: none;">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell" >额外奖励的奖品发放方式，主办方将在展会结束后，逐一联系买家，逐一确认。</li>
+
+        </ul>
+
+    </div>
+
+    <div class="mui-card" id="en1" style="display: none;">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">ITB China 2018 will launch the Chinese Buyer Points Incentive Program. Please switch to the Chinese page for further reference.</li>
+
+        </ul>
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+<footer class="footer-bar templateContainer">
+	<script type="text/html">
+		<a href="../dashboard/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/homeG.png?__=1552030651276" alt=""><br><%=FOOTER['b1']%>
+		</a>
+		<a href="../navigation/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/floorplanG.png?__=1552030651276" alt=""><br><%=FOOTER['b2']%>
+		</a>
+		<a href="../record/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/recordG.png?__=1552030651276" alt="">
+			<div><%=FOOTER['b3']%></div>
+		</a>
+		<a href="../moments/index.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/momentsGs.png?__=1552030651276" alt=""><br><%=FOOTER['b4']%>
+		</a>
+		<a href="../schedule/mine.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/scheduleG.png?__=1552030651276" alt=""><br><%=FOOTER['b5']%>
+		</a>
+	</script>
+</foote>
+
+<script src="/itb-dist/wap/js/libs.js?__=af44dfd"></script>
+<script src="/itb-dist/wap/pages/score/description.i18n.js?__=6443aa0"></script>
+
+
+<script type="text/javascript" src="/itb-dist/wap/js/util.js?__=a479366"></script>
+<script type="text/javascript" src="/itb-dist/wap/js/api.js?__=722b967"></script>
+<script type="text/javascript" src="/itb-dist/wap/pages/score/description.js?__=68cef19"></script>
+<script>
+	/*window.addEventListener('pageshow', function (e) {
+		// 通过persisted属性判断是否存在 BF Cache
+		if (e.persisted) {
+			location.reload();
+		}
+	});*/
+
+	var lngPk4Footer = {
+		en : {
+			b1 : 'Home',
+			b2 : 'Floorplan',
+			b3 : 'Record',
+			b4 : 'Moments',
+			b5 : 'Schedule',
+		},
+		cn:{
+			b1 : 'cn-aa',
+			b2 : 'cn-bb',
+			b3 : 'bbb',
+			b4 : 'bbb',
+			b5 : 'bbb',
+		}
+	};
+
+	var Languages = require('js/util.ts').Languages;
+
+	Languages.init(languagePkg, function (lngPackage) {
+		lngPackage['FOOTER'] = lngPk4Footer[lngPackage['$current']];
+		$('.templateContainer').each(function (index , elem) {
+			var tmpl = $('script' , this).html();
+			var render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
+	});
+
+
+
+    mui.init({});
+
+
+
+
+	mui.ready(() => {
+		require('pages/score/description.ts');
+	});
+
+
+	$('body').on('tap', 'a', function () {
+		location.href = this.href;
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

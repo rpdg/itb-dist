@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/wishlist/assets/barcode.css?__=050b3df" />
+	
+</head>
+<body>
+
+<div id="swiper" class="swiper-container">
+
+</div>
+
+<script id="tpl-swiper" type="text/html">
+    <div class="swiper-wrapper">
+
+
+        <% for(var i=0, l= data.length,p ; i< l, p = data[i]; i++){ %>
+        <div class="swiper-slide">
+            <h1 class="title"><%=p.company%></h1>
+
+            <% if(p.company_logo!=null && p.company_logo!=undefined && p.company_logo!="") { %>
+            <img onerror="src='../exhibitors/assets/no-logo.png'" src="<%=p.company_logo%>" style="width:350px; height:auto;  margin: 50px 20px;" />
+            <% } else if(p.logourl!=null && p.logourl!=undefined && p.logourl!="") { %>
+            <img onerror="src='../exhibitors/assets/no-logo.png'" src="<%=p.logourl%>" style="width:350px; height:auto; margin: 50px 20px;" />
+            <% } else { %>
+            <img src="/itb-dist/pc/pages/itb/exhibitors/assets/no-logo.png?__=13fdc60" style="width:350px; height:243px; margin: 50px 20px;" />
+            <% } %>
+
+            <div style="padding: 20px;display: inline-block; width: 400px; height:500px;vertical-align: top; overflow-y:auto; overflow-x: hidden;">
+
+                <% if(act=='exhibition') { %>
+                <!--<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="../../../pages/itb/exhibitors/assets/barcode.png" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.barcode%></p>-->
+                <!--<p ><%=p["barcode"]%></p>-->
+                <!--<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="../../../pages/itb/exhibitors/assets/company.png" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.company%></p>-->
+                <!--<p ><%=p["company"]%></p>-->
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/country.png?__=1688b1e" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.country%></p>
+                <p ><%=p["country_name"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/city.png?__=341c2f9" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.city%></p>
+                <p ><%=p["city"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/person.png?__=092ee0a" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.person%></p>
+                <p ><%=p["name"]%>&nbsp;<%=p["sex_name"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/department.png?__=6b0f788" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.department%></p>
+                <p ><%=p["department"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/position.png?__=aa4ccdc" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.position%></p>
+                <p ><%=p["position"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/company_describe.png?__=52d26c8" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.company_describe%></p>
+                <p style="word-wrap:break-word;width:95%;"><%=p["company_describe"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/web.png?__=b7cbe18" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.web%></p>
+                <p ><%=p["company_url"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/segments.png?__=82cd1ea" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.segments%></p>
+                <p ><%=p["O"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/product.png?__=ea7b021" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.product%></p>
+                <p ><%=p["P"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/regions.png?__=26e8262" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.regions%></p>
+                <p ><%=p["Q"]%></p>
+
+                <% 	} else if(act=='buyer') { %>
+                <!--<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="../../../pages/itb/exhibitors/assets/barcode.png" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.barcode%></p>-->
+                <!--<p ><%=p["barcode"]%></p>-->
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/booth_no.png?__=cee43f9" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.booth_no%></p>
+                <p ><a href="../navigation/index.html?booth=<%=p["booth_no"]%>"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/fid.png?__=59724a0" style="width:20px;height:20px;border:0px;"/><%=p["booth_no"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/country.png?__=1688b1e" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.country%></p>
+                <p ><%=p["countryname"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/company_describe.png?__=52d26c8" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.company_describe%></p>
+                <p style="word-wrap:break-word;width:95%;"><%=p["company_msg"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/web.png?__=b7cbe18" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.web%></p>
+                <p ><%=p["web"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/product.png?__=ea7b021" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.product2%></p>
+                <p ><%=p["product"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/segments.png?__=82cd1ea" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.segments%></p>
+                <p ><%=p["segments"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/regions.png?__=26e8262" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.regions%></p>
+                <p ><%=p["region1"]%> <%=p["region2"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/email.png?__=26a9eae" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.email%></p>
+                <p ><%=p["email"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/fax.png?__=448d389" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.fax%></p>
+                <p ><%=p["fax"]%></p>
+                <p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/pc/pages/itb/exhibitors/assets/tel.png?__=04b5ee9" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.tel%></p>
+                <p ><%=p["tel"]%></p>
+
+                <!--<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="../../../pages/itb/exhibitors/assets/zipcode.png" style="width:20px;height:20px;border:0px;"/>&emsp;<%=lng.zipcode%></p>-->
+                <!--<p ><%=p["zipcode"]%></p>-->
+
+                <%	} %>
+            </div>
+        </div>
+        <%}%>
+    </div>
+
+</script>
+
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/itb/wishlist/barcode.i18n.js?__=1a12c9a"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/wishlist/barcode.js?__=dd01a55"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/itb/wishlist/barcode.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

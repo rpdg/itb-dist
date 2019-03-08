@@ -112,7 +112,7 @@ define('ts/util/api.ts', function(require, exports, module) {
                   },
                   complete: function () {
                       loading.handlers--;
-                      loading.timer = setTimeout(loading.hide, 100);
+                      loading.timer = setTimeout(loading.hide, 1000);
                       that.accessible = true;
                       that = null;
                       return data;
@@ -178,7 +178,7 @@ define('ts/util/api.ts', function(require, exports, module) {
       return api;
   };
   exports.api = api;
-  //# sourceMappingURL=/itb-dist/pc/ts/util/api.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/util/api.js.map?__=1552033897847
   
 
 });

@@ -1,5 +1,17 @@
 var languagePkg = {
-	en: {},
+	en: {
+		exhibitionDateSetting : 'Exhibition Date Setting',
+		beginDateSetting : 'Start Date',
+		endDateSetting : 'End Date',
+		timeSlotsSetting : 'Exhibition Working Hour Setting',
+		slotType : 'time Slot Type',
+		beginTime : 'Time Slot Start Time',
+		endTime : 'Time Slot End Time',
+		org : 'Organizer',
+		custom : 'Customizing',
+		info : 'Display Information',
+		slotDeleteTip: 'Are you sure to delete this time slot?'
+	},
 	cn: {
 		exhibitionDateSetting : '展会日期设置',
 		beginDateSetting : '开始日期',

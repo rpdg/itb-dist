@@ -6,74 +6,101 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 	<meta name="renderer" content="webkit">
 	<title>ITB</title>
-	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814a" />
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
     <link rel="stylesheet" href="/itb-dist/pc/css/swiper.css?__=962c5b3" />
-    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/dashboard/assets/dashboard.css?__=51f4878" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/dashboard/assets/dashboard.css?__=be5dd41" />
+	
 </head>
-<body>
+<body>
+
+
 <aside id="left" class="templateContainer">
 	<script type="text/html">
+		<div id="newsandannoucement" style="display:none;">
 		<div id="swiper" class="swiper-container">
 		</div>
+		<p style="padding-right: 1em;"><a id="bMore" href="../news/index.html"><%=readMore%></a></p>
 		<div class="announcement">
-			<h1><%=announcement%></h1>
+			<h1><%=announcement%></h1>
+
 			<div id="an1"></div>
-			<p><a id="aMore" href="#"><%=readMore%></a></p>
+			<p><a id="aMore" href="../announcement/index.html"><%=readMore%></a></p>
 		</div>
-	</script>
-</aside>
+		</div>
+		<div id="leftTop" style="height:50%;display: none;">
+		</div>
+		<div id="leftBottom" style="height:45%;margin-top:60px;display: none;">
+		</div>
+	</script>
+</aside>
+
+
 <div class="rightTopWrap">
-	<aside id="rightTop">
+	<aside id="rightTop" style="overflow-x:auto;overflow-y: auto;">
+		<div id="rightBottom2">
+
+		</div>
 	</aside>
-</div>
-<aside id="rightBottom">
-</aside>
+</div>
+
+
+<aside id="rightBottom" style="overflow-x: hidden">
+	<iframe src="../schedule/index.html?iframe=1" frameborder="0" style="display:none;position: absolute; top: 0; bottom: 0; left: 0; right: 0;" id="scheduleFrame"></iframe>
+
+</aside>
+
+
 <script id="tpl-swiper" type="text/html">
 	<div class="swiper-wrapper">
 		<% for(var i=0, l= $data.length, pic ; i< l, pic = $data[i]; i++){ %>
 		<div class="swiper-slide">
-			<a href="../news/detail.html?id=<%=pic.id%>">
+			<div class="viewNews" data-id="<%=pic.id%>">
 				<img src="<%=pic.coverpicture%>">
-			</a>
+				<span><%=pic.ctitle||pic.title%></span>
+			</div>
 		</div>
 		<%}%>
 	</div>
 	<!-- Add Arrows -->
 	<div class="swiper-button-next swiper-button-white"></div>
 	<div class="swiper-button-prev swiper-button-white"></div>
-	<!-- Add Pagination -->
-	<div class="swiper-pagination swiper-pagination-white"></div>
-</script>
+</script>
+
 <script id="tpl-news" type="text/html">
 	<% for(var i=0, l= $data.length, an ; i< l, an = $data[i]; i++){ %>
-		<h2><a href="<%=an.id%>"><%=an.title%></a></h2>
+		<h2><a class="aNews" data-id="<%=an.id%>" href="javascript:void(0)"><%=an.title%></a></h2>
 		<time><%=an.publishbegindate%></time>
 		<%if(an.subjects && an.subjects.length){ %>
 			<div class="anContent">
 				<%=an.subjects[0].content%>
 			</div>
 		<%}%>
-	<%}%>
-</script>
+	<%}%>
+
+</script>
+
+
+
 <div id="opgAjaxLoading">
 	<div id="opgAjaxLoadingText">
 		<div id="square-spin"></div>
 		loading ...
 	</div>
-</div>
+</div>
+
 <script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
 <script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
 <script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
-<script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
-<script src="/itb-dist/pc/pages/itb/dashboard/index.i18n.js?__=7701277"></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/app.cfg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/utils.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/itb/dashboard/index.js?__="></script>
+<script src="/itb-dist/pc/pages/itb/dashboard/index.i18n.js?__=0b601e2"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/news/ViewNewsDetail.js?__=8349953"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/dashboard/index.js?__=9ac8058"></script>
 <script src="/itb-dist/pc/lib/swiper.js?__=e21ee4c"></script>
 <script>
 	!function () {
@@ -83,16 +110,26 @@
 			var mainSection = document.getElementById('mainSection');
 			if (mainSection && templateElem) {
 				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-			}
+			}
+
 			$('.templateContainer').each(function (index , elem) {
 				var tmpl = $('script' , this).html();
 				var render = template.compile(tmpl);
 				elem.innerHTML = render(lngPackage);
 			});
-		});
-		console.log('Languages:', Languages);
+		});
+
+		console.log('Languages:', Languages);
+
 		require('pages/itb/dashboard/index.ts');
 	}();
-</script>
+</script>
+
+
+
+
+
+
+
 </body>
 </html>

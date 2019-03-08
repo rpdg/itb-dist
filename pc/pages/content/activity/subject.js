@@ -21,7 +21,7 @@ define('pages/content/activity/subject.ts', function(require, exports, module) {
   var form = $('#tbMain');
   var panel = opg_1.default.wrapPanel(form, {
       title: "" + lng.subjectBody,
-      btnSearchText: "<i class=\"ico-find\"></i> " + lng.save,
+      btnSearchText: "" + lng.saveItemContent,
       btnSearchClick: function () {
           var param = form.fieldsToJson({
               title: {
@@ -69,8 +69,13 @@ define('pages/content/activity/subject.ts', function(require, exports, module) {
           datepicker: false,
           //closeOnDateSelect: true,
           format: 'H:i',
-          step: 10,
+          step: 30,
       });
+  });
+  $('#beginDate').datetimepicker({
+      timepicker: false,
+      closeOnDateSelect: true,
+      format: 'Y-m-d',
   });
   var optArr = [];
   for (var i = 7, l = 20, s = 0, step = 30; i < l;) {
@@ -95,13 +100,14 @@ define('pages/content/activity/subject.ts', function(require, exports, module) {
       var t = row.time ? row.time.split('-') : [];
       row.time0 = t[0];
       row.time1 = t[1];
+      row.begindate = row.begindate ? row.begindate.split(' ')[0] : '';
       form.jsonToFields(row);
       var occ = row.occupytime ? row.occupytime.split(',') : [];
       var opts_1 = selOccupyTime.find('option');
       occ.map(function (v, i) {
           opts_1.each(function (j, elem) {
               var opt = elem;
-              console.log(opt, v);
+              //console.log(opt , v);
               if (opt.value === v) {
                   $(opt).prop('selected', true);
                   return true;
@@ -111,7 +117,7 @@ define('pages/content/activity/subject.ts', function(require, exports, module) {
       new GuestManage_1.default(subjectId);
       new UserManage_1.default(subjectId);
   }
-  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/subject.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/subject.js.map?__=1552033897847
   
 
 });

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/events/assets/detail.css?__=b2b22f4" />
+	
+</head>
+<body class="pop">
+
+<div id="main"></div>
+
+
+<script id="tpl" type="text/html">
+	<div>
+		<h1><b class="padRed"></b> <%=title%></h1>
+		<div class="thumb"><img src="<%=coverpicture%>" style="width:363px;height:auto;"></div>
+		<h3 class="h3time"><%=lng.startTime%></h3>
+		<p class="txt"><%=time%></p>
+		<h3 class="h3location"><%=lng.location%></h3>
+		<p class="txt"><%=location%></p>
+		<h3 class="h3type"><%=lng.content%></h3>
+		<p class="txt"><%=content%></p>
+		<h3 class="h3note"><%=lng.note%></h3>
+		<p class="txt"><%=note%></p>
+
+	</div>
+	<hr>
+	<div class="mui-popup-buttons">
+		<% if(scope == 1 ||  scope == 0){ %>
+			<% if(applyState.applied){ %>
+				<% if(applyState.accept == -1){ %>
+					<span class="mui-popup-button blue"><%=lng.waitingConfirm%></span>
+				<% } else if(applyState.accept == 1){ %>
+					<span class="mui-popup-button green btnSingin"><%=lng.agreed%></span>
+				<% } else if(applyState.accept == 0){ %>
+					<span class="mui-popup-button "><%=lng.denied%></span>
+				<% } %>
+			<% } else {%>
+				<button class="btn-success btnSendApply" data-acid="<%=id%>" data-scope="<%=scope%>"><%= lng.sendApply %></button>
+			<% } %>
+		<% } else if(scope == 2) { %>
+			<% if(applyState.invite == 1 ){ %>
+				<% if(applyState.accept == -1){ %>
+					<span class="mui-popup-button blue"><%=lng.waitingConfirm%></span>
+				<% } else if(applyState.accept == 1){ %>
+					<span class="mui-popup-button green btnSingin"><%=lng.agreed%></span>
+				<% } else if(applyState.accept == 0){ %>
+					<span class="mui-popup-button "><%=lng.denied%></span>
+				<% } %>
+			<% } %>
+		<% } %>
+	</div>
+</script>
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/itb/events/detail.i18n.js?__=59edbf0"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/events/detail.js?__=d0d46f1"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/itb/events/detail.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

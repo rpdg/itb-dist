@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/exhibitors/assets/index.css?__=b125dc3" />
+	
+</head>
+<body>
+
+
+<div id="divSearch" class="templateContainer" style="margin-bottom: 20px;">
+	<script type="text/html">
+		<label><input id="iptKeyword" type="text" name="keyword" style="width: 200px;"></label>
+		<button id="btnSearch" class="btn-primary btn-small"><i class="ico-find"></i> <%=search%></button>
+	</script>
+</div>
+
+<div id="mytext" class="mytext"></div>
+<br/>
+<ul id="ulBuyerList"></ul>
+<div id="divRegionList"></div>
+
+
+
+<script id="tpl" type="text/html">
+	<% for(var i=0,l=$data.length,p , n = $data.lng ; i< l , p =$data[i]; i++) { %>
+	<!-- <li><b class="padRed"></b> <a href="buyer3.html?by=<%=$data.by%>&productId=<%=p.id%><%=request.from?'&from='+request.from:''%><%=request.info?'&info='+request.info:''%>&text=<%=mytextobj%> > <%=p['groupBuyer_'+ n]%>"><%=p['groupBuyer_'+ n]%></a></li> -->
+	<li><b class="padRed"></b> <a href="index.html?by=<%=$data.by%>&productId=<%=p.id%><%=request.from?'&from='+request.from:''%><%=request.info?'&info='+request.info:''%>&text=<%=mytextobj%> > <%=p['groupBuyer_'+ n]%>"><%=p['groupBuyer_'+ n]%></a></li>
+	<% } %>
+</script>
+
+
+<script id="tpl-products" type="text/html">
+	<% for (let key in $data) { %>
+	<% let data = $data[key] ; %>
+	<% if(key!='request') { %>
+	<h1><b class="padRed"></b> # <%=key%></h1>
+	<ul class="ulBuyerList">
+		<% for(var i=0,l=data.length,p ; i< l , p =data[i]; i++) { %>
+		<% if(isGroup(p.label)=='true') { %>
+		<li><a href="#"><b><%=p.label%></b></a></li>
+		<% } else {%>
+		<!-- <li><a href="buyer3.html?by=<%=request.by%>&regionId=<%=p.id%><%=request.from?'&from='+request.from:''%><%=request.info?'&info='+request.info:''%>&text=<%=mytextobj%> > <%=p.label%>"><%=p.label%></a></li> -->
+		<li><a href="index.html?by=<%=request.by%>&regionId=<%=p.id%><%=request.from?'&from='+request.from:''%><%=request.info?'&info='+request.info:''%>&text=<%=mytextobj%> > <%=p.label%>"><%=p.label%></a></li>
+		<% } %>
+		<% } %>
+	</ul>
+	<% } %>
+	<% } %>
+</script>
+
+
+<script id="tpl-regions" type="text/html">
+	<% for (let key in $data) { %>
+	<% if (key !== 'request') { %>
+	<% let data = $data[key] ; %>
+	<h1><b class="padRed"></b> <%=key%></h1>
+	<ul class="ulBuyerList">
+		<% for(var i=0,l=data.length,p ; i< l , p =data[i]; i++) { %>
+		<!-- <li><a href="buyer3.html?by=<%=request.by%>&regionId=<%=p.id%><%=request.from?'&from='+request.from:''%><%=request.info?'&info='+request.info:''%>&text=<%=mytextobj%> > <%=p.label%>"><%=p.label%></a></li> -->
+		<li><a href="index.html?by=<%=request.by%>&regionId=<%=p.id%><%=request.from?'&from='+request.from:''%><%=request.info?'&info='+request.info:''%>&text=<%=mytextobj%> > <%=p.label%>"><%=p.label%></a></li>
+		<% } %>
+	</ul>
+	<% }} %>
+</script>
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/itb/buyers/list.i18n.js?__=625874b"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/buyers/list.js?__=6574b2e"></script>
+<script src="/itb-dist/pc/lib/pinyin.js?__=791865b"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/itb/buyers/list.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

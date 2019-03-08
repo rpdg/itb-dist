@@ -46,7 +46,7 @@ define('pages/roles/role/index.ts', function(require, exports, module) {
       pagination: false,
   });
   var cache = store_1.Cache.getInstance();
-  var infoPage = '/itb-dist/pc/pages/roles/role/info.html?__=b79a8fe'.split('?')[0];
+  var infoPage = '/itb-dist/pc/pages/roles/role/info.html?__=13c9d3a'.split('?')[0];
   //Edit
   tb.tbody.on('click', '.btn-info', function () {
       var btn = $(this), title = btn.data('title'), id = btn.data('id'), index = btn.data('index');
@@ -89,7 +89,7 @@ define('pages/roles/role/index.ts', function(require, exports, module) {
           title: "" + lpg.please + lpg.confirm,
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/roles/role/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/roles/role/index.js.map?__=1552033897847
   
 
 });

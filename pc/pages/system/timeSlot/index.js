@@ -120,7 +120,7 @@ define('pages/system/timeSlot/index.ts', function(require, exports, module) {
   $('#btnAdd').click(function () {
       new TimeModifier_1.default(tbTime);
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/system/timeSlot/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/system/timeSlot/index.js.map?__=1552033897847
   
 
 });

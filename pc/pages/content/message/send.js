@@ -27,7 +27,7 @@ define('pages/content/message/send.ts', function(require, exports, module) {
       }
       return param;
   };
-  //# sourceMappingURL=/itb-dist/pc/pages/content/message/send.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/message/send.js.map?__=1552033897847
   
 
 });

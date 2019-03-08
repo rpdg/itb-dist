@@ -1,6 +1,24 @@
 var languagePkg = {
 	'en': {
-
+		moduleName: 'Events',
+		category: 'Type',
+		type: {
+			0: 'Conference',
+			1: 'Networking'
+		},
+		topic: 'Topic',
+		cover: 'Cover',
+		selectPhoto: 'Please select the picutre',
+		upload: 'Upload',
+		publisher: 'Publisher',
+		time: 'Time',
+		publishTimeBegin: 'Publish start time',
+		publishTimeEnd: 'Publish end time',
+		stick: 'Bring to top',
+		subjectsDeleteConfirm: 'Are you sure to delete this sub item?',
+		subjectsList: 'Item List',
+		addSubject: 'Add Item',
+		editSubject: 'Edit Item'
 	},
 	'cn': {
 		moduleName: '会议活动',
@@ -10,6 +28,9 @@ var languagePkg = {
 			1: '活动'
 		},
 		topic: '主题',
+		cover: '封面照',
+		selectPhoto: '选择图片',
+		upload: '上传',
 		publisher: '发布方',
 		time: '时间',
 		publishTimeBegin: '发布开始时间',

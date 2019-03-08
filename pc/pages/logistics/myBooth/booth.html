@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <style>
+    #ulSubjects{
+        padding: 20px;
+    }
+    #ulSubjects >li{
+        margin-bottom: 30px;
+    }
+    .halfWidth {
+        width: 70% !important;
+    }
+</style>
+    <link rel="stylesheet" href="/itb-dist/pc/pages/logistics/myBooth/booth.css?__=b053891" />
+	
+</head>
+<body>
+
+
+
+
+
+
+<div id="mainSection">
+
+    <script id="tpl-mainSection" type="text/html">
+        <table id="tbMain" class="search-table">
+            <!--<tr>-->
+                <!--<td colspan="4" >-->
+                    <!--<label class="fonttitle"><%=formtitle%></label>-->
+                <!--</td>-->
+            <!--</tr>-->
+
+            <!--<tr>-->
+                <!--<td colspan="4">-->
+                    <!--<label class="fontbold"><%=formcontact1%></label><br/>-->
+                    <!--<%=formcontact2%><br/>-->
+                <!--</td>-->
+            <!--</tr>-->
+
+            <tr>
+                <td colspan="4">
+                    <table style="width:100%;border:0;">
+                        <tr style="width:100%;border:0;">
+                            <td style=" border:0;width:200px;"><img src="/itb-dist/pc/pages/logistics/myBooth/booth/booth.jpg?__=e129bbb" style="width:200px;height:150px;" /></td>
+                            <td style=" border:0;vertical-align:top;text-align: left;font-size:16px;font-weight: bold;  word-wrap:break-word;">
+                                <label class="fonttitle"><%=formtitle%></label><br/><br/>
+                                <%=formcontact1%><br/><%=formcontact2%><br/><%=formcontact3%>
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="standno"><%=booth%></label></td>
+                <td><input type="text" name="standno" id="standno" /></td>
+                <td class="lead"><label for="exhibitor"><%=exhibitor%></label></td>
+                <td><input type="text" name="exhibitor" id="exhibitor" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="company"><%=company%></label></td>
+                <td><input type="text" name="company" id="company" /></td>
+                <td class="lead"><label for="contactperson"><%=chargepeople%></label></td>
+                <td><input type="text" name="contactperson" id="contactperson" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="contacttel"><%=chargetel%></label></td>
+                <td><input type="text" name="contacttel" id="contacttel" /></td>
+                <td class="lead"><label for="designremark"><%=remark%></label></td>
+                <td><input type="text" name="designremark" id="designremark" /></td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="logoPicture"><%=pic%></label></td>
+                <td>
+                    <b id="tdUploadLogo" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog1" class="btn-mini" data-target="logoPicture" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture" ></span>
+                </td>
+                <td class="lead"><label for="logoPicture2"><%=pic2%></label></td>
+                <td>
+                    <b id="tdUploadLogo2" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture2" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog2" class="btn-mini" data-target="logoPicture2" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture2" ></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="logoPicture3"><%=pic3%></label></td>
+                <td>
+                    <b id="tdUploadLogo3" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture3" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog3" class="btn-mini" data-target="logoPicture3" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture3" ></span>
+                </td>
+                <td class="lead"><label for="logoPicture4"><%=pic4%></label></td>
+                <td>
+                    <b id="tdUploadLogo4" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture4" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog4" class="btn-mini" data-target="logoPicture4" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture4" ></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="logoPicture5"><%=pic5%></label></td>
+                <td>
+                    <b id="tdUploadLogo5" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture5" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog5" class="btn-mini" data-target="logoPicture5" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture5" ></span>
+                </td>
+                <td class="lead"><label for="logoPicture6"><%=pic6%></label></td>
+                <td>
+                    <b id="tdUploadLogo6" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture6" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog6" class="btn-mini" data-target="logoPicture6" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture6" ></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="logoPicture5"><%=pic7%></label></td>
+                <td>
+                    <b id="tdUploadLogo7" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture7" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog7" class="btn-mini" data-target="logoPicture7" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture7" ></span>
+                </td>
+                <td class="lead"><label for="logoPicture8"><%=pic8%></label></td>
+                <td>
+                    <b id="tdUploadLogo8" class="fcGroup">
+                        <b class="fcItem">
+                            <input name="icon" id="logoPicture8" type="text" placeholder="" readonly>
+                        </b>
+                        <b class="fcItem" style="width: 50px; padding-left: 5px; font-weight: 100;">
+                            <i class="fileChooserWrap">
+                                <button id="btnUploadDialog8" class="btn-mini" data-target="logoPicture8" style="width: 100%;"><%=upload%></button>
+                            </i>
+                        </b>
+                    </b>
+                    <span id="td_logoPicture8" ></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="applyinfo"><%=applyinfo%></label></td>
+                <td><div id="applyinfo" /></td>
+                <td class="lead"><label for="approvalinfo"><%=approvalinfo%></label></td>
+                <td><div id="approvalinfo" /></td>
+            </tr>
+
+
+            <tr>
+                <td colspan="4" >
+                    <%=info1%><br/><%=info2%>&emsp;<%=info3%>&emsp;<%=info4%><br/><%=info5%>&emsp;<%=info6%>&emsp;<%=info7%><br/><%=info8%><br/>
+                </td>
+            </tr>
+
+        </table>
+
+
+        <p id="buttonSection" class="text-center">
+            <button id="btnSaveMain" class="btn-success"><%=sendApply%></button>
+            <button id="btnReset" class="btn-danger"><%=reset%></button>
+        </p>
+
+
+    </script>
+
+</div>
+
+
+
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/logistics/myBooth/booth.i18n.js?__=e7546a9"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/logistics/myBooth/booth.js?__=b1e52d1"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/logistics/myBooth/booth.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

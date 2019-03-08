@@ -1,14 +1,14 @@
 var languagePkg = {
 	'en': {
-		carousel : 'carousel ',
-		title : 'title',
-		linkType : 'link type',
-		linkBinding : 'link binding',
-		showIndex : 'show order',
-		news : 'news ',
-		sponsor : 'sponsor',
-		announcement : 'announcement',
-		nullSelectWarn : 'please select a news entry',
+		carousel : 'Banner',
+		title : 'Title',
+		linkType : 'Link Type',
+		linkBinding : 'Hyperlink',
+		showIndex : 'Banner Order',
+		news : 'News',
+		sponsor : 'Sponser',
+		announcement : 'Information',
+		nullSelectWarn : 'Please select the content',
 	},
 	'cn': {
 		carousel : '轮播',
@@ -18,7 +18,7 @@ var languagePkg = {
 		showIndex : '显示顺序',
 		news : '新闻',
 		sponsor : '赞助商',
-		announcement : '公告',
-		nullSelectWarn : '请选择新闻',
+		announcement : '信息',
+		nullSelectWarn : '请选择内容',
 	}
 };

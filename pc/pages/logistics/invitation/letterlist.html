@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/logistics/invitation/letterlist.css?__=d41d8cd" />
+    <link rel="stylesheet" href="/itb-dist/pc/css/jquery.datetimepicker.css?__=087d36f" />
+	
+</head>
+<body>
+
+
+<div class="templateContainer">
+    <script type="text/html">
+
+        <table id="form" class="search-table">
+            <tr>
+                <td class="lead"><%=countryname%></td>
+                <td><input type="text" name="countryname"></td>
+                <td class="lead"><%=username%></td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td class="lead"><%=position%></td>
+                <td><input type="text" name="position"></td>
+                <td class="lead"><%=gender%></td>
+                <td><select name="gender">
+                    <option value="Male"><%=gendercontent[0]%></option>
+                    <option value="Female"><%=gendercontent[1]%></option>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="lead"><%=dateofbirth%></td>
+                <td><input type="datetime" id="dateofbirth" name="dateofbirth" /></td>
+                <td class="lead"><%=nationality%></td>
+                <td><input type="text" name="nationality"></td>
+            </tr>
+            <tr>
+                <td class="lead"><%=passportnumber%></td>
+                <td><input type="text" name="passportnumber"></td>
+                <td class="lead"><%=passportvalidity%></td>
+                <td><input type="datetime" id="passportvalidity" name="passportvalidity" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><%=employer%></td>
+                <td><input type="text" name="employer"></td>
+                <td class="lead"><%=residence%></td>
+                <td><input id="starttime" name="starttime" type="datetime" value="2018-05-13" />--<input id="stoptime"  name="stoptime" type="datetime" value="2018-05-19" /></td>
+            </tr>
+
+        </table>
+
+    </script>
+
+</div>
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/logistics/invitation/letterlist.i18n.js?__=38d4e00"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/logistics/invitation/letterlist.js?__=c2cf3c4"></script>
+<script src="/itb-dist/pc/lib/jquery.datetimepicker.js?__=6f0a657"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/logistics/invitation/letterlist.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

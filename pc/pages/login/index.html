@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 	<meta name="renderer" content="webkit">
 	<title>ITB</title>
-	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814a" />
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
     <style>body {
   background-color: #d71711;
   background-image: url("/itb-dist/pc/pages/login/assets/weblogin.jpg?__=185a42e");
@@ -32,7 +32,6 @@
 }
 
 #avanda {
-  width: 158px;
   height: 80px;
   margin-top: 30px;
 }
@@ -54,7 +53,7 @@
   line-height: 33px;
   margin-bottom: 10px;
   font-size: 14px;
-  text-indent: 3em;
+  padding-left: 3em;
   border-radius: 3px;
   box-shadow: none !important;
 }
@@ -85,7 +84,6 @@
   width: 440px;
   height: 38px;
   background-color: #d71711;
-  text-transform: uppercase;
   color: #fff;
   font-weight: 900;
 }
@@ -118,33 +116,52 @@
   cursor: default;
 }
 
-/*# sourceMappingURL=login.css.map?__= */</style>
+/*# sourceMappingURL=login.css.map?__=1552033897847 */</style>
+	
+
+
+<script>
+	window.CONFIG = {
+		apiServer: 'http://120.27.236.138:8080/api/',
+		loginPage: window.location.pathname
+	};
+</script>
+
 </head>
-<body>
-
+<body>
+
+
+
+
 <div id="loginPanel">
-	<div id="mainSection">
+	<div id="mainSection">
+
 		<script id="tpl-mainSection" type="text/html">
 			<div id="switcher">
-				<div class="tgr <%=($current==='cn'?'cur':'s')%>">汉</div>
+				<div class="tgr <%=($current==='cn'?'cur':'s')%>">中</div>
 				<div class="tgr <%=($current==='en'?'cur':'s')%>">EN</div>
 			</div>
 			<p class="text-center logoPh">
-				<img src="/itb-dist/pc/css/img/logo-itb.png?__=83a39e6" id="avanda">
+				<img src="/itb-dist/pc/css/img/logo-itb.png?__=64be1f4" id="avanda">
 			</p>
 			<form id="loginForm" action="#" onsubmit="return false">
-				<input id="loginName" name="username" type="text" maxlength="20" placeholder="<%=loginName%>">
-				<input id="password" name="password" type="password" maxlength="18" placeholder="<%=password%>">
+				<input id="loginName" name="username" type="text"   placeholder="<%=loginName%>">
+				<input id="password" name="password" type="password"   placeholder="<%=password%>">
 			</form>
 			<p id="linkBar">
 				<label class="float-right"><img src="/itb-dist/pc/pages/login/assets/ico-foots.png?__=1b3a059" alt=""> <a id="guestLogin" href="javascript:void(0)"><%=guest%></a> </label>
-				<label class="float-right"><img src="/itb-dist/pc/pages/login/assets/ico-mail.png?__=079e2d6" alt=""> <a href="#"><%=forget%></a> </label>
+				<label class="float-right"><img src="/itb-dist/pc/pages/login/assets/ico-mail.png?__=079e2d6" alt=""> <a id="forgetPwd" href="#"><%=forget%></a> </label>
 				<label class="float-left"><input id="remPassword" type="checkbox"> <%=remember%> </label>
 			</p>
 			<button id="btnLogin"><%=login%></button>
-		</script>
-	</div>
-</div>
+		</script>
+
+	</div>
+
+
+</div>
+
+
 <!--[if lt IE 10]>
 <style type="text/css">
 	#ie6wraning {
@@ -158,17 +175,21 @@
 		height: 30px;
 		width: 100%;
 		text-align: center;
-	}
+	}
+
 	#ie6wraning a {
 		color: #ff0;
-	}
+	}
+
 	#ie6wraning a:hover {
 		color: #fff;
-	}
+	}
+
 	* html #ie6wraning {
 		position: absolute;
 	}
-</style>
+</style>
+
 <div id="ie6wraning">
 	您使用的浏览器是旧版IE，无法正常使用本系统，请升级您的浏览器至新版本。
 	推荐您使用：
@@ -177,42 +198,32 @@
 	<a target="_blank" href="http://se.360.cn/">360浏览器</a>、
 	<a target="_blank" href="http://www.maxthon.cn/">遨游浏览器</a>
 </div>
-<![endif]-->
+<![endif]-->
+
+
+
+
+
 <div id="opgAjaxLoading">
 	<div id="opgAjaxLoadingText">
 		<div id="square-spin"></div>
 		loading ...
 	</div>
-</div>
+</div>
+
 <script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
 <script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
 <script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
-<script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
-<script src="/itb-dist/pc/pages/login/index.i18n.js?__=eb3398d"></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/DisplayOject.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/FormControls.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/app.cfg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/utils.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Table.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Popup.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Panel.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Combo.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Tree.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/TabView.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/opg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/login/index.js?__="></script>
+<script src="/itb-dist/pc/pages/login/index.i18n.js?__=f99d85a"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/login/index.js?__=47d43ee"></script>
 <script>
-	window.CONFIG = {
-		apiServer: 'http://116.62.34.149:8090/api/',
-		loginPage: window.location.pathname
-	};
-
-
 	!function () {
 		var Languages = require('ts/util/Languages.ts').Languages;
 		Languages.init(languagePkg, function (lngPackage) {
@@ -220,16 +231,26 @@
 			var mainSection = document.getElementById('mainSection');
 			if (mainSection && templateElem) {
 				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-			}
+			}
+
 			$('.templateContainer').each(function (index , elem) {
 				var tmpl = $('script' , this).html();
 				var render = template.compile(tmpl);
 				elem.innerHTML = render(lngPackage);
 			});
-		});
-		console.log('Languages:', Languages);
+		});
+
+		console.log('Languages:', Languages);
+
 		require('pages/login/index.ts');
 	}();
-</script>
+</script>
+
+
+
+
+
+
+
 </body>
 </html>

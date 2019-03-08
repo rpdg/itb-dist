@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/logistics/serviceRental/index.css?__=d6a7c93" />
+	
+</head>
+<body>
+
+<div id="mainSection">
+	<script id="tpl-mainSection" type="text/html">
+		<table id="tbSearch" class="search-table">
+			<tr>
+				<td colspan="2">
+					<table style="width:100%;border:0;">
+						<tr style="width:100%;border:0;">
+							<td style=" border:0;width:200px;"><img src="/itb-dist/pc/pages/logistics/serviceRental/service/furniture.jpg?__=04edadc" style="width:200px;height:150px;" /></td>
+							<td style=" border:0;vertical-align:top;text-align: left;font-size:16px;font-weight: bold;  word-wrap:break-word;">
+								<label class="fonttitle"><%=formtitle%></label><br/><br/>
+								<%=formcontact1%><br/><%=formcontact2%>
+							</td>
+
+						</tr>
+					</table>
+				</td>
+				<td colspan="2">
+					<table style="width:100%;height:100%;border:0;">
+						<tr style="width:100%;height:100%;border:0;">
+							<td style="border:0;width:100%;height:150px;min-height:150px;vertical-align:top;text-align: left;">
+								<%=info1%><br/><%=info2%>&emsp;<%=info3%>&emsp;<%=info4%><br/><%=info5%>&emsp;<%=info6%>&emsp;<%=info7%><br/><%=info8%><br/>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+						<table style="width:100%;height:50px;border:0;">
+								<tr style="width:100%;height:100%;border:0;">
+									<td style="border:0;width:100%;height:50px;min-height:50px;vertical-align:top;text-align: left;">
+										<%=info9%><br/><%=info10%><br/><%=info11%><br/>
+									</td>
+								</tr>
+						</table>
+				</td>
+			</tr>
+			<tr>
+                <td class="lead"><%=furniturepic%></td>
+                <td class="iconLink">&emsp;&emsp;<a href="#" id="popiconimg1"><img class="iconimg" src="/itb-dist/pc/pages/logistics/serviceRental/service/funitureicon.png?__=42c9e2f" /></a>
+					&emsp;&emsp;<a href="#" id="popiconimg2"><img class="iconimg"  src="/itb-dist/pc/pages/logistics/serviceRental/service/funitureicon2.png?__=a1da1c6" /></a></td>
+				<td class="lead"></td><td></td>
+				<!--<td class="lead"><label for="reservetype"><%=service%></label></td>-->
+				<!--<td><select name="reservetype" id="reservetype">-->
+					<!--<option value="furniture" selected><%=servicetype[0]%></option>-->
+					<!--<option value="power"><%=servicetype[1]%></option>-->
+					<!--<option value="other"><%=servicetype[2]%></option>-->
+				<!--</select></td>-->
+			</tr>
+		</table>
+
+		<p id="buttonSection" class="text-center">
+			<!--<button id="btnSearch" class="btn-primary"><%=searchService%></button>-->
+			<button id="btnServiceApply" class="btn-warning"><%=serviceApply%></button>
+			<button id="btnServiceApply2" class="btn-warning"><%=serviceApply2%></button>
+			<button id="btnServiceApply3" class="btn-warning"><%=serviceApply3%></button>
+		</p>
+
+	</script>
+
+</div>
+
+<p></p>
+<p></p>
+
+<table id="tb"></table>
+<div id="totalsum" class="totalsumstyle"></div>
+
+<p></p>
+<p></p>
+
+<table id="tb2"></table>
+<div id="totalsum2" class="totalsumstyle"></div>
+
+<p></p>
+<p></p>
+
+<table id="tb3"></table>
+<div id="totalsum3" class="totalsumstyle"></div>
+
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/logistics/serviceRental/index.i18n.js?__=619d87b"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/logistics/serviceRental/index.js?__=98521cd"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/logistics/serviceRental/index.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

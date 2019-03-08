@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/logistics/translation/index.css?__=d6a7c93" />
+	
+</head>
+<body>
+
+<div id="mainSection">
+	<script id="tpl-mainSection" type="text/html">
+		<table id="tbSearch" class="search-table">
+			<tr>
+				<td colspan="2">
+					<table style="width:100%;border:0;">
+						<tr style="width:100%;border:0;">
+							<td style=" border:0;width:200px;"><img src="/itb-dist/pc/pages/logistics/translation/translate/translate.jpg?__=33e3b88" style="width:200px;height:150px;" /></td>
+							<td style=" border:0;vertical-align:top;text-align: left;font-size:16px;font-weight: bold;  word-wrap:break-word;">
+								<label class="fonttitle"><%=formtitle%></label><br/><br/>
+								<%=formcontact1%><br/><%=formcontact2%>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td colspan="2">
+					<table style="width:100%;height:100%;border:0;">
+						<tr style="width:100%;height:100%;border:0;">
+							<td style="border:0;width:100%;height:150px;min-height:150px;vertical-align:top;text-align: left;">
+								<%=info1%><br/><%=info2%><br/><%=info3%>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="4">
+					<input type="checkbox" name="needtranslate" id="needtranslate" value="need" /><span class="fontinfo"><%=choiceinfo%></span>
+				
+				</td>
+			</tr>
+
+			<tr>
+				<td class="lead"><label for="payment"><%=payment%></label></td>
+				<td><select name="payment" id="payment">
+					<option value="CNY" selected><%=paymenttypeD[0]%></option>
+					<option value="EUR" ><%=paymenttypeD[1]%></option>
+					<option value="USD" ><%=paymenttypeD[2]%></option>
+				</select></td>
+                <td class="lead"><label for="country"><%=country%></label></td>
+                <td><input type="text" id="country" name="country" /></td>
+			</tr>
+			<tr>
+				<td class="lead"><label for="contactperson"><%=contactperson%></label></td>
+				<td><input type="text" id="contactperson" name="contactperson" /></td>
+				<td class="lead"><label for="phonenum"><%=phonenum%></label></td>
+				<td><input type="text" id="phonenum" name="phonenum" /></td>
+			</tr>
+			<tr>
+				<td class="lead"><label for="email"><%=email%></label></td>
+				<td><input type="text" id="email" name="email" /></td>
+				<td  class="lead"></td>
+				<td></td>
+				<!--<td class="lead"><label for="reservetype"><%=service%></label></td>-->
+				<!--<td><select name="reservetype" id="reservetype">-->
+					<!--<option value="translation" selected><%=servicetype[0]%></option>-->
+				<!--</select></td>-->
+			</tr>
+
+
+			<tr>
+				<td colspan="4">
+					<label class="fontinfo"><%=forminfo%></label><br/>
+					<label class="fontinfo"><%=forminfo2%></label><br/>
+					<label class="fontinfo"><%=forminfo3%></label><br/>
+					<label class="fontinfo"><%=forminfo4%></label><br/>
+					<label class="fontinfo"><%=forminfo5%></label><br/>
+					<label class="fontinfo"><%=forminfo6%></label><br/>
+					<label class="fontinfo"><%=forminfo7%></label><br/>
+					<label class="fontinfo"><%=forminfo8%></label><br/>
+					<label class="fontinfo"><%=forminfo9%></label><br/>
+					<label class="fontinfo"><%=forminfo10%></label><br/>
+				</td>
+			</tr>
+		</table>
+
+
+		<p id="buttonSection" class="text-center">
+			<!--<button id="btnSearch" class="btn-primary"><%=searchService%></button>-->
+			<button id="btnServiceApply" class="btn-warning"><%=serviceApply%></button>
+		</p>
+	</script>
+
+</div>
+
+<p></p>
+<p></p>
+
+<table id="tb"></table>
+
+<div id="totalsum" class="totalsumstyle"></div>
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/logistics/translation/index.i18n.js?__=3b38682"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/logistics/translation/index.js?__=802f7be"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/logistics/translation/index.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

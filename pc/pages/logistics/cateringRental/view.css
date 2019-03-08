@@ -1,0 +1,31 @@
+#listtable {
+  width: 100%;
+}
+
+#listtable thead th {
+  background-color: #ecf0f1;
+  color: #000;
+  border-bottom-width: 0;
+}
+
+/* Column Style */
+#listtable td {
+  color: #000;
+}
+
+/* Heading and Column Style */
+#listtable tr, #listtable th {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000;
+}
+
+/* Padding and font style */
+#listtable td, #listtable th {
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=view.css.map?__=1552033897847 */

@@ -6,79 +6,315 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
-	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=a71f1ada71f1ad" />
-    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=ad1e264ad1e264" />
-    <link rel="stylesheet" href="/itb-dist/wap/pages/buyer/assets/buyer.css?__=b76c3ceb76c3ce" />
+	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
+	
+	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=5eb3e79" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=a8d5d58" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/buyer/assets/buyer.css?__=13aed54" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/buyer/assets/2019_style.css?__=6631ac7" />
+
 	<script>
 		window.CONFIG = {
-			apiServer: 'http://116.62.34.149:8090/api/'
+			apiServer: 'http://120.27.236.138:8080/api/'
 		};
-	</script>
+	</script>
+
 </head>
 <body class="">
-<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
-<header class="mui-bar mui-bar-nav">
-	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="../dashboard/index.html"></a>
-	<h1 class="mui-title templateContainer">
+<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
+
+<div id="outterFrame">
+
+
+<div class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" id="backurl"></a>
+	<h1 class="mui-title templateContainer" style="text-indent:1rem;">
 		<script type="text/html">
 			<%=pageTitle%>
 		</script>
 	</h1>
-</header>
+</div>
+
 <div class="mui-content">
-	<div class="lyuSearchWrap">
-		<div class="lyuSearchBar">
-			<div class="mui-input-row mui-search">
-				<input type="search" class="mui-input-clear" placeholder="">
-			</div>
-		</div>
-	</div>
-	<div class="templateContainer">
-		<script type="text/html">
-			<div class="imgBlock" style="background-image: url(/itb-dist/wap/pages/buyer/assets/buyer1.jpg?__=7ecc48a7ecc48a) ;">
-				<a href="list.html"><%=buyer1%></a>
-			</div>
-			<div class="imgBlock" style="background-image: url(/itb-dist/wap/pages/buyer/assets/buyer2.jpg?__=d2734d2d2734d2) ;">
-				<a href="list.html"><%=buyer2%></a>
-			</div>
-			<div class="imgBlock" style="background-image: url(/itb-dist/wap/pages/buyer/assets/buyer3.jpg?__=22f8e0222f8e02) ;">
-				<a href="list.html"><%=buyer3%></a>
-			</div>
-			<div class="imgBlock" style="background-image: url(/itb-dist/wap/pages/buyer/assets/buyer4.jpg?__=ed137feed137fe) ;">
-				<a href="list.html"><%=buyer4%></a>
-			</div>
-		</script>
+	<label id="toggleViewStyle">
+		<img class="tgList" src="/itb-dist/wap/pages/buyer/assets/view-list.png?__=1552030651276" alt="" />
+		<img class="tgThumb" src="/itb-dist/wap/pages/buyer/assets/view-thumb.png?__=1552030651276" alt="" />
+		<span style="float: right;">
+			<img id="icoCart" class="i-icon" src="/itb-dist/wap/pages/buyer/assets/cart-79-xxl.png?__=1552030651276" />
+			<img id="icoFilter" class="i-icon" src="/itb-dist/wap/pages/buyer/assets/app06.png?__=1552030651276" />
+		</span>
+	</label>
+	<div class="wrap">
+		<div id="divResult"></div>
 	</div>
-</div>
-<script src="/itb-dist/wap/js/libs.js?__=b71f713b71f713"></script>
-<script src="/itb-dist/wap/pages/buyer/buyer1.i18n.js?__=90f731f90f731f"></script>
-<script type="text/javascript" src="/itb-dist/wap/js/util.js?__="></script>
-<script type="text/javascript" src="/itb-dist/wap/js/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/wap/pages/buyer/buyer1.js?__="></script>
+</div>
+<script id="tpl-result" type="text/html">
+	<% for (var key in list) { %>
+	<% var data = list[key] ; %>
+	<h1><%=key%></h1>
+	<ul class="result-list">
+		<% for(var i=0,l=data.length,p , n = data.lng ; i< l , p =data[i]; i++) { %>
+		<%
+			var templogo="",logohost="http://wapp.itb-china.com";
+			if(p.logourl==="N/A" || p.logourl==="未提供") {
+				p.logourl= null;
+			}
+			if(p.company_logo==="N/A" || p.company_logo==="未提供") {
+				p.company_logo= null;
+			}
+
+			if(p.logourl){
+				templogo=logohost+ "/Logo/"+p.logourl.split('/')[p.logourl.split('/').length-1];
+			}
+			else if( p.company_logo){
+				templogo=logohost+ "/Logo/"+p.company_logo.split('/')[p.company_logo.split('/').length-1];
+			}
+			else {
+				templogo="../exhibitors/assets/no-logo.png";
+			}
+		%>
+		<li data-index="<%=p[':index']%>" data-barcode="<%=p.barcode%>">
+			<% if(stage){ %>
+				<img src="/itb-dist/wap/pages/buyer/assets/app05.png?__=1552030651276" class="icon-add" />
+			<% } %>
+			<img src="/itb-dist/wap/pages/buyer/assets/ico-heart.png?__=1552030651276" class="icon-heart" style="visibility:<%=(p.selected?'visible':'hidden')%>;" />
+
+			<div class="imgHold" style="background-image: url('<%=templogo%>')"></div>
+			<%=p.company%><br/>
+			<%=p.name%>&nbsp;<%=p.sex_name%>
+		</li>
+		<% } %>
+	</ul>
+	<% } %>
+</script>
+
+<div class="mask m" id="mask1"></div>
+
+<div id="sideBar" class="sideBar templateContainer">
+	<script type="text/html">
+		<div class="mui-input-row mui-search" style="margin: 15px 5px 0;">
+			<input id="iptSearch" name="keyword" type="search" class="mui-input-clear" placeholder="<%=searchtips%>" />
+		</div>
+
+		<hr />
+		<div class="sideSec">
+				<label>
+						<b style="padding-left:1em;"><%=regions%></b>: <br>
+						<select name="region" id="selRegion">
+							<option value=""> ---- </option>
+						</select>
+					</label>
+		</div>
+
+		<hr />
+		<div class="sideSec">
+				<label>
+						<b style="padding-left:1em;"><%=products%></b>: <br>
+						<select name="product" id="selProduct">
+							<option value=""> ---- </option>
+						</select>
+					</label>
+		</div>
+
+
+		<div class="sideSec" id="divSideSearch">
+			<button id="btnSearch" class="mui-btn mui-btn-danger mui-btn-block"><%=search%></button>
+			<button id="btnReset" class="mui-btn mui-btn-danger mui-btn-block"><%=reset%></button>
+		</div>
+	</script>
+</div>
+
+<script id="tpl-selects" type="text/html">
+	<% var list = $data.list , val = $data.val  , txt = $data.txt; %>
+	<% for(var i=0, l= list.length , item; i < l , item = list[i]; i++) { %>
+		<option value="<%=item[val]%>">
+			<%=item[txt]%>
+		</option>
+	<% } %>
+</script>
+
+<div id="sortBar" class="sideBar">
+	<h3 class="h3-title templateContainer">
+		<script type="text/html">
+			<%=preferences%>
+		</script>
+	</h3>
+	<ul id="slippyList">
+		<script id="tpl-choosed" type="text/html">
+			<% for(var i=0, l= $data.length , item; i < l , item = $data[i]; i++) { %>
+				<li data-barcode="<%=item.barcode%>">
+					<span class="ico-remove" data-barcode="<%=item.barcode%>">-</span>
+					<span class="liText">[<%=i+1%>] <%=item.company%></span> <b class="ico-handle">≡</b>
+				</li>
+			<% } %>
+		</script>
+	</ul>
+	<h3 class="h3-title2 templateContainer">
+		<script type="text/html">
+			<%=ordertip%>
+		</script>
+	</h3>
+</div>
+
+<script id="tpl-detail" type="text/html">
+	<div class="detailContainer">
+		<div class="detail">
+			<%
+			var templogo2="",logohost="http://wapp.itb-china.com";
+			if($data.logourl==="N/A" || $data.logourl==="未提供") {
+				$data.logourl="";
+			}
+			if($data.company_logo==="N/A" || $data.company_logo==="未提供" ) {
+				$data.company_logo="";
+			}
+			if($data.logourl!="" && $data.logourl!=null && $data.logourl!=undefined)
+			{
+				templogo2=logohost+ "/Logo/"+ $data.logourl.split('/')[$data.logourl.split('/').length-1];
+			}
+			else if($data.company_logo!="" && $data.company_logo!=null && $data.company_logo!=undefined)
+			{
+				templogo2=logohost+ "/Logo/"+ $data.company_logo.split('/')[$data.company_logo.split('/').length-1];
+			}
+			else {
+				templogo2="../exhibitors/assets/no-logo.png";
+			}
+			%>
+			<div class="headImg"><img onerror="src='../exhibitors/assets/no-logo.png'" src="<%=templogo2%>" alt="" class="headThumb"></div>
+			<div class="detailText">
+				<p class="pTitle" style="word-wrap:break-word;width:95%;"><div class="company-backc"><%=$data.company%></div></p>
+
+				<!--<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="../../pages/exhibitors/assets/barcode.png" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.barcode%></p>-->
+				<!--<p ><%=$data.barcode%></p>-->
+				<!--<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="../../pages/exhibitors/assets/company.png" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.company%></p>-->
+				<!--<p ><%=$data.company%></p>-->
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/country.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.country%></p>
+				<p ><%=$data.country_name%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/city.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.city%></p>
+				<p ><%=$data.city%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/person.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.person%></p>
+				<p ><%=$data.name%>&nbsp;<%=$data.sex_name%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/department.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.department%></p>
+				<p ><%=$data.department%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/position.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.position%></p>
+				<p ><%=$data.position%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/company_describe.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.company_describe%></p>
+				<p style="word-wrap:break-word;width:95%;"><%=$data.company_describe%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/web.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.web%></p>
+				<p ><%=$data.company_url%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/segments.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.segments%></p>
+				<p ><%=$data.O%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/product.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.product%></p>
+				<p ><%=$data.P%></p>
+				<p style="color:#3ca9e2;font-size:16px;display:flex;align-items:center;"><img src="/itb-dist/wap/pages/exhibitors/assets/regions.png?__=1552030651276" style="width:20px;height:20px;border:0px;"/>&emsp;<%=__lng.regions%></p>
+				<p ><%=$data.Q%></p>
+
+
+			</div>
+			<% if(fromSchedule){ %>
+			<button class="mui-btn orangebtn mui-btn-block" id="btnSendSchedule"><%=__lng.dating%></button>
+			<% }  else if(stage){ %>
+			<button class="mui-btn orangebtn mui-btn-block" id="btnWishList"><%=__lng.wishListLike%></button>
+			<% } else {%>
+			<p>&nbsp;</p>
+			<% } %>
+		</div>
+	</div>
+</script>
+
+</div>
+
+
+
+
+<footer class="footer-bar templateContainer">
+	<script type="text/html">
+		<a href="../dashboard/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/homeG.png?__=1552030651276" alt=""><br><%=FOOTER['b1']%>
+		</a>
+		<a href="../navigation/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/floorplanG.png?__=1552030651276" alt=""><br><%=FOOTER['b2']%>
+		</a>
+		<a href="../record/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/recordG.png?__=1552030651276" alt="">
+			<div><%=FOOTER['b3']%></div>
+		</a>
+		<a href="../moments/index.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/momentsGs.png?__=1552030651276" alt=""><br><%=FOOTER['b4']%>
+		</a>
+		<a href="../schedule/mine.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/scheduleG.png?__=1552030651276" alt=""><br><%=FOOTER['b5']%>
+		</a>
+	</script>
+</foote>
+
+<script src="/itb-dist/wap/js/libs.js?__=af44dfd"></script>
+<script src="/itb-dist/wap/pages/buyer/buyer1.i18n.js?__=f3961aa"></script>
+
+
+<script type="text/javascript" src="/itb-dist/wap/js/util.js?__=a479366"></script>
+<script type="text/javascript" src="/itb-dist/wap/js/api.js?__=722b967"></script>
+<script type="text/javascript" src="/itb-dist/wap/pages/buyer/buyer1.js?__=0c9afdb"></script>
+<script src="/itb-dist/wap/lib/slip.js?__=093bc5b"></script>
+<script src="/itb-dist/wap/lib/jquery.pinyin.js?__=791865b"></script>
 <script>
 	/*window.addEventListener('pageshow', function (e) {
 		// 通过persisted属性判断是否存在 BF Cache
 		if (e.persisted) {
 			location.reload();
 		}
-	});*/
-	let Languages = require('js/util.ts').Languages;
+	});*/
+
+	var lngPk4Footer = {
+		en : {
+			b1 : 'Home',
+			b2 : 'Floorplan',
+			b3 : 'Record',
+			b4 : 'Moments',
+			b5 : 'Schedule',
+		},
+		cn:{
+			b1 : 'cn-aa',
+			b2 : 'cn-bb',
+			b3 : 'bbb',
+			b4 : 'bbb',
+			b5 : 'bbb',
+		}
+	};
+
+	var Languages = require('js/util.ts').Languages;
+
 	Languages.init(languagePkg, function (lngPackage) {
+		lngPackage['FOOTER'] = lngPk4Footer[lngPackage['$current']];
 		$('.templateContainer').each(function (index , elem) {
-			let tmpl = $('script' , this).html();
-			let render = template.compile(tmpl);
+			var tmpl = $('script' , this).html();
+			var render = template.compile(tmpl);
 			elem.innerHTML = render(lngPackage);
 		});
-	});
+	});
 
-
+
+
+
+
 	mui.ready(() => {
 		require('pages/buyer/buyer1.ts');
-	});
+	});
+
+
 	$('body').on('tap', 'a', function () {
 		location.href = this.href;
 	});
-</script>
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

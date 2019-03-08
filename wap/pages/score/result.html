@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ITB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
+	
+	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=5eb3e79" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=a8d5d58" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/wishlist/assets/result.css?__=975e74d" />
+
+	<script>
+		window.CONFIG = {
+			apiServer: 'http://120.27.236.138:8080/api/'
+		};
+	</script>
+
+	
+</head>
+<body class="">
+<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
+
+<div id="outterFrame">
+
+<div class="mui-bar mui-bar-nav">
+	<a class="mui-icon mui-icon-left-nav mui-pull-left" href="./myScore.html"></a>
+	<h1 class="mui-title templateContainer">
+		<script type="text/html">
+			<%=pageTitle%>
+		</script>
+	</h1>
+</div>
+
+<div class="mui-content" >
+	<div class="wrap">
+		<table id="resulthead" class="header templateContainer">
+			<script type="text/html">
+				<thead><tr><th style='width:70%'><%=th1%></th><th><%=th3%></th></tr></thead>
+			</script>
+		</table>
+		<table id="resultlist" class="list">
+			<script id="tpl-resultlist" type="text/html">
+				<% for(var i=0, l=$data.length, p  ; i< l , p =$data[i]; i++) { %>
+				<tr><td style='width:70%'><%=p.title%></td><td><%=p.score%></td></tr>
+				<% } %>
+			</script>
+		</table>
+
+	</div>
+</div>
+
+
+
+</div>
+
+
+
+
+<footer class="footer-bar templateContainer">
+	<script type="text/html">
+		<a href="../dashboard/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/homeG.png?__=1552030651276" alt=""><br><%=FOOTER['b1']%>
+		</a>
+		<a href="../navigation/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/floorplanG.png?__=1552030651276" alt=""><br><%=FOOTER['b2']%>
+		</a>
+		<a href="../record/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/recordG.png?__=1552030651276" alt="">
+			<div><%=FOOTER['b3']%></div>
+		</a>
+		<a href="../moments/index.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/momentsGs.png?__=1552030651276" alt=""><br><%=FOOTER['b4']%>
+		</a>
+		<a href="../schedule/mine.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/scheduleG.png?__=1552030651276" alt=""><br><%=FOOTER['b5']%>
+		</a>
+	</script>
+</foote>
+
+<script src="/itb-dist/wap/js/libs.js?__=af44dfd"></script>
+<script src="/itb-dist/wap/pages/score/result.i18n.js?__=d21f9e6"></script>
+
+
+<script type="text/javascript" src="/itb-dist/wap/js/util.js?__=a479366"></script>
+<script type="text/javascript" src="/itb-dist/wap/js/api.js?__=722b967"></script>
+<script type="text/javascript" src="/itb-dist/wap/pages/score/result.js?__=1973b0e"></script>
+<script>
+	/*window.addEventListener('pageshow', function (e) {
+		// 通过persisted属性判断是否存在 BF Cache
+		if (e.persisted) {
+			location.reload();
+		}
+	});*/
+
+	var lngPk4Footer = {
+		en : {
+			b1 : 'Home',
+			b2 : 'Floorplan',
+			b3 : 'Record',
+			b4 : 'Moments',
+			b5 : 'Schedule',
+		},
+		cn:{
+			b1 : 'cn-aa',
+			b2 : 'cn-bb',
+			b3 : 'bbb',
+			b4 : 'bbb',
+			b5 : 'bbb',
+		}
+	};
+
+	var Languages = require('js/util.ts').Languages;
+
+	Languages.init(languagePkg, function (lngPackage) {
+		lngPackage['FOOTER'] = lngPk4Footer[lngPackage['$current']];
+		$('.templateContainer').each(function (index , elem) {
+			var tmpl = $('script' , this).html();
+			var render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
+	});
+
+
+
+
+
+	mui.ready(() => {
+		require('pages/score/result.ts');
+	});
+
+
+	$('body').on('tap', 'a', function () {
+		location.href = this.href;
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,23 +1,29 @@
-.card { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); background-color: #d71711; color: #fff; width: 8.93333rem; margin: 0.66667rem auto; border-radius: 0.2rem; }
+.card { position: absolute; left: 0.53333rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); background-color: #d71711; color: #fff; width: 8.93333rem; margin: 0.66667rem auto; border-radius: 0.2rem; }
 
 .card > .qrSec { height: 7rem; text-align: center; }
 
-.card > .qrSec > .qrImg { display: inline-block; width: 5.06667rem; height: 5.06667rem; background-color: #fff; border-radius: 0.2rem; margin: 0.66667rem auto 0; }
+.card > .qrSec #imgSwitcher { right: 0; position: absolute; width: 1.64rem; height: 1.64rem; }
+
+.card > .qrSec > .qrImg { display: inline-block; width: 5.06667rem; height: 5.06667rem; background-color: #fff; border-radius: 0.2rem; margin: 0.66667rem auto 0; text-align: center; }
+
+.card > .qrSec > .qrImg > img { width: 4.8rem; height: 4.8rem; margin: 0.13333rem; }
 
 .card > .qrSec > .time { display: block; height: 2em; line-height: 2em; font-size: 0.29333rem; }
 
-.card > .rateSec { background-color: #fff; height: 5.73333rem; text-align: center; padding-top: 0.4rem; }
+.card .rateSec { background-color: #fff; height: 5.73333rem; text-align: center; padding-top: 0.4rem; }
 
-.card > .rateSec > p { color: #fdbb0d; line-height: 2em; font-size: 0.50667rem; font-weight: 900; }
+.card .rateSec > p { color: #fdbb0d; line-height: 2em; font-size: 0.50667rem; font-weight: 900; }
 
-.card > .rateSec > p.star { line-height: 1em; margin-bottom: 1em; }
+.card .rateSec > p.star { line-height: 1em; margin-bottom: 1em; }
 
-.card > .rateSec > p.star > span { font-size: 0.93333rem; }
+.card .rateSec > p.star > span { font-size: 0.93333rem; }
 
-.card > .rateSec > textarea { width: 7.2rem; height: 2.13333rem; border: 1px solid #d3d3d3; color: #333; }
+.card .rateSec > textarea { width: 7.2rem; height: 2.13333rem; border: 1px solid #d3d3d3; color: #333; }
 
-.card > .submit { display: block; width: 100%; border: none; background-color: #d71711; color: #fff; font-size: 0.4rem; height: 1.4rem; text-transform: uppercase; border-bottom-right-radius: 0.2rem; border-bottom-left-radius: 0.2rem; }
+.card .submit { display: block; width: 100%; border: none; background-color: #d71711; color: #fff; font-size: 0.4rem; height: 1.4rem; text-transform: uppercase; border-bottom-right-radius: 0.2rem; border-bottom-left-radius: 0.2rem; }
 
-.mui-content { height: 16.93333rem; background-image: url("/itb-dist/wap/pages/wishlist/assets/bg-bottom.png?__=48ecbe548ecbe5"); background-repeat: no-repeat; background-position: center bottom; background-size: 8rem 1.06667rem; }
+.mui-content { height: 16.93333rem; }
 
-/*# sourceMappingURL=signin.css.map?__= */
+.itbLogo { position: absolute; width: 4.66667rem; left: 2.66667rem; top: 10rem; }
+
+/*# sourceMappingURL=signin.css.map?__=1552030651276 */

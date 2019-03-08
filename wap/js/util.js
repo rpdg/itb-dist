@@ -198,22 +198,26 @@ define('js/util.ts', function(require, exports, module) {
       }
   }
   var url = {
-      addSearch: function (url, pm1, pm2) {
+      addSearch: function (urlStr) {
+          var params = [];
+          for (var _i = 1; _i < arguments.length; _i++) {
+              params[_i - 1] = arguments[_i];
+          }
           for (var i = 1, len = arguments.length; i < len; i++) {
               var p = arguments[i];
               if (p !== undefined && p !== null) {
                   if (p.indexOf('?') === 0 || p.indexOf('&') === 0)
                       p = p.substr(1);
-                  var prefix = i > 1 ? '&' : (url.indexOf('?') > -1 ? '&' : '?');
-                  url += (prefix + p);
+                  var prefix = i > 1 ? '&' : (urlStr.indexOf('?') > -1 ? '&' : '?');
+                  urlStr += (prefix + p);
               }
           }
-          return url;
+          return urlStr;
       },
       //opg.url.setParam('http://127.0.0.1:8080/page/home/' , {name:'Bob'}, 'user' );
       //opg.url.setParam('http://127.0.0.1:8080/page/home/' , {name:'Bob'} );
-      setParam: function (url, obj, namespace) {
-          return url.addSearch(url, objectToQueryString(namespace, obj));
+      setParam: function (urlString, obj, namespace) {
+          return url.addSearch(urlString, objectToQueryString(namespace, obj));
       },
       getParam: function (url, name) {
           name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -276,6 +280,9 @@ define('js/util.ts', function(require, exports, module) {
       addDays: function (d, s) {
           return new Date(d.getTime() + s * 24 * 3600 * 1000);
       },
+      secondSpan: function (dateFrom, dateTo) {
+          return dateTo.valueOf() - dateFrom.valueOf();
+      },
       daySpan: function (dateFrom, dateTo) {
           return Math.round((dateTo.valueOf() - dateFrom.valueOf()) / 86400000);
       },
@@ -318,10 +325,11 @@ define('js/util.ts', function(require, exports, module) {
           return obj;
       },
       stringToDate: function (str, formater) {
-          var format = formater || 'yyyy-MM-dd HH:mm:ss'; // default format
+          if (formater === void 0) { formater = 'yyyy-MM-dd HH:mm:ss'; }
+          //let format :string = formater || 'yyyy-MM-dd HH:mm:ss'; // default format
           var parts = str.match(/(\d+)/g), i = 0, fmt = {};
           // extract date-part indexes from the format
-          format.replace(/(yyyy|dd|MM|HH|hh|mm|ss)/g, function (part) {
+          formater.replace(/(yyyy|dd|MM|HH|hh|mm|ss)/g, function (part) {
               fmt[part] = i++;
           });
           //
@@ -360,7 +368,7 @@ define('js/util.ts', function(require, exports, module) {
               'm+': date.getMinutes(),
               's+': date.getSeconds(),
               'q+': Math.floor((date.getMonth() + 3) / 3),
-              'S': date.getMilliseconds() //millisecond
+              'S': date.getMilliseconds(),
           };
           if (/(y+)/.test(format))
               format = format.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
@@ -511,8 +519,10 @@ define('js/util.ts', function(require, exports, module) {
                           return 1;
                       return (A === B ? 0 : A > B ? 1 : -1);
                   }
+                  //a[prop] 非 number, b[prop] 是 number
                   else if (nA)
                       return -1;
+                  //a[prop] 是 number, b[prop] 非 number
                   else if (nB)
                       return 1;
                   //a[prop], b[prop]  均是 number
@@ -522,7 +532,7 @@ define('js/util.ts', function(require, exports, module) {
       },
   };
   exports.array = array;
-  //# sourceMappingURL=/itb-dist/wap/js/util.js.map?__=
+  //# sourceMappingURL=/itb-dist/wap/js/util.js.map?__=1552030651276
   
 
 });

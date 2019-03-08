@@ -6,6 +6,7 @@ define('pages/content/activity/edit.ts', function(require, exports, module) {
   var Languages_1 = require("ts/util/Languages.ts");
   var store_1 = require("ts/util/store.ts");
   var utils_1 = require("ts/util/utils.ts");
+  var Combo_1 = require("ts/ui/Combo.ts");
   var cache = store_1.Cache.getInstance();
   var row = cache.get('row');
   console.log(row);
@@ -16,16 +17,45 @@ define('pages/content/activity/edit.ts', function(require, exports, module) {
       'updateMain!post': 'activity/UpActivitySubject',
       getSubjects: 'activity/GetActivityContentsByActivityId',
       delSubject: 'activity/DelActivityContentById',
+      'upload!UPLOAD': 'upload/files',
   });
   var ID;
-  var subjectPage = '/itb-dist/pc/pages/content/activity/subject.html?__=';
+  var subjectPage = '/itb-dist/pc/pages/content/activity/subject.html?__=1552033897847';
   jQuery.datetimepicker.setLocale(Languages_1.Languages.current);
   $('#beginDate,#endDate').each(function (i, elem) {
       $(elem).datetimepicker({
           //timepicker: false,
           //closeOnDateSelect: true,
           format: 'Y-m-d H:i:00',
-          step: 10,
+          step: 30,
+      });
+  });
+  var iptCoverPicture = $('#coverPicture');
+  var tdCover = $('#tdCover');
+  Combo_1.Combo.makeClearableInput(iptCoverPicture, $({}));
+  $('.ipt-eraser', '#tdUpload').on('click', function () {
+      //if(!this.value){
+      tdCover.empty();
+      //}
+  });
+  var uploadForm = $("<form>\n\t\t\t\t\t\t<input name=\"file\" type=\"file\" accept=\"image/jpg,image/jpeg,image/png\">\n\t\t\t\t</form>");
+  $('#btnUploadDialog').click(function () {
+      var pop = top.opg.confirm(uploadForm, function () {
+          var formData = new FormData(uploadForm[0]);
+          opg_1.default.api.upload(formData, function (data) {
+              iptCoverPicture.val(data[0].downloadLink);
+              tdCover.html("<img src=\"" + data[0].downloadLink + "\"/>");
+              pop.close();
+          });
+          return true;
+      }, {
+          title: "" + lpg.upload,
+          width: 200,
+          height: 50,
+          buttons: {
+              ok: "" + lpg.upload,
+              cancel: "" + lpg.cancel,
+          },
       });
   });
   var btnAddSubject = $('#btnAddSubject');
@@ -65,7 +95,7 @@ define('pages/content/activity/edit.ts', function(require, exports, module) {
       var pop = opg_1.default.popTop("<iframe src=\"" + src + "\" />", {
           title: lpg.edit + ": " + row.title,
           btnMax: true,
-          width: 900,
+          width: 1100,
           height: 600,
           onClose: function () {
               cache.remove('rowSub');
@@ -123,7 +153,7 @@ define('pages/content/activity/edit.ts', function(require, exports, module) {
       var src = utils_1.url.setParam(subjectPage, { activityId: ID });
       var pop = opg_1.default.popTop("<iframe src=\"" + src + "\" />", {
           title: "" + lpg.addSubject,
-          width: 900,
+          width: 1100,
           height: 600,
           btnMax: true,
           onClose: function () {
@@ -131,7 +161,7 @@ define('pages/content/activity/edit.ts', function(require, exports, module) {
           },
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/edit.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/edit.js.map?__=1552033897847
   
 
 });

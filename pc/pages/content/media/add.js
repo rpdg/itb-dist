@@ -12,7 +12,7 @@ define('pages/content/media/add.ts', function(require, exports, module) {
   var cache = store_1.Cache.getInstance();
   var row = cache.get('row');
   console.log(row);
-  var subjectPage = '/itb-dist/pc/pages/content/media/addSubject.html?__=32e4e07';
+  var subjectPage = '/itb-dist/pc/pages/content/media/addSubject.html?__=ec0a71e';
   opg_ts_1.default.api({
       'addMain!post': 'mediaexhibtion/AddMediaExhibitonInfoSubject',
       'updateMain!post': 'mediaexhibtion/UpMediaExhibitonInfoSubject',
@@ -118,7 +118,7 @@ define('pages/content/media/add.ts', function(require, exports, module) {
       var btn = $(this), subId = btn.data('id');
       opg_ts_1.default.confirm(lpg.deleteConfirm, function () {
           opg_ts_1.default.api.delSubject({ id: subId }, function () {
-              listSubjects();
+              btn.parent().remove();
           });
       });
   });
@@ -142,6 +142,7 @@ define('pages/content/media/add.ts', function(require, exports, module) {
                   btnAddSubject.show();
               });
           }
+          //add
           else {
               opg_ts_1.default.api.addMain(param, function (data) {
                   informationId = data;
@@ -166,7 +167,7 @@ define('pages/content/media/add.ts', function(require, exports, module) {
           },
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/media/add.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/media/add.js.map?__=1552033897847
   
 
 });

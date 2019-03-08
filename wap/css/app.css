@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义； 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能； */
-html, body { height: 100%; font-family: 'Hiragino Sans GB' , 'Microsoft YaHei UI', 'Simsun', sans-serif; background-color: #fff3f3; }
+html, body { height: 100%; font-family: 'Hiragino Sans GB', 'Microsoft YaHei UI', 'Simsun', sans-serif; background-color: #efefef; }
 
 a { color: #333; }
 
@@ -30,7 +30,7 @@ a:hover { text-decoration: none; }
 
 .padRed { display: inline-block; width: 0.05333rem; height: 1em; background-color: #d71711; vertical-align: middle; margin-right: 5px; }
 
-.lyuSearchWrap { padding-top: 10px; background-image: url("/itb-dist/wap/img/bg-searchBar.png?__=7f227307f22730"); background-size: 10rem 1.72rem; background-repeat: no-repeat; background-position: center 0; }
+.lyuSearchWrap { padding-top: 10px; background-image: url("/itb-dist/wap/img/bg-searchBar.png?__=1552030651276"); background-size: 10rem 1.72rem; background-repeat: no-repeat; background-position: center 0; }
 
 .lyuSearchWrap .lyuSearchBar { width: 9.33333rem !important; margin: 0 auto; }
 
@@ -44,13 +44,27 @@ a:hover { text-decoration: none; }
 
 .mask { position: fixed; z-index: 1001; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.3); display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center; }
 
-.mui-plus header.mui-bar { display: none; background: #d71711; }
-
-.mui-plus .mui-bar-nav ~ .mui-content { padding: 0; }
-
 /*hm开头的表示仅为 Hello MUI示例定义*/
-.hm-description { margin: .5em 0; }
+.hm-description { margin: 0.5em 0; }
 
 .hm-description > li { font-size: 14px; color: #8f8f94; }
 
-/*# sourceMappingURL=app.css.map?__= */
+#outterFrame { position: fixed; top: 0; bottom: 47px; left: 0; right: 0; overflow: auto; }
+
+footer.footer-bar { display: table; width: 100%; position: fixed; left: 0; bottom: 0; height: 1.33333rem; background: #fff; z-index: 100; }
+
+footer.footer-bar a { display: table-cell; vertical-align: middle; width: 20%; color: #626262; text-align: center; font-size: 12px; line-height: 1.1em; }
+
+footer.footer-bar a.foot-R { color: #d11711; }
+
+footer.footer-bar a img { width: 26px; height: 26px; display: inline-block; }
+
+footer.footer-bar a:nth-of-type(3) { position: absolute; }
+
+footer.footer-bar a:nth-of-type(3) img { z-index: 101; margin-top: -7px; width: 1rem; height: 1rem; background-color: #fff; border-radius: 100px; box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.3); }
+
+footer.footer-bar a:nth-of-type(3) div { z-index: 102; text-align: center; }
+
+footer.footer-bar a.foot-bar-a.curr { color: #348c96; }
+
+/*# sourceMappingURL=app.css.map?__=1552030651276 */

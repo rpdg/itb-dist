@@ -1,4 +1,7 @@
+@charset "UTF-8";
 .wrap { margin: 0.53333rem; border-radius: 0.2rem; overflow: hidden; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
+
+.wrap .resultBtnSelect { display: none; }
 
 .wrap #btnSelect { background-color: #d71711; color: white; width: 100%; height: 1.46667rem; }
 
@@ -6,10 +9,30 @@
 
 .wrap table.list tr:nth-of-type(odd) { background-color: #eee; }
 
+.wrap table.list td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.wrap table.list td .ico-handle { float: right; font-size: 22px; color: #ccc; line-height: 2; }
+
 .wrap table tr { height: 1.13333rem; line-height: 1.13333rem; }
 
 .wrap table tr th { font-weight: 900; }
 
 .wrap table tr td, .wrap table tr th { font-size: 0.32rem; text-align: center; }
 
-/*# sourceMappingURL=result.css.map?__= */
+#divBusyDateList { width: 9.33333rem; border-radius: 0.10667rem; padding: 0.66667rem 0.33333rem; background-color: #fff; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); margin: 0.58667rem auto 0; }
+
+#divBusyDateList .switchDate.mui-switch { width: 3.6rem; }
+
+#divBusyDateList .switchDate.mui-switch.mui-active .mui-switch-handle { -webkit-transform: translate(2.72rem, 0); transform: translate(2.72rem, 0); }
+
+#divBusyDateList .switchDate-en.mui-switch.mui-active:before { content: 'unavailable'; }
+
+#divBusyDateList .switchDate-en.mui-switch:before { content: 'available'; }
+
+#divBusyDateList .switchDate-cn.mui-switch.mui-active:before { content: '不可用'; }
+
+#divBusyDateList .switchDate-cn.mui-switch:before { content: '可用'; }
+
+.deleteSpan { color: red; }
+
+/*# sourceMappingURL=result.css.map?__=1552030651276 */

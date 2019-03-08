@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/logistics/applicationForBoothActivity/index.css?__=83ccc06" />
+    <link rel="stylesheet" href="/itb-dist/pc/css/jquery.datetimepicker.css?__=087d36f" />
+	
+</head>
+<body>
+
+<div id="mainSection">
+
+    <script id="tpl-mainSection" type="text/html">
+        <table id="tbMain" class="search-table">
+            <tr>
+                <td colspan="4">
+                    <table style="width:100%;border:0;">
+                        <tr style="width:100%;border:0;">
+                            <td style=" border:0;width:200px;"><img src="/itb-dist/pc/pages/logistics/applicationForBoothActivity/activity/activity.jpg?__=3f60fad" style="width:200px;height:150px;" /></td>
+                            <td style=" border:0;vertical-align:top;text-align: left;font-size:14px;font-weight: bold;  word-wrap:break-word;">
+                                <label class="fonttitle"><%=formtitle%></label><br/><br/>
+                                <%=formtitle2%><br/><%=formtitle3%><br/><%=formtitle4%>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <!--<td colspan="2">-->
+                    <!--<table style="width:100%;height:100%;border:0;">-->
+                        <!--<tr style="width:100%;height:100%;border:0;">-->
+                            <!--<td style="border:0;width:100%;height:150px;min-height:150px;vertical-align:top;text-align: left;">-->
+                                <!--<%=formcontact1%><br/>-->
+                                <!--<%=formcontact2%><br/>-->
+                                <!--<%=formcontact3%><br/>-->
+                                <!--<%=formcontact4%>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                <!--</td>-->
+            </tr>
+
+
+
+
+            <tr>
+                <td class="lead"><label for="standno"><%=booth%></label></td>
+                <td><input type="text" name="standno" id="standno" /></td>
+                <td class="lead"><label for="exhibitor"><%=exhibitor%></label></td>
+                <td><input type="text" name="exhibitor" id="exhibitor" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="company"><%=company%></label></td>
+                <td><input type="text" name="company" id="company" /></td>
+                <td class="lead"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="eventtype"><%=eventtype%></label></td>
+                <td><select  id="eventtype" name="eventtype">
+                    <option value="0"><%=eventtypeoption[0]%></option>
+                    <option value="1"><%=eventtypeoption[1]%></option>
+                </select></td>
+                <td class="lead"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="starttime"><%=starttime%></label></td>
+                <td><input type="datetime" name="starttime" id="starttime" /></td>
+                <td class="lead"><label for="stoptime"><%=stoptime%></label></td>
+                <td><input type="datetime" name="stoptime" id="stoptime" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="eventname"><%=eventname%></label></td>
+                <td><input type="text" name="eventname" id="eventname" /></td>
+                <td class="lead"><label for="plannednum"><%=plannednum%></label></td>
+                <td><input type="text" name="plannednum" id="plannednum" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="place"><%=place%></label></td>
+                <td><input type="text" name="place" id="place" /></td>
+                <td class="lead"></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="lead"><label for="chargepeople"><%=chargepeople%></label></td>
+                <td><input type="text" name="chargepeople" id="chargepeople" /></td>
+                <td class="lead"><label for="chargetel"><%=chargetel%></label></td>
+                <td><input type="text" name="chargetel" id="chargetel" /></td>
+            </tr>
+            <tr>
+                <td class="lead"><label for="chargemail"><%=chargemail%></label></td>
+                <td><input type="text" name="chargemail" id="chargemail" /></td>
+                <td class="lead"></td>
+                <td></td>
+            </tr>
+
+            <!--<tr>-->
+                <!--<td class="lead"><label><%=service%></label></td>-->
+                <!--<td><input type="checkbox" name="servicecheckbox" id="service1" value="0"/><lable for="service1" ><%=serviceoperation[0]%></lable>-->
+                    <!--<input type="checkbox" name="servicecheckbox" id="service2" value="1"/><lable for="service2" ><%=serviceoperation[1]%></lable>-->
+                    <!--<input type="checkbox" name="servicecheckbox" id="service3" value="2"/><lable for="service3" ><%=serviceoperation[2]%></lable>-->
+                    <!--<input type="checkbox" name="servicecheckbox" id="service4" value="3"/><lable for="service4" ><%=serviceoperation[3]%></lable>-->
+                    <!--<input type="checkbox" name="servicecheckbox" id="service5" value="4"/><lable for="service5" ><%=serviceoperation[4]%></lable>-->
+                <!--</td>-->
+                <!--<td class="lead"><label for="serviceother"><%=serviceother%></label></td>-->
+                <!--<td><input type="text" name="serviceother" id="serviceother" /></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td colspan="4">-->
+                    <!--<label class="fontbold"><%=remark1%></label><br/>-->
+                    <!--<%=remark2%><br/>-->
+                <!--</td>-->
+            <!--</tr>-->
+
+            <tr>
+                <td colspan="4">
+                    <label class="fontinfo"><%=forminfo%></label><br/>
+                    <label class="fontinfo"><%=forminfo2%></label><br/>
+                </td>
+            </tr>
+        </table>
+
+
+        <p id="buttonSection" class="text-center">
+            <button id="btnSaveMain" class="btn-success"><%=sendApply%></button>
+            <button id="btnReset" class="btn-danger"><%=reset%></button>
+        </p>
+
+
+    </script>
+
+</div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<table id="tb"></table>
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/logistics/applicationForBoothActivity/index.i18n.js?__=87c5455"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/logistics/applicationForBoothActivity/index.js?__=a91f419"></script>
+<script src="/itb-dist/pc/lib/jquery.datetimepicker.js?__=6f0a657"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/logistics/applicationForBoothActivity/index.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

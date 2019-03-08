@@ -2,17 +2,15 @@
 @import "form";
 @import "text";
 
-
 @mixin overflow() {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 
-$odd-row-bg : #fafafa;
-$even-row-bg : #fff;
-$row-hover-bg : #edfaff;
-
+$odd-row-bg: #fafafa;
+$even-row-bg: #fff;
+$row-hover-bg: #edfaff;
 
 .grid {
 	table-layout: fixed;
@@ -56,27 +54,27 @@ $row-hover-bg : #edfaff;
 	> tbody {
 		> tr {
 			&.odd {
-				background-color: $odd-row-bg ;
+				background-color: $odd-row-bg;
 			}
-			&.even{
+			&.even {
 				background-color: $even-row-bg;
 			}
 			
-			&.odd:hover,&.even:hover {
+			&.odd:hover, &.even:hover {
 				background-color: $row-hover-bg;
 			}
 			
 			td {
-		
+				
 				@include overflow;
 				
 			}
 			
-			&.subTHead{
+			&.subTHead {
 				background-color: $title-bar-color;
 				
-				th{
-					font:{
+				th {
+					font: {
 						size: 12px;
 						weight: 100;
 					}
@@ -84,11 +82,11 @@ $row-hover-bg : #edfaff;
 				}
 			}
 			
-			&.subTBody:nth-of-type(even){
-				background-color: $even-row-bg ;
+			&.subTBody:nth-of-type(even) {
+				background-color: $even-row-bg;
 			}
-			&.subTBody:nth-of-type(odd){
-				background-color: $odd-row-bg ;
+			&.subTBody:nth-of-type(odd) {
+				background-color: $odd-row-bg;
 			}
 		}
 	}
@@ -102,8 +100,7 @@ $row-hover-bg : #edfaff;
 	}
 }
 
-
-.grid-title-bar{
+.grid-title-bar {
 	background-color: $title-bar-color;
 	color: $head-text-color;
 	padding: 0.428em 0.857em 0.428em 1em;
@@ -114,16 +111,16 @@ $row-hover-bg : #edfaff;
 		size: 14px;
 		weight: bold;
 	}
-	border:  solid $border-color;
-	border-width: 1px 1px 0 1px ;
+	border: solid $border-color;
+	border-width: 1px 1px 0 1px;
 	
-	button{
+	button {
 		
 		margin: -3px 3px 0 0;
 		@extend .float-right;
 		@extend .btn-small;
 		
-		.ico{
+		.ico {
 			display: inline-block;
 			width: 14px;
 			height: 14px;
@@ -132,10 +129,10 @@ $row-hover-bg : #edfaff;
 		}
 	}
 	
-	.btn-create{
+	.btn-create {
 		@extend .btn-success;
 		
-		.ico-create{
+		.ico-create {
 			display: inline-block;
 			width: 14px;
 			height: 14px;
@@ -146,6 +143,15 @@ $row-hover-bg : #edfaff;
 	}
 }
 
+.gridPaginationFooter {
+	//width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding-top: 3px;
+	border: 1px solid #a8bace;
+	background-color: $footer-bar-color;
+	margin-top: -1px;
+}
 
 .rc-handle-container {
 	position: relative;

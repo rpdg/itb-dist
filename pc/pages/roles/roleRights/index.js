@@ -50,7 +50,7 @@ define('pages/roles/roleRights/index.ts', function(require, exports, module) {
           name: 'treeWap',
           root: 'App / WeChat',
           cmd: 'checkAll',
-          childSrc: 'childMenus'
+          childSrc: 'childMenus',
       });
   }), opg_ts_1.default.api.getFullMenuPc(function (data) {
       treePC = opg_ts_1.default('#treeMenuPC').tree({
@@ -58,7 +58,7 @@ define('pages/roles/roleRights/index.ts', function(require, exports, module) {
           name: 'treePC',
           root: 'Web / back-end',
           cmd: 'checkAll',
-          childSrc: 'childMenus'
+          childSrc: 'childMenus',
       });
   })).then(function () {
       selRole.jq.trigger('change');
@@ -66,7 +66,13 @@ define('pages/roles/roleRights/index.ts', function(require, exports, module) {
   $('#btnSave').click(function () {
       var arr = [];
       $(':checkbox:checked', '#tb').each(function (i, elem) {
-          arr.push(elem.value);
+          arr.push(~~elem.value);
+          var span = $(elem).closest('span');
+          if (span.data('depth') == '2') {
+              var ul = span.closest('ul'), pId = ul.data('parent');
+              if (arr.indexOf(pId) === -1)
+                  arr.push(~~pId);
+          }
       });
       var api = opg_ts_1.default.api.addRoleMenus;
       api.set('url', apiAddRoleMenusUrl + "/" + selRole.getValue());
@@ -75,7 +81,7 @@ define('pages/roles/roleRights/index.ts', function(require, exports, module) {
       opg_ts_1.default.api.addRoleMenus(arr, function () {
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/roles/roleRights/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/roles/roleRights/index.js.map?__=1552033897847
   
 
 });

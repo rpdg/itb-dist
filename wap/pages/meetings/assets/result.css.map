@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "file": "result.css?__=1552030651276",
+    "sources": [
+        "/pages/meetings/assets/result.scss",
+        "/css/module/_fn.scss",
+        "/css/module/_color.scss"
+    ],
+    "sourcesContent": [
+        "@import \"../../../css/module/fn\";\r\n@import \"../../../css/module/color\";\r\n\r\n.wrap{\r\n\tmargin: p2m(40);\r\n\tborder-radius: p2m(15);\r\n\toverflow: hidden;\r\n\t@include shadow;\r\n\t\r\n\t\r\n\t#btnSelect{\r\n\t\tbackground-color: $red;\r\n\t\tcolor: white;\r\n\t\twidth: 100%;\r\n\t\theight:p2m(110);\r\n\t}\r\n\ttable{\r\n\t\twidth: 100%;\r\n\t\tbackground-color: #fff;\r\n\t\ttable-layout: fixed;\r\n\t\t\r\n\t\t&.list {\r\n\t\t\t> tbody{\r\n\t\t\t\t> tr:nth-of-type(odd){\r\n\t\t\t\t\tbackground-color: #eee;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\t\r\n\t\t}\r\n\t\ttr{\r\n\t\t\theight: p2m(85);\r\n\t\t\tline-height: p2m(85);\r\n\t\t\tth{\r\n\t\t\t\tfont-weight: 900;\r\n\t\t\t}\r\n\t\t\ttd,th{\r\n\t\t\t\tfont-size: p2m(24);\r\n\t\t\t\ttext-align: center;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\t\r\n}\r\n\r\n#imgQR{\r\n\tcolor: #fff;\r\n\twidth: 0.8rem;\r\n\theight: 0.8rem;\r\n\tmargin-top: 0.3rem;\r\n}\r\n",
+        "// px转em\r\n@function p2m($px, $base: 75) {\r\n\t@return ($px / $base) * 1rem;\r\n}\r\n\r\n@mixin shadow($alpha:0.3 , $dist:10px) {\r\n\tbox-shadow: 0 0 $dist 0 rgba(0, 0, 0, $alpha);\r\n}\r\n\r\n\r\n@mixin textClip{\r\n\twhite-space: nowrap;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis  ;\r\n}\r\n\r\n@mixin lineClip($lines:3) {\r\n\tdisplay: -webkit-box; /** 对象作为伸缩盒子模型显示 **/\r\n\t-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/\r\n\t-webkit-line-clamp: $lines; /** 显示的行数 **/\r\n\toverflow: hidden; /** 隐藏超出的内容 **/\r\n}\r\n\r\n@mixin centered($w , $h) {\r\n\tposition: fixed;\r\n\twidth: p2m($w);\r\n\theight: p2m($h);\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\ttransform: translate(-50%, -50%);\r\n}\r\n\r\n@mixin flexAlignContainer{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tflex-wrap: nowrap;\r\n\talign-items: flex-start;\r\n\talign-content: stretch;\r\n\tjustify-content: space-between;\r\n}",
+        "$red : #d71711;\r\n$background-red: #efefef;\r\n$snow: #e0e0e0;\r\n\r\n$font-black: #333;\r\n"
+    ],
+    "names": [],
+    "mappings": "AAGA,AAAA,KAAK,CAAA,EACJ,MAAM,ECFE,UAAoB,EDG5B,aAAa,ECHL,MAAoB,EDI5B,QAAQ,EAAE,MAAM,ECAhB,UAAU,EAAE,CAAC,CAAC,CAAC,CADiB,IAAI,CACd,CAAC,CAAC,kBAAqB,GDoC7C;;AAvCD,AAOC,KAPI,CAOJ,UAAU,CAAA,EACT,gBAAgB,EEXX,OAAO,EFYZ,KAAK,EAAE,KAAK,EACZ,KAAK,EAAE,IAAI,EACX,MAAM,ECZC,UAAoB,GDa3B;;AAZF,AAaC,KAbI,CAaJ,KAAK,CAAA,EACJ,KAAK,EAAE,IAAI,EACX,gBAAgB,EAAE,IAAI,EACtB,YAAY,EAAE,KAAK,GAqBnB;;AArCF,AAoBI,KApBC,CAaJ,KAAK,AAKH,KAAK,GACH,KAAK,GACJ,EAAE,AAAA,YAAa,CAAA,GAAG,EAAC,EACpB,gBAAgB,EAAE,IAAI,GACtB;;AAtBL,AA0BE,KA1BG,CAaJ,KAAK,CAaJ,EAAE,CAAA,EACD,MAAM,EC5BA,UAAoB,ED6B1B,WAAW,EC7BL,UAAoB,GDqC1B;;AApCH,AA6BG,KA7BE,CAaJ,KAAK,CAaJ,EAAE,CAGD,EAAE,CAAA,EACD,WAAW,EAAE,GAAG,GAChB;;AA/BJ,AAgCG,KAhCE,CAaJ,KAAK,CAaJ,EAAE,CAMD,EAAE,EAhCL,KAAK,CAaJ,KAAK,CAaJ,EAAE,CAME,EAAE,CAAA,EACJ,SAAS,EClCJ,OAAoB,EDmCzB,UAAU,EAAE,MAAM,GAClB;;AAMJ,AAAA,MAAM,CAAA,EACL,KAAK,EAAE,IAAI,EACX,KAAK,EAAE,MAAM,EACb,MAAM,EAAE,MAAM,EACd,UAAU,EAAE,MAAM,GAClB"
+}

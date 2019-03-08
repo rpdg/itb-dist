@@ -449,6 +449,18 @@
 	};
 
 
+	function xss(vva ){
+		if(typeof vva === 'string'){
+			return String(vva)
+					.replace(/&/g, '&amp;')
+					.replace(/"/g, '&quot;')
+					.replace(/'/g, '&#39;')
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;');
+		}
+		return vva;
+	}
+
 	// the setting cache for bindUrl and bindList use
 	var boundCache = {
 		m_Count: 0,
@@ -497,6 +509,15 @@
 		},
 		remove: function (id) {
 			delete this[id];
+		},
+		xssObject(obj){
+			for(let key in obj){
+				let vva = obj[key];
+				if(typeof vva === 'string'){
+					obj[key] = xss(vva);
+				}
+			}
+			return obj;
 		}
 	};
 
@@ -560,6 +581,9 @@
 
 			//如果data没有被itemFilter过滤掉
 			if (rowObject) {
+				//xss
+				boundCache.xssObject(rowObject);
+				
 				//行号
 				rowObject[":rowNum"] = ++nb;
 				//renderer
@@ -607,5 +631,8 @@
 	};
 
 })(jQuery);
+
+
+
 
 

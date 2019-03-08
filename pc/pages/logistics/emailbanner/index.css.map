@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "file": "index.css?__=1552033897847",
+    "sources": [
+        "/pages/logistics/emailbanner/index.scss"
+    ],
+    "sourcesContent": [
+        ".totalsumstyle{\r\n  color:#ff0000;\r\n  text-align: right;\r\n  font-weight: bold;\r\n  font-size: 20px;\r\n}\r\n\r\n.apply {\r\n  text-align:center;\r\n  font-weight: bold;\r\n}\r\n\r\n.agree {\r\n  color:green;\r\n  text-align:center;\r\n  font-weight: bold;\r\n}\r\n\r\n.deny {\r\n  color:#ff0000;\r\n  text-align:center;\r\n  font-weight: bold;\r\n}\r\n\r\n.fontbold {\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n  word-wrap:break-word;\r\n}\r\n\r\n.fonttitle {\r\n  font-size: 20px;\r\n  font-weight: bold;\r\n  color:#c7140c;\r\n}\r\n\r\n.fontinfo {\r\n  font-size: 14px;\r\n  color:red;\r\n  word-wrap:break-word;\r\n}"
+    ],
+    "names": [],
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACZ,KAAK,EAAC,OAAO;EACb,UAAU,EAAE,KAAK;EACjB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;CAChB;;AAED,AAAA,MAAM,CAAC;EACL,UAAU,EAAC,MAAM;EACjB,WAAW,EAAE,IAAI;CAClB;;AAED,AAAA,MAAM,CAAC;EACL,KAAK,EAAC,KAAK;EACX,UAAU,EAAC,MAAM;EACjB,WAAW,EAAE,IAAI;CAClB;;AAED,AAAA,KAAK,CAAC;EACJ,KAAK,EAAC,OAAO;EACb,UAAU,EAAC,MAAM;EACjB,WAAW,EAAE,IAAI;CAClB;;AAED,AAAA,SAAS,CAAC;EACR,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,SAAS,EAAC,UAAU;CACrB;;AAED,AAAA,UAAU,CAAC;EACT,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,KAAK,EAAC,OAAO;CACd;;AAED,AAAA,SAAS,CAAC;EACR,SAAS,EAAE,IAAI;EACf,KAAK,EAAC,GAAG;EACT,SAAS,EAAC,UAAU;CACrB"
+}

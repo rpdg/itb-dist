@@ -309,6 +309,10 @@ a:active
     -webkit-overflow-scrolling: touch;
 }
 
+.mui-content-app-correction {
+    margin-top:44px;
+}
+
 .mui-bar-nav ~ .mui-content
 {
     padding-top: 44px;
@@ -5019,7 +5023,7 @@ body > .mui-progressbar
     font-weight: normal;
     font-style: normal;
 
-    src: url('/itb-dist/wap/fonts/mui.ttf?__=8820b7f8820b7f') format('truetype');
+    src: url('/itb-dist/wap/fonts/mui.ttf?__=1552030651276') format('truetype');
 }
 .mui-icon
 {

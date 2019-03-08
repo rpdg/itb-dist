@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "file": "index.css?__=1552030651276",
+    "sources": [
+        "/pages/press/assets/index.scss",
+        "/css/module/_color.scss",
+        "/css/module/_fn.scss"
+    ],
+    "sourcesContent": [
+        "@import \"../../../css/module/color\";\r\n@import \"../../../css/module/fn\";\r\n\r\n\r\n\r\n#ulBuyerList {\r\n\twidth: p2m(700);\r\n\theight: p2m(235);\r\n\tborder-radius: p2m(8);\r\n\tmargin: 20px auto;\r\n\t\r\n\tli {\r\n\t\theight: p2m(128);\r\n\t\tline-height: p2m(128);\r\n\t\tfont-size: p2m(28);\r\n\t\tpadding: 0 p2m(50);\r\n\t\t@include shadow();\r\n\t\tbackground-color: #fff;\r\n\t\t\r\n\t\ta:active {\r\n\t\t\tcolor: $red;\r\n\t\t}\r\n\t}\r\n}",
+        "$red : #d71711;\r\n$background-red: #efefef;\r\n$snow: #e0e0e0;\r\n\r\n$font-black: #333;\r\n",
+        "// px转em\r\n@function p2m($px, $base: 75) {\r\n\t@return ($px / $base) * 1rem;\r\n}\r\n\r\n@mixin shadow($alpha:0.3 , $dist:10px) {\r\n\tbox-shadow: 0 0 $dist 0 rgba(0, 0, 0, $alpha);\r\n}\r\n\r\n\r\n@mixin textClip{\r\n\twhite-space: nowrap;\r\n\toverflow: hidden;\r\n\ttext-overflow: ellipsis  ;\r\n}\r\n\r\n@mixin lineClip($lines:3) {\r\n\tdisplay: -webkit-box; /** 对象作为伸缩盒子模型显示 **/\r\n\t-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/\r\n\t-webkit-line-clamp: $lines; /** 显示的行数 **/\r\n\toverflow: hidden; /** 隐藏超出的内容 **/\r\n}\r\n\r\n@mixin centered($w , $h) {\r\n\tposition: fixed;\r\n\twidth: p2m($w);\r\n\theight: p2m($h);\r\n\ttop: 50%;\r\n\tleft: 50%;\r\n\ttransform: translate(-50%, -50%);\r\n}\r\n\r\n@mixin flexAlignContainer{\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\tflex-wrap: nowrap;\r\n\talign-items: flex-start;\r\n\talign-content: stretch;\r\n\tjustify-content: space-between;\r\n}"
+    ],
+    "names": [],
+    "mappings": "AAKA,AAAA,YAAY,CAAC,EACZ,KAAK,EEJG,UAAoB,EFK5B,MAAM,EELE,UAAoB,EFM5B,aAAa,EENL,UAAoB,EFO5B,MAAM,EAAE,SAAS,GAcjB;;AAlBD,AAMC,YANW,CAMX,EAAE,CAAC,EACF,MAAM,EEVC,UAAoB,EFW3B,WAAW,EEXJ,UAAoB,EFY3B,SAAS,EEZF,UAAoB,EFa3B,OAAO,EAAE,CAAC,CEbH,UAAoB,EAI5B,UAAU,EAAE,CAAC,CAAC,CAAC,CADiB,IAAI,CACd,CAAC,CAAC,kBAAqB,EFW5C,gBAAgB,EAAE,IAAI,GAKtB;;AAjBF,AAcE,YAdU,CAMX,EAAE,CAQD,CAAC,AAAA,OAAO,CAAC,EACR,KAAK,ECpBD,OAAO,GDqBX"
+}

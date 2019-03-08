@@ -2,9 +2,12 @@ define('ts/ui/Popup.ts', function(require, exports, module) {
 
   "use strict";
   var __extends = (this && this.__extends) || (function () {
-      var extendStatics = Object.setPrototypeOf ||
-          ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-          function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+      var extendStatics = function (d, b) {
+          extendStatics = Object.setPrototypeOf ||
+              ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+              function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+          return extendStatics(d, b);
+      };
       return function (d, b) {
           extendStatics(d, b);
           function __() { this.constructor = d; }
@@ -22,6 +25,7 @@ define('ts/ui/Popup.ts', function(require, exports, module) {
       btnMax: false,
       drag: true,
       modal: true,
+      modalClose: false,
       show: true,
       destroy: true,
       onClose: null,
@@ -31,7 +35,7 @@ define('ts/ui/Popup.ts', function(require, exports, module) {
   var BoxyStore = {
       manager: [],
       managerHash: {},
-      dragging: null,
+      dragging: null | [],
       _handleDrag: function (evt) {
           //evt.preventDefault() ;
           var d = BoxyStore.dragging;
@@ -183,6 +187,7 @@ define('ts/ui/Popup.ts', function(require, exports, module) {
           this.cfg = cfg;
       };
       PopUp.prototype.create = function (jq, cfg) {
+          var _this = this;
           this.state = 'normal';
           this.visible = false;
           this.mask = $('<div class="dg-mask"></div>');
@@ -190,19 +195,29 @@ define('ts/ui/Popup.ts', function(require, exports, module) {
           this.content = $('<div class="dg-content"></div>');
           this.content.append(jq);
           this.boxy.append(this.content).appendTo(document.body);
+          if (cfg.modalClose) {
+              this.mask.on('click', function () {
+                  _this.close();
+              });
+          }
           var titleBarHeight = 0, footBarHeight = 0;
           if (cfg.title) {
               setTitleBar.call(this, cfg);
               titleBarHeight = this.titleBar.outerHeight();
               this.boxy.find('.tb-row').css({ height: titleBarHeight });
           }
-          if (cfg.buttons) {
+          if (cfg.buttons && Object.keys(cfg.buttons).length) {
               setFooter.call(this, cfg);
               this.boxy.find('.tf-row').css({ height: this.footBar.outerHeight() });
               footBarHeight = this.footBar.outerHeight();
           }
-          if (this.jq[0].tagName === 'IFRAME')
+          else {
+              this.content.css({ bottom: 0 });
+          }
+          if (this.jq[0].tagName === 'IFRAME') {
               this.iframe = this.jq[0];
+              this.content.css({ position: 'absolute' });
+          }
           var contentSize = {
               width: cfg.width || this.boxy.outerWidth() || 500,
               height: cfg.height || this.boxy.outerHeight() || 300
@@ -407,7 +422,7 @@ define('ts/ui/Popup.ts', function(require, exports, module) {
       return { html: html, cfg: cfg };
   }
   exports.default = PopUp;
-  //# sourceMappingURL=/itb-dist/pc/ts/ui/Popup.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/ui/Popup.js.map?__=1552033897847
   
 
 });

@@ -6,134 +6,110 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 	<meta name="renderer" content="webkit">
 	<title>ITB</title>
-	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814a" />
-    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/schedule/assets/schedule.css?__=8becdfc" />
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/schedule/assets/schedule.css?__=de480a0" />
+	
 </head>
-<body>
-<table id="tbSchedule">
-	<thead>
-	<tr>
-		<td>2018</td>
-		<td>
-			<span class="x">day 1</span>
-			<time>
-				<span class="d">2017.09.27</span>
-				<span class="dt">Wednesday</span>
-			</time>
-		</td>
-		<td>
-			<span class="x">day 2</span>
-			<time>
-				<span class="d">2017.09.28</span>
-				<span class="dt">Thursday</span>
-			</time>
-		</td>
-		<td>
-			<span class="x">day 3</span>
-			<time>
-				<span class="d">2017.09.29</span>
-				<span class="dt">Friday</span>
-			</time>
-		</td>
-	</tr>
-	</thead>
-	<tbody class="mine">
-	<tr>
-		<td>9:30 AM</td>
-		<td>
-			<section>
-				<div class="divAppoint">appointment</div>
-				<div class="divActivity">activity</div>
-			</section>
-		</td>
-		<td>
-			<section>
-				<div class="divAppoint">appointment</div>
-				<div class="divMeeting">meeting</div>
-				<div class="divActivity">activity</div>
-			</section>
-		</td>
-		<td>
-			<section>
-				<div class="divAppoint">appointment</div>
-				<div class="divActivity">activity</div>
-				<div class="divWalk">walk in</div>
-				<div class="divMeeting">meeting</div>
-			</section>
-		</td>
-	</tr>
-	<tr>
-		<td>10:30 am</td>
-		<td>
-			<section>
-				<div class="divAppoint">appointment</div>
-				<div class="divActivity">appointment</div>
-			</section>
-		</td>
-		<td></td>
-		<td>
-			<section>
-				<div class="divAddTo"> + Add To</div>
-			</section>
-		</td>
-	</tr>
-	<tr>
-		<td>11:30 am</td>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	</tbody>
-	<tbody class="rest">
-	<tr>
-		<td>12:00</td>
-		<td colspan="3" class="lunch">lunch time</td>
-	</tr>
-	</tbody>
-	<tbody class="mine">
-	<tr>
-		<td>13:30</td>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>14:30</td>
-		<td></td>
-		<td></td>
-		<td>
-			<section>
-				<div class="divAddTo"> + Add To</div>
-			</section>
-		</td>
-	</tr>
-	<tr>
-		<td>15:30</td>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-	</tbody>
-</table>
+<body>
+
+
+<div id="divSec">
+
+</div>
+
+
+
+<script id="tpl" type="text/html">
+
+	<table id="tbSchedule">
+		<thead>
+		<tr>
+			<td><%=year%></td>
+			<% for(var i=0,l=dayArr.length,d; i< l , d = dayArr[i]; i++) { %>
+			<td>
+				<span class="x">Day <%=(1+i)%></span>
+				<time>
+					<span class="d"><%=$imports.dateFormat(d.date , 'yyyy.MM.dd')%></span>
+					<span class="dt"><%= lng.dayOfWeek[d.date.getDay()] %></span>
+				</time>
+
+			</td>
+			<% } %>
+		</tr>
+		</thead>
+		<% for(var t in dayArr[0].time) { %>
+			<% var it0 = dayArr[0].time[t] ; %>
+			<% if(it0.usable) { %>
+			<tbody class="mine">
+			<tr>
+				<td><%= t.split('-')[0] %> <%= ($imports.parseInt(t.split('-')[0] , 10)< 12 ? 'AM' : 'PM') %></td>
+				<% for(var d = 0, p = 3 ; d< p  ; d++) { %>
+				<% var timeSlot = dayArr[d].time[t] , acts= timeSlot.acts; %>
+				<td class="<%= (timeSlot.isBusy?'gray':'') %>">
+					<section>
+					<% if(acts.length){ %>
+						<% for(var z=0,y= acts.length,v; z< y , v = acts[z]; z++) { %>
+							<% var cls = v.informationtype == 0? 'Meeting' : v.informationtype == 1? 'Activity': v.informationtype == 3 ? 'Appoint' : ''; %>
+							<% cls = (v.type=='4' ? 'TempAppoint' : v.type=='3' ? 'Walk' : v.type=='0' ? 'AppointSpeed' : cls) %>
+								<div class="<%=(v.isBusyDate?'busy':v.isAppoint?'pt':'mc')%> div<%=cls%> <%=v.accept==1?'':'gray'%>"
+								    data-aid="<%=v.activity_id%>"
+								    data-acid="<%=v.activitycontent_id%>"
+								    data-key="<%=d%>/<%=t%>/<%=z%>"
+								    data-search="?id=<%=v.id%>&end=<%=v.time%>&score=<%=v.score%>&typeCode=<%=v.informationtype%>">
+								<% if(v.informationtype==0 || v.informationtype==1) { %>
+									<%=v.title%>
+								<% } else { %>
+									<%=v.company%>
+								<% }%>
+							</div>
+						<% } %>
+					<% } %>
+
+					<% if( timeSlot.showAddTo ) { %>
+						<div class="divAddTo" data-date="<%=dateFormat(dayArr[d].date)%>" data-time="<%=t%>"> + Add To</div>
+					<% } %>
+					</section>
+				</td>
+				<% } %>
+			</tr>
+			</tbody>
+			<% } else { %>
+			<tbody class="rest">
+			<tr>
+				<td><%= t.split('-')[0] %></td>
+				<td colspan="3" class="lunch">Lunch Time</td>
+			</tr>
+			</tbody>
+			<% } %>
+		<% } %>
+	</table>
+
+
+</script>
+<p></p>
+
+
+
 <div id="opgAjaxLoading">
 	<div id="opgAjaxLoadingText">
 		<div id="square-spin"></div>
 		loading ...
 	</div>
-</div>
+</div>
+
 <script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
 <script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
 <script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
-<script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
-<script src="/itb-dist/pc/pages/itb/schedule/index.i18n.js?__=725550a"></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/app.cfg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/utils.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/itb/schedule/index.js?__="></script>
+<script src="/itb-dist/pc/pages/itb/schedule/index.i18n.js?__=c8927a7"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/schedule/schedule.js?__=7651471"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/schedule/index.js?__=a4364c5"></script>
 <script src="/itb-dist/pc/lib/dialog-plus.js?__=e9750be"></script>
 <script>
 	!function () {
@@ -143,16 +119,26 @@
 			var mainSection = document.getElementById('mainSection');
 			if (mainSection && templateElem) {
 				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-			}
+			}
+
 			$('.templateContainer').each(function (index , elem) {
 				var tmpl = $('script' , this).html();
 				var render = template.compile(tmpl);
 				elem.innerHTML = render(lngPackage);
 			});
-		});
-		console.log('Languages:', Languages);
+		});
+
+		console.log('Languages:', Languages);
+
 		require('pages/itb/schedule/index.ts');
 	}();
-</script>
+</script>
+
+
+
+
+
+
+
 </body>
 </html>

@@ -1,8 +1,10 @@
-let languagePkg = {
+var languagePkg = {
 	en: {
-		pageTitle: 'news'
+		pageTitle: 'News',
+		sponsor: 'Sponsor'
 	},
 	cn: {
-		pageTitle: '新闻'
+		pageTitle: '新闻',
+		sponsor: '赞助商'
 	}
 };

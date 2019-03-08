@@ -1,0 +1,37 @@
+.main { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); margin: 20px; background-color: #fff; }
+
+.main .S3 { margin: 0 auto 20px; display: block; width: 8rem; }
+
+.main h1 { padding: 20px; font-size: 20px; }
+
+.main h3 { height: 0.93333rem; line-height: 0.93333rem; margin-bottom: 0; color: #d71711; text-indent: 1.06667rem; font-size: 0.37333rem; font-weight: 600; background-repeat: no-repeat; background-position: 12px center; background-size: 0.42667rem 0.42667rem; }
+
+.main h3.h3type { background-image: url("/itb-dist/wap/pages/meetings/assets/ico32-bloom.png?__=1552030651276"); }
+
+.main h3.h3time { background-image: url("/itb-dist/wap/pages/meetings/assets/ico32-clock.png?__=1552030651276"); }
+
+.main h3.h3note { background-image: url("/itb-dist/wap/pages/meetings/assets/ico32-book.png?__=1552030651276"); }
+
+.main h3.h3location { background-image: url("/itb-dist/wap/pages/meetings/assets/ico32-location.png?__=1552030651276"); }
+
+.main h3.h3meeting { background-image: url("/itb-dist/wap/pages/meetings/assets/ico32-meeting.png?__=1552030651276"); }
+
+.main .txt { margin: 0.26667rem; }
+
+.main .pMsg { margin: 0.21333rem 1em 2em; background-repeat: no-repeat; background-position: left 3px; background-size: 0.42667rem 0.42667rem; }
+
+.main .mui-popup-button { color: #fff; background-color: #d71711; font-size: 0.34667rem; box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, 0.2); }
+
+.main .mui-popup-button:first-child { border-bottom-left-radius: 4px; }
+
+.main .mui-popup-button:last-child { border-bottom-right-radius: 4px; }
+
+.main .mui-popup-button:after { background-color: white; width: 2px; }
+
+.main .mui-popup-button.green { background-color: #65b658; }
+
+.main .mui-popup-button.blue { background-color: #4069d0; }
+
+.main .mui-popup-button.gray { color: #999; background-color: #ddd; }
+
+/*# sourceMappingURL=detail.css.map?__=1552030651276 */

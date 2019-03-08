@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/logistics/emailbanner/index.css?__=4fb776e" />
+	
+</head>
+<body>
+
+
+<div id="mainSection">
+    <script id="tpl-mainSection" type="text/html">
+        <table id="tbMain" class="search-table">
+
+            <tr>
+                <td colspan="4">
+                    <table style="width:100%;border:0;">
+                        <tr style="width:100%;border:0;">
+                            <td style=" border:0;width:200px;"><img src="/itb-dist/pc/pages/logistics/emailbanner/banner/banner.jpg?__=a618bb3" style="width:200px;height:150px;" /></td>
+                            <td style=" border:0;vertical-align:top;text-align: left;font-size:16px;font-weight: bold;  word-wrap:break-word;">
+                                <label class="fonttitle"><%=formtitle%></label><br/><br/>
+                                <%=forminfo1%><br/><%=forminfo2%>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="lead"><%=boothno%></td>
+                <td><input type="text" id="boothid" name="boothid"></td>
+                <td class="lead"><%=operation%></td>
+                <td><button id="btnDownloadcn" class="btn-info"><%=operationbutton%></button>
+                    <button id="btnDownloaden" class="btn-info"><%=operationbutton2%></button>
+                </td>
+            </tr>
+
+        </table>
+
+
+    </script>
+
+</div>
+
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/logistics/emailbanner/index.i18n.js?__=c29978b"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/logistics/emailbanner/index.js?__=3f72226"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/logistics/emailbanner/index.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

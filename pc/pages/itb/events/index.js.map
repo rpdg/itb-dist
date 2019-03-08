@@ -1,0 +1,1 @@
+{"version":3,"sources":["/pages/itb/events/index.ts"],"names":[],"mappings":";;;;AAAA,+BAAyB;AAEzB,IAAI,cAAI,CAAC,CAAC,CAAC,CAAC","file":"index.js","sourcesContent":["import List from './list'\r\n\r\nnew List(1);"]}

@@ -1,0 +1,9 @@
+#result { position: absolute; width: 8rem; height: 8rem; top: 2.66667rem; left: 50%; margin-left: -4rem; }
+
+#round { width: 6.66667rem; height: 6.66667rem; border-radius: 6.66667rem; border: 0.13333rem solid #d71711; margin: 0.66667rem auto; font-size: 1.2rem; color: #d71711; line-height: 6rem; text-align: center; }
+
+#text { text-align: center; font-size: 0.93333rem; color: #d71711; line-height: 1.2rem; }
+
+#goDetail { position: fixed !important; bottom: 0; }
+
+/*# sourceMappingURL=myScore.css.map?__=1552030651276 */

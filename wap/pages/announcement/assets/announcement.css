@@ -9,7 +9,7 @@
 
 .atom > .news > p { display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/ -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/ -webkit-line-clamp: 3; /** 显示的行数 **/ overflow: hidden; /** 隐藏超出的内容 **/ font-size: 0.29333rem; color: #333; }
 
-.atom > .btnLink { background-color: #d71711; color: #fff; font-size: 0.32rem; height: 1rem; width: 100%; border-bottom-left-radius: 0.2rem; border-bottom-right-radius: 0.2rem; }
+.atom > .btnLink { display: inline-block; background-color: #d71711; color: #fff; text-align: center; font-size: 0.32rem; line-height: 1rem; height: 1rem; width: 100%; border-bottom-left-radius: 0.2rem; border-bottom-right-radius: 0.2rem; }
 
 .detail { box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); width: 8.93333rem; background-color: #fff; border-radius: 0.2rem; margin: 0.66667rem auto; padding: 0.66667rem 0.6rem; }
 
@@ -19,4 +19,8 @@
 
 .detail > p { font-size: 0.32rem; color: #333; }
 
-/*# sourceMappingURL=announcement.css.map?__= */
+#newsList.mui-table-view { background-color: transparent; }
+
+#newsList.mui-table-view:after, #newsList.mui-table-view:before { background-color: transparent; }
+
+/*# sourceMappingURL=announcement.css.map?__=1552030651276 */

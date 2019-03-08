@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <style>body {
+  background-color: #d71711;
+  background-image: url("/itb-dist/pc/pages/login/assets/weblogin.jpg?__=185a42e");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#loginPanel {
+  position: absolute;
+  width: 680px;
+  height: 440px;
+  top: 50%;
+  margin-top: -220px;
+  left: 50%;
+  margin-left: -340px;
+  background-color: #f7f7f7;
+}
+
+#loginPanel .logoPh {
+  padding-top: 2.5em;
+  padding-bottom: 2em;
+}
+
+#avanda {
+  height: 80px;
+  margin-top: 30px;
+}
+
+#mainSection {
+  width: 440px;
+  text-align: center;
+  margin: auto;
+}
+
+#loginForm {
+  margin-bottom: 1em;
+}
+
+#loginForm input[type='text'], #loginForm input[type='password'] {
+  display: block;
+  width: 440px;
+  height: 33px;
+  line-height: 33px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-left: 3em;
+  border-radius: 3px;
+  box-shadow: none !important;
+}
+
+#loginForm input[type='text'] {
+  background: #fff url("/itb-dist/pc/pages/login/assets/ico-user.png?__=9455ad4") no-repeat 1em center !important;
+}
+
+#loginForm input[type='password'] {
+  background: #fff url("/itb-dist/pc/pages/login/assets/ico-lock.png?__=ea28b99") no-repeat 1em center !important;
+}
+
+#linkBar {
+  height: 3em;
+  line-height: 3em;
+}
+
+#linkBar label {
+  margin-right: 0;
+}
+
+#linkBar label img {
+  margin-left: 1em;
+}
+
+#btnLogin {
+  font-size: 14px;
+  width: 440px;
+  height: 38px;
+  background-color: #d71711;
+  color: #fff;
+  font-weight: 900;
+}
+
+#switcher {
+  width: 54px;
+  height: 26px;
+  border: 1px solid #d71711;
+  border-radius: 3px;
+  padding: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  white-space: nowrap;
+}
+
+#switcher .tgr {
+  display: inline-block;
+  width: 23px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#switcher .tgr.cur {
+  background-color: #d71711;
+  color: #fff;
+  cursor: default;
+}
+
+/*# sourceMappingURL=login.css.map?__=1552033897847 */</style>
+	
+
+
+<script>
+	window.CONFIG = {
+		apiServer: 'http://120.27.236.138:8080/api/',
+		loginPage: window.location.pathname
+	};
+</script>
+
+</head>
+<body>
+
+
+
+
+<div id="loginPanel">
+	<div id="mainSection">
+
+		<script id="tpl-mainSection" type="text/html">
+			<!-- <div id="switcher">
+				<div class="tgr <%=($current==='cn'?'cur':'s')%>">中</div>
+				<div class="tgr <%=($current==='en'?'cur':'s')%>">EN</div>
+			</div> -->
+			<p class="text-center logoPh">
+				<img src="/itb-dist/pc/css/img/logo-itb.png?__=64be1f4" id="avanda">
+			</p>
+			<form id="loginForm" action="#" onsubmit="return false">
+				<input id="loginName" name="username" type="text"  >
+				<input id="password" name="password" type="password"  >
+			</form>
+			<!-- <p id="linkBar">
+				<label class="float-right"><img src="./assets/ico-foots.png" alt=""> <a id="guestLogin" href="javascript:void(0)"><%=guest%></a> </label>
+				<label class="float-right"><img src="./assets/ico-mail.png" alt=""> <a id="forgetPwd" href="#"><%=forget%></a> </label>
+				<label class="float-left"><input id="remPassword" type="checkbox"> <%=remember%> </label>
+			</p> -->
+			<button id="btnLogin"><%=login%></button>
+		</script>
+
+	</div>
+
+
+</div>
+
+
+<!--[if lt IE 10]>
+<style type="text/css">
+	#ie6wraning {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 99999999;
+		background-color: #911f0c;
+		color: #fff;
+		line-height: 30px;
+		height: 30px;
+		width: 100%;
+		text-align: center;
+	}
+
+	#ie6wraning a {
+		color: #ff0;
+	}
+
+	#ie6wraning a:hover {
+		color: #fff;
+	}
+
+	* html #ie6wraning {
+		position: absolute;
+	}
+</style>
+
+<div id="ie6wraning">
+	您使用的浏览器是旧版IE，无法正常使用本系统，请升级您的浏览器至新版本。
+	推荐您使用：
+	<a target="_blank" href="https://www.google.com/chrome/browser/desktop/index.html">谷歌浏览器</a>、
+	<a target="_blank" href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">新版IE</a>、
+	<a target="_blank" href="http://se.360.cn/">360浏览器</a>、
+	<a target="_blank" href="http://www.maxthon.cn/">遨游浏览器</a>
+</div>
+<![endif]-->
+
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/login/91b332fb641e43de9709332565af93da.i18n.js?__=a477310"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/login/91b332fb641e43de9709332565af93da.js?__=a866f53"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/login/91b332fb641e43de9709332565af93da.ts');
+	}();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

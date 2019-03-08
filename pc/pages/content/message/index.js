@@ -45,14 +45,6 @@ define('pages/content/message/index.ts', function(require, exports, module) {
       },
       columns: [
           {
-              text: 'ID', width: 60,
-              src: 'user_id',
-          },
-          {
-              text: "" + lpg.userName, width: 100,
-              src: 'username',
-          },
-          {
               text: "" + lpg.roleName, width: 100,
               src: 'name',
           },
@@ -85,10 +77,15 @@ define('pages/content/message/index.ts', function(require, exports, module) {
               },
           },
       ],
-      pagination: true,
+      pagination: {
+          pageSize: 50
+      },
+  });
+  $.when(tb.createdPromise).then(function () {
+      tb.tfoot.appendTo('#stickTr');
   });
   //view
-  var infoPage = '/itb-dist/pc/pages/content/message/view.html?__='.split('?')[0];
+  var infoPage = '/itb-dist/pc/pages/content/message/view.html?__=1552033897847'.split('?')[0];
   tb.tbody.on('click', '.btn-info', function () {
       var btn = $(this), id = btn.data('id'), name = btn.data('name');
       var pop = opg_ts_1.default.popTop("<iframe src=\"" + infoPage + "?id=" + id + "\" />", {
@@ -101,7 +98,7 @@ define('pages/content/message/index.ts', function(require, exports, module) {
           }
       });
   });
-  var addPage = '/itb-dist/pc/pages/content/message/send.html?__=2274576';
+  var addPage = '/itb-dist/pc/pages/content/message/send.html?__=325bcc2';
   //send
   tb.tbody.on('click', '.btn-warning', function () {
       var btn = $(this), id = btn.data('id'), name = btn.data('name');
@@ -168,7 +165,29 @@ define('pages/content/message/index.ts', function(require, exports, module) {
           pop.close();
       });
   }
-  //# sourceMappingURL=/itb-dist/pc/pages/content/message/index.js.map?__=
+  /*let $this = $('#tto') , style = $this[0].style , $parent = $this.parent();
+  let options = {
+      gap: 0,
+  };
+  let  $win = $(window);
+  $win.on('scroll', function() {
+      let scrollPos = $win.scrollTop(),
+          elemSize = $this.outerHeight(),
+          parentPos = $parent.offset().top ,
+          parentSize = $parent.outerHeight();
+  
+      if (scrollPos >= parentPos - options.gap && (parentSize + parentPos - options.gap) >= (scrollPos + elemSize)) {
+          style.position = 'fixed';
+          style.bottom = options.gap + 'px';
+      } else if (scrollPos < parentPos) {
+          style.position = 'absolute';
+          style.bottom = '0';
+      } else {
+          style.position = 'absolute';
+          style.bottom = parentSize - elemSize + 'px';
+      }
+  }).resize();*/
+  //# sourceMappingURL=/itb-dist/pc/pages/content/message/index.js.map?__=1552033897847
   
 
 });

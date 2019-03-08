@@ -1,5 +1,13 @@
 var languagePkg = {
-	en: {},
+	en: {
+		moduleName : 'Role Management',
+		role : 'Role',
+		roleName : 'Role Name',
+		roleDesc : 'Role Desc',
+		userNameKeyword : 'User ID',
+		userName : 'Login ID',
+		realName : 'User Name',
+	},
 	cn: {
 		moduleName : '角色权限管理',
 		role : '角色',

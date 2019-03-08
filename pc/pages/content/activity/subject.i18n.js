@@ -1,12 +1,63 @@
 var languagePkg = {
-	'en': {},
+	'en': {
+		scope: {
+			label: 'Opening Scope',
+			0: 'Need apply',
+			1: 'Open',
+			2: 'Only for invited'
+		},
+		beginDate: 'Event Date',
+		timeFrom: 'Start Time',
+		timeTo: 'End Time',
+		subjectBody: 'Item content',
+		time: 'Time',
+		location: 'Location',
+		occupyTime: 'Occupied Time Slot',
+		score: 'Item Score',
+		title: 'Title',
+		msgTitle: 'Message Title',
+		content: 'Messag Content',
+		note: 'Note',
+		user: 'User',
+		addUser: 'Add User',
+		userName: 'User Name',
+		userRole: 'User Role',
+		userLoginName: 'Login Name',
+		agree : 'Accept',
+		deny : 'Deny',
+		isAccepted: 'Accepted or not',
+		isAcceptedHash:{
+			'-1' : 'Pending',
+			'0' : 'Denied',
+			'1' : 'Accepted'
+		},
+		isInvited : 'Invited or not',
+		isInvitedHash:{
+			'-1' : 'Default',
+			'0' : 'Not invited',
+			'1' : 'Invited'
+		},
+		rateScore : 'Evaluate Score',
+		signInScore : 'Sign in Score',
+		sendInvite : 'Send Invitation',
+        sendBatchInvite:'Send Invitation to All',
+		guest: 'Speaker',
+		guestName: 'Speaker Name',
+		guestTitle: 'Speaker Title',
+		guestBrief: 'Introduction',
+		deleteGuestConfirm: 'Are you sure to delete this user?',
+        saveItemContent:'Save Item Content',
+		okb:'Add',
+		cancelb:'Close'
+	},
 	'cn': {
 		scope: {
 			label: '开放范围',
-			0: '开放申请',
-			1: '开放申请 & 所有人可见',
-			2: '自行设定人员 & 只设定人员可见'
+			0: '需申请',
+			1: '公开',
+			2: '仅限邀请'
 		},
+		beginDate: '举办日期',
 		timeFrom: '起始时间',
 		timeTo: '结束时间',
 		subjectBody: '子项内容',
@@ -15,6 +66,7 @@ var languagePkg = {
 		occupyTime: '占用时间段',
 		score: '完成分值',
 		title: '议题',
+		msgTitle: '消息标题',
 		content: '内容',
 		note: '备注',
 		user: '用户',
@@ -22,21 +74,31 @@ var languagePkg = {
 		userName: '用户名',
 		userRole: '用户角色',
 		userLoginName: '登录名',
+		agree : '同意',
+		deny : '拒绝',
 		isAccepted: '是否接受',
 		isAcceptedHash:{
-			'0' : '未邀请',
-			'1' : '已邀请'
+			'-1' : '未处理',
+			'0' : '已拒绝',
+			'1' : '已同意'
 		},
 		isInvited : '是否邀请',
 		isInvitedHash:{
+			'-1' : '默认',
 			'0' : '未邀请',
 			'1' : '已邀请'
 		},
+		rateScore : '评价分',
+		signInScore : '签到分',
 		sendInvite : '发出邀请',
+        sendBatchInvite:'发出邀请至所有人',
 		guest: '嘉宾',
 		guestName: '嘉宾名字',
 		guestTitle: '嘉宾头衔',
 		guestBrief: '嘉宾简介',
-		deleteGuestConfirm: '确定要删除该用户吗？'
+		deleteGuestConfirm: '确定要删除该用户吗？',
+        saveItemContent:'保存子项内容',
+        okb:'添加',
+        cancelb:'关闭'
 	}
 };

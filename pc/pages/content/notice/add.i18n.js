@@ -1,10 +1,23 @@
 var languagePkg = {
 	'en': {
-
+notice : 'Information',
+		noticeTitle : 'Subject',
+		noticeSummary : 'Summary',
+		publisher : 'Publisher',
+		forward : 'Reprinted from',
+		publishTimeBegin : 'Publish start time',
+		publishTimeEnd : 'Publish end time',
+		cover: 'Cover',
+		selectPhoto: 'Please select the picture',
+		upload: 'Upload',
+		stick: 'Bring to top',
+		addSubject: 'Add item',
+		editSubject: 'Edit item',
+		deleteConfirm : 'Are you sure to delete this item?',
 	},
 	'cn': {
-		notice : '公告',
-		noticeTitle : '公告标题',
+		notice : '信息',
+		noticeTitle : '标题',
 		noticeSummary : '新闻摘要',
 		publisher : '发布方',
 		forward : '转载自',
@@ -15,6 +28,8 @@ var languagePkg = {
 		upload: '上传',
 		stick: '置顶',
 		addSubject: '添加子项',
-		editSubject: '编辑子项'
+		editSubject: '编辑子项',
+		deleteConfirm : '确定要删除该项？',
+		language: '语言'
 	}
 };

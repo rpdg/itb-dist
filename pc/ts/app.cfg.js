@@ -4,10 +4,10 @@ define('ts/app.cfg.ts', function(require, exports, module) {
   Object.defineProperty(exports, "__esModule", { value: true });
   var store_1 = require("ts/util/store.ts");
   var cfg = {
-      apiServer: store_1.store.get('apiServer') || (window.CONFIG ? window.CONFIG.apiServer : null),
-      ajaxTimeOut: 30000,
-      loginPage: store_1.store.get('loginPage') || (window.CONFIG ? window.CONFIG.loginPage : '../login/index.html'),
-      version: '1.0.2_20170908',
+      apiServer: (window.CONFIG && window.CONFIG.apiServer) ? window.CONFIG.apiServer : (store_1.store.get('apiServer') || null),
+      ajaxTimeOut: 1800000,
+      loginPage: (window.CONFIG && window.CONFIG.loginPage) ? window.CONFIG.loginPage : (store_1.store.get('loginPage') || '../login/index.html'),
+      version: '1.0.3_20180411',
   };
   cfg.onUnauthorizedError = function () {
       var param = '', url = cfg.loginPage;
@@ -32,11 +32,12 @@ define('ts/app.cfg.ts', function(require, exports, module) {
           cfg.onUnauthorizedError();
       }
       else {
-          top.opg.err("api." + this.name + " error " + code + " (" + errorMsg + ")");
+          //top.opg.err(`api.${this.name} error ${code} (${errorMsg})`);
+          top.opg.err("api." + this.name + " error (" + errorMsg + ")");
       }
   };
   exports.default = cfg;
-  //# sourceMappingURL=/itb-dist/pc/ts/app.cfg.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/app.cfg.js.map?__=1552033897847
   
 
 });

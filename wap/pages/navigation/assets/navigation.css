@@ -5,7 +5,7 @@
 
 .filterBar .mui-btn { font-size: 0.29333rem; width: 100%; display: inline-block; overflow: hidden; border: 0; }
 
-#fengMap { box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1); margin-top: 0.13333rem; border-radius: 6px; position: absolute; top: 2.53333rem; left: 50%; margin-left: -4.66667rem; bottom: 0.48rem; }
+#fengMap { position: absolute; top: 2.4rem; bottom: 0.48rem; left: 0; right: 0; }
 
 .group-layer { top: 2.8rem !important; }
 
@@ -16,4 +16,4 @@
 
 #hotwords li:hover { color: #92d7ff; }
 
-/*# sourceMappingURL=navigation.css.map?__= */
+/*# sourceMappingURL=navigation.css.map?__=1552030651276 */

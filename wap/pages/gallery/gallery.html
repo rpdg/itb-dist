@@ -6,82 +6,140 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
-	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=a71f1ada71f1ad" />
-    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=ad1e264ad1e264" />
-    <link rel="stylesheet" href="/itb-dist/wap/pages/gallery/assets/gallery.css?__=a6e8c6da6e8c6d" />
-    <link rel="stylesheet" href="/itb-dist/wap/css/mui.picker.css?__=d4e0f60d4e0f60" />
-    <link rel="stylesheet" href="/itb-dist/wap/css/mui.poppicker.css?__=89868258986825" />
+	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
+	
+	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=5eb3e79" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=a8d5d58" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/gallery/assets/gallery.css?__=9137a2a" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/mui.picker.css?__=d4e0f60" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/mui.poppicker.css?__=8986825" />
+
 	<script>
 		window.CONFIG = {
-			apiServer: 'http://116.62.34.149:8090/api/'
+			apiServer: 'http://120.27.236.138:8080/api/'
 		};
-	</script>
+	</script>
+
+	
 </head>
 <body class="">
-<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
-<header class="mui-bar mui-bar-nav">
+<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
+
+<div id="outterFrame">
+
+
+<div class="mui-bar mui-bar-nav">
 	<a class="mui-icon mui-icon-left-nav mui-pull-left" href='../dashboard/index.html'></a>
 	<h1 class="mui-title templateContainer">
 		<script type="text/html">
 			<%=pageTitle%>
 		</script>
 	</h1>
-</header>
-<div class="mui-content">
+</div>
+
+
+<div class="mui-content" >
 	<div class="lyuSearchWrap">
 		<div class="lyuSearchBar">
 			<div class="mui-input-row mui-search">
 				<input id="iptSearch" type="search" class="mui-input-clear" placeholder="">
 			</div>
-		</div>
-	</div>
+		</div>
+
+	</div>
+
+
 	<div class="filterBar w700 bgWhite">
 		<button id='sel1' class="mui-btn" type='button'>...</button>
 		<button id='sel2' class="mui-btn" type='button'>...</button>
 		<button id='sel3' class="mui-btn" type='button'>...</button>
-	</div>
+	</div>
+
 	<div class="showcase w700 bgWhite">
 		<div id="tag" class="tag"></div>
 		<div id="myScroll">
-			<ul id="wholeWrapper" class="mui-table-view mui-grid-view">
+			<ul id="wholeWrapper" class="mui-table-view mui-grid-view">
+
 			</ul>
 		</div>
-	</div>
-</div>
-<div id="fullSizeViewer">
+	</div>
+
+
+</div>
+
+
+<div id="fullSizeViewer" >
 	<div class="fullSizerViewerWrapper">
 		<div id="closer">&times;</div>
-		<div id="divImgFullSize"><img id="imgFullSize" src="about:blank" alt=""></div>
+		<div id="divImgFullSize"><img id="imgFullSize" src="about:blank" alt=""><p id="pDlInfo"></p></div>
+
 	</div>
-</div>
+</div>
+
 <script id="tpl-img" type="text/html">
-	<% for (let i=0,l=$data.length,img; i< l , img = $data[i] ; i++ ){ %>
+	<% for (var i=0,l=$data.length,img; i< l , img = $data[i] ; i++ ){ %>
 	<li class="mui-table-view-cell mui-media mui-col-xs-6">
-		<img class="mui-media-object" src="<%=img.url%>" data-src="<%=img.url%>">
+		<img class="mui-media-object" style="border:5px solid #666;" src="<%=img.url%>" data-src="<%=img.url%>">
 	</li>
 	<% } %>
-</script>
-<script src="/itb-dist/wap/js/libs.js?__=b71f713b71f713"></script>
-<script src="/itb-dist/wap/pages/gallery/gallery.i18n.js?__=61b325261b3252"></script>
-<script type="text/javascript" src="/itb-dist/wap/js/util.js?__="></script>
-<script type="text/javascript" src="/itb-dist/wap/js/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/wap/pages/gallery/gallery.js?__="></script>
-<script src="/itb-dist/wap/lib/mui.picker.js?__=81933de81933de"></script>
-<script src="/itb-dist/wap/lib/mui.poppicker.js?__=bffdd65bffdd65"></script>
-<script>
-	(function () {
-		let fullSizeViewer = document.getElementById('fullSizeViewer');
-		let imgFullSize = document.getElementById('imgFullSize');
-		$('#wholeWrapper').on('click', 'img', function () {
-			console.log(this.alt);
-			imgFullSize.src = this.getAttribute('data-src');
-			fullSizeViewer.style.cssText = ';display:block;';
-		});
-		$('#closer').click(function () {
-			fullSizeViewer.style.cssText = ';display:none;';
-		});
-	})();
+</script>
+
+
+<script id="tpl-img2" type="text/html">
+	<% for (var key in $data ){ %>
+		<li class="mui-table-view-cell mui-media mui-col-xs-12" style="margin-top: 20px;">
+			<span style="font-size: 18px;"><%=key%></span>
+			<hr>
+		</li>
+
+		<% for (var i=0,l=$data[key].length,img; i< l , img = $data[key][i] ; i++ ){ %>
+		<li class="mui-table-view-cell mui-media mui-col-xs-6">
+			<img class="mui-media-object" style="border:5px solid #666;" src="<%=img.url%>" data-src="<%=img.url%>">
+		</li>
+		<% } %>
+	<% } %>
+</script>
+
+
+</div>
+
+
+
+
+<footer class="footer-bar templateContainer">
+	<script type="text/html">
+		<a href="../dashboard/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/homeG.png?__=1552030651276" alt=""><br><%=FOOTER['b1']%>
+		</a>
+		<a href="../navigation/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/floorplanG.png?__=1552030651276" alt=""><br><%=FOOTER['b2']%>
+		</a>
+		<a href="../record/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/recordG.png?__=1552030651276" alt="">
+			<div><%=FOOTER['b3']%></div>
+		</a>
+		<a href="../moments/index.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/momentsGs.png?__=1552030651276" alt=""><br><%=FOOTER['b4']%>
+		</a>
+		<a href="../schedule/mine.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/scheduleG.png?__=1552030651276" alt=""><br><%=FOOTER['b5']%>
+		</a>
+	</script>
+</foote>
+
+<script src="/itb-dist/wap/js/libs.js?__=af44dfd"></script>
+<script src="/itb-dist/wap/pages/gallery/gallery.i18n.js?__=158a4ef"></script>
+
+
+<script type="text/javascript" src="/itb-dist/wap/js/util.js?__=a479366"></script>
+<script type="text/javascript" src="/itb-dist/wap/js/api.js?__=722b967"></script>
+<script type="text/javascript" src="/itb-dist/wap/pages/gallery/gallery.js?__=c5d035d"></script>
+<script src="/itb-dist/wap/lib/mui.picker.js?__=81933de"></script>
+<script src="/itb-dist/wap/lib/mui.poppicker.js?__=bffdd65"></script>
+<script src="/itb-dist/wap/pages/gallery/assets/h2c.js?__=d150daf"></script>
+<script>
+
+
 
 
 	/*window.addEventListener('pageshow', function (e) {
@@ -89,23 +147,59 @@
 		if (e.persisted) {
 			location.reload();
 		}
-	});*/
-	let Languages = require('js/util.ts').Languages;
+	});*/
+
+	var lngPk4Footer = {
+		en : {
+			b1 : 'Home',
+			b2 : 'Floorplan',
+			b3 : 'Record',
+			b4 : 'Moments',
+			b5 : 'Schedule',
+		},
+		cn:{
+			b1 : 'cn-aa',
+			b2 : 'cn-bb',
+			b3 : 'bbb',
+			b4 : 'bbb',
+			b5 : 'bbb',
+		}
+	};
+
+	var Languages = require('js/util.ts').Languages;
+
 	Languages.init(languagePkg, function (lngPackage) {
+		lngPackage['FOOTER'] = lngPk4Footer[lngPackage['$current']];
 		$('.templateContainer').each(function (index , elem) {
-			let tmpl = $('script' , this).html();
-			let render = template.compile(tmpl);
+			var tmpl = $('script' , this).html();
+			var render = template.compile(tmpl);
 			elem.innerHTML = render(lngPackage);
 		});
-	});
+	});
 
-
+
+
+
+
 	mui.ready(() => {
 		require('pages/gallery/gallery.ts');
-	});
+	});
+
+
 	$('body').on('tap', 'a', function () {
 		location.href = this.href;
 	});
-</script>
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

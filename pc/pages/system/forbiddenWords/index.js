@@ -40,7 +40,7 @@ define('pages/system/forbiddenWords/index.ts', function(require, exports, module
       pagination: false,
   });
   var cache = store_1.Cache.getInstance();
-  var infoPage = '/itb-dist/pc/pages/system/forbiddenWords/edit.html?__=8500909';
+  var infoPage = '/itb-dist/pc/pages/system/forbiddenWords/edit.html?__=37297b7';
   //Edit
   tb.tbody.on('click', '.btn-info', function () {
       var btn = $(this), word = btn.data('word'), id = btn.data('id');
@@ -50,6 +50,7 @@ define('pages/system/forbiddenWords/index.ts', function(require, exports, module
       }, {
           title: "" + lpg.edit + moduleName + ": " + word,
           width: 500,
+          height: 200,
           buttons: {
               ok: "" + lpg.save + moduleName,
               cancel: lpg.cancel,
@@ -63,6 +64,7 @@ define('pages/system/forbiddenWords/index.ts', function(require, exports, module
       }, {
           title: "" + lpg.add + moduleName,
           width: 500,
+          height: 200,
           buttons: {
               ok: "" + lpg.save + moduleName,
               cancel: lpg.cancel,
@@ -78,7 +80,7 @@ define('pages/system/forbiddenWords/index.ts', function(require, exports, module
           title: "" + lpg.please + lpg.confirm,
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/system/forbiddenWords/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/system/forbiddenWords/index.js.map?__=1552033897847
   
 
 });

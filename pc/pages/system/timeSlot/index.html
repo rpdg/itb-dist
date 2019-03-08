@@ -6,12 +6,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 	<meta name="renderer" content="webkit">
 	<title>ITB</title>
-	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=c0c814a" />
-    <link rel="stylesheet" href="/itb-dist/pc/css/jquery.datetimepicker.css?__=087d36f" />
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/css/jquery.datetimepicker.css?__=087d36f" />
+	
 </head>
-<body>
-<div id="mainSection">
-	<script id="tpl-mainSection" type="text/html">
+<body>
+
+<div id="mainSection">
+
+	<script id="tpl-mainSection" type="text/html">
+
 		<table id="formDate" class="search-table">
 			<tr>
 				<td class="lead"><label for="beginDate"><%=beginDateSetting%></label></td>
@@ -19,39 +23,39 @@
 				<td class="lead"><label for="endDate"><%=endDateSetting%></label></td>
 				<td><input id="endDate" name="endDate" type="datetime" readonly /></td>
 			</tr>
-		</table>
-		<table id="tbTime"></table>
-	</script>
-</div>
+		</table>
+
+
+		<table id="tbTime"></table>
+
+
+	</script>
+
+</div>
+
+
+
+
 <div id="opgAjaxLoading">
 	<div id="opgAjaxLoadingText">
 		<div id="square-spin"></div>
 		loading ...
 	</div>
-</div>
+</div>
+
 <script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
 <script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
 <script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
 <script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
-<script src="/itb-dist/pc/js/jquery.plugins.js?__=4b44b7d"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
 <script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
-<script src="/itb-dist/pc/pages/system/timeSlot/index.i18n.js?__=a59c5f1"></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/store.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/Languages.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/DisplayOject.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/FormControls.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/app.cfg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/utils.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/util/api.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Table.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Popup.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Panel.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Combo.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/Tree.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/ui/TabView.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/ts/opg.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/system/timeSlot/TimeModifier.js?__="></script>
-<script type="text/javascript" src="/itb-dist/pc/pages/system/timeSlot/index.js?__="></script>
+<script src="/itb-dist/pc/pages/system/timeSlot/index.i18n.js?__=4ecc1b4"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/timeSlot/TimeModifier.js?__=bdb084b"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/system/timeSlot/index.js?__=e216260"></script>
 <script src="/itb-dist/pc/lib/jquery.datetimepicker.js?__=6f0a657"></script>
 <script>
 	!function () {
@@ -61,16 +65,26 @@
 			var mainSection = document.getElementById('mainSection');
 			if (mainSection && templateElem) {
 				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
-			}
+			}
+
 			$('.templateContainer').each(function (index , elem) {
 				var tmpl = $('script' , this).html();
 				var render = template.compile(tmpl);
 				elem.innerHTML = render(lngPackage);
 			});
-		});
-		console.log('Languages:', Languages);
+		});
+
+		console.log('Languages:', Languages);
+
 		require('pages/system/timeSlot/index.ts');
 	}();
-</script>
+</script>
+
+
+
+
+
+
+
 </body>
 </html>

@@ -1,0 +1,24 @@
+.imgBlock {
+  display: inline-block;
+  margin: 10px;
+  width: 504px;
+  height: 169px;
+  line-height: 169px;
+  border-radius: 20px;
+  border: 8px solid white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.imgBlock a {
+  display: block;
+  line-height: 169px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+}
+
+/*# sourceMappingURL=index.css.map?__=1552033897847 */

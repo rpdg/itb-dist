@@ -96,6 +96,15 @@ define('pages/content/exhibition/addSubject.ts', function(require, exports, modu
           //debugger;
           $('#lbFormatType').jsonToFields(data[0]);
           selType.trigger('change').prop('disabled', true);
+          formatType = ~~selType.val();
+          if (formatType == 0) {
+              panel.find('textarea').text(data[0].content);
+          }
+          else if (formatType == 3) {
+              setTimeout(function () {
+                  editor.setContent(data[0].content);
+              }, 2000);
+          }
       });
   }
   window['doSave'] = function (pop, listSubjects) {
@@ -153,7 +162,7 @@ define('pages/content/exhibition/addSubject.ts', function(require, exports, modu
       }
       return true;
   };
-  //# sourceMappingURL=/itb-dist/pc/pages/content/exhibition/addSubject.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/exhibition/addSubject.js.map?__=1552033897847
   
 
 });

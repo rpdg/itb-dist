@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "file": "index.css?__=1552033897847",
+    "sources": [
+        "/pages/system/integralMatch/assets/index.scss"
+    ],
+    "sourcesContent": [
+        "#mainTab {\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n  .panel-foot {\r\n    .btn-export {\r\n      margin-left: 10px;\r\n    }\r\n  }\r\n}\r\n\r\n.th-asc {\r\n  cursor: pointer;\r\n}\r\n\r\n.th-asc:after {\r\n  content: '▲';\r\n}\r\n\r\n.th-desc:after {\r\n  content: '▼';\r\n}"
+    ],
+    "names": [],
+    "mappings": ";AAAA,AAAA,QAAQ,CAAC;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CAOb;;AATD,AAKI,QALI,CAIN,WAAW,CACT,WAAW,CAAC;EACV,WAAW,EAAE,IAAI;CAClB;;AAIL,AAAA,OAAO,CAAC;EACN,MAAM,EAAE,OAAO;CAChB;;AAED,AAAA,OAAO,AAAA,MAAM,CAAC;EACZ,OAAO,EAAE,IAAI;CACd;;AAED,AAAA,QAAQ,AAAA,MAAM,CAAC;EACb,OAAO,EAAE,IAAI;CACd"
+}

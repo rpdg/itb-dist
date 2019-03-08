@@ -7,6 +7,12 @@
 	box-shadow: 0 0 $dist 0 rgba(0, 0, 0, $alpha);
 }
 
+@mixin textClip{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis  ;
+}
+
 @mixin lineClip($lines:3) {
 	display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
 	-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
@@ -21,4 +27,13 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+@mixin flexAlignContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	align-content: stretch;
+	justify-content: space-between;
 }

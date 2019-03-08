@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>ITB</title>
+	    <link rel="stylesheet" href="/itb-dist/pc/css/ams.css?__=ceb953d" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/exhibitors/assets/index.css?__=b125dc3" />
+    <link rel="stylesheet" href="/itb-dist/pc/pages/itb/exhibitors/assets/2019style.css?__=b5136d7" />
+
+</head>
+<body>
+
+
+
+<div id="divSearch" class="templateContainer" style="margin-bottom: 20px;">
+	<script type="text/html">
+		<label><%=regions%>
+			<select name="region" id="selRegion">
+				<option value="">----</option>
+			</select>
+		</label>
+		<label><%=products%>
+			<select name="product" id="selProduct">
+				<option value="">----</option>
+			</select>
+		</label>
+		<label><input id="iptKeyword" type="text" name="keyword" placeholder="<%=searchtips%>"></label>
+		<button id="btnSearch" class="btn-primary btn-small"><%=search%></button>
+		<button id="btnReset" class="btn-primary btn-small"><%=reset%></button>
+		<label id="toggleViewStyle">
+			<img class="tgList" src="/itb-dist/pc/pages/itb/exhibitors/assets/view-list.png?__=6f48f48" alt=""> 
+			<img class="tgThumb" src="/itb-dist/pc/pages/itb/exhibitors/assets/view-thumb.png?__=860c4ba" alt=""> 
+		</label>
+	</script>
+	
+</div>
+
+
+<div class="main">
+	<section class="leftSec">
+		<div class="grid-title-bar templateContainer">
+			<script type="text/html">
+				<%=result%>
+			</script>
+		</div>
+
+		<div id="divList">
+		</div>
+		
+	</section>
+
+	<section class="rightSec">
+		<div class="grid-title-bar templateContainer">
+			<script type="text/html">
+				<%=preferences%>
+			</script>
+		</div>
+
+		<ul id="slippyList">
+		</ul>
+
+		<div class="grid-title-bar2 templateContainer">
+			<script type="text/html">
+				<%=ordertip%>
+			</script>
+		</div>
+	</section>
+</div>
+
+
+
+
+
+<div id="opgAjaxLoading">
+	<div id="opgAjaxLoadingText">
+		<div id="square-spin"></div>
+		loading ...
+	</div>
+</div>
+
+<script src="/itb-dist/pc/lib/mod.js?__=f81190f"></script>
+<script src="/itb-dist/pc/lib/jquery-3.2.1.js?__=a5a8ab0"></script>
+<script src="/itb-dist/pc/lib/jquery.resizableColumns.js?__=509717c"></script>
+<script src="/itb-dist/pc/lib/jquery.pagination.js?__=2d8260c"></script>
+<script src="/itb-dist/pc/js/jquery.plugins.js?__=b5a15b1"></script>
+<script src="/itb-dist/pc/lib/template-web.js?__=b3777f7"></script>
+<script src="/itb-dist/pc/pages/itb/buyers/index.i18n.js?__=bbb1632"></script>
+
+
+
+<script type="text/javascript" src="/itb-dist/pc/js/opglib.js?__=1552033897847"></script>
+<script type="text/javascript" src="/itb-dist/pc/pages/itb/buyers/index.js?__=7e097f7"></script>
+<script src="/itb-dist/pc/lib/slip.js?__=093bc5b"></script>
+<script>
+	!function () {
+		var Languages = require('ts/util/Languages.ts').Languages;
+		Languages.init(languagePkg, function (lngPackage) {
+			var templateElem = document.getElementById('tpl-mainSection');
+			var mainSection = document.getElementById('mainSection');
+			if (mainSection && templateElem) {
+				document.getElementById('mainSection').innerHTML = template('tpl-mainSection', lngPackage);
+			}
+
+			$('.templateContainer').each(function (index , elem) {
+				var tmpl = $('script' , this).html();
+				var render = template.compile(tmpl);
+				elem.innerHTML = render(lngPackage);
+			});
+		});
+
+		console.log('Languages:', Languages);
+
+		require('pages/itb/buyers/index.ts');
+	}();
+</script>
+<script src="/itb-dist/pc/lib/pinyin.js?__=791865b"></script>
+
+
+
+
+</body>
+</html>

@@ -225,8 +225,9 @@ define('ts/util/utils.ts', function(require, exports, module) {
           }
           return obj;
       },
-      stringToDate: function (str, formater) {
-          var format = formater || 'yyyy-MM-dd HH:mm:ss'; // default format
+      stringToDate: function (str, format) {
+          if (format === void 0) { format = 'yyyy-MM-dd HH:mm:ss'; }
+          //let format = formater || 'yyyy-MM-dd HH:mm:ss'; // default format
           var parts = str.match(/(\d+)/g), i = 0, fmt = {};
           // extract date-part indexes from the format
           format.replace(/(yyyy|dd|MM|HH|hh|mm|ss)/g, function (part) {
@@ -423,8 +424,10 @@ define('ts/util/utils.ts', function(require, exports, module) {
                           return 1;
                       return (A === B ? 0 : A > B ? 1 : -1);
                   }
+                  //a[prop] 非 number, b[prop] 是 number
                   else if (nA)
                       return -1;
+                  //a[prop] 是 number, b[prop] 非 number
                   else if (nB)
                       return 1;
                   //a[prop], b[prop]  均是 number
@@ -434,7 +437,7 @@ define('ts/util/utils.ts', function(require, exports, module) {
       },
   };
   exports.array = array;
-  //# sourceMappingURL=/itb-dist/pc/ts/util/utils.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/util/utils.js.map?__=1552033897847
   
 
 });

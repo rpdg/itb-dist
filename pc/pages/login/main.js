@@ -11,6 +11,7 @@ define('pages/login/main.ts', function(require, exports, module) {
       GetCurrentUserInfoAndMenus: 'user/GetCurrentUserInfoAndMenus?type=1',
   });
   var menuPack = Languages_1.Languages.package['menu'];
+  var lpg = Languages_1.Languages.package;
   var menuDefine = {
       NewsManagement: '../content/news/index.html',
       NoticeManagement: '../content/notice/index.html',
@@ -24,31 +25,53 @@ define('pages/login/main.ts', function(require, exports, module) {
       PhotoManagment: '../content/photo/index.html',
       MediaManagment: '../content/media/index.html',
       ExhibitionInfoManagment: '../content/exhibition/index.html',
-      RoleAuthorityManagment: '../roles/roleRights/index.html',
       DisableWordsSetting: '../system/forbiddenWords/index.html',
       StageSetting: '../system/period/index.html',
       TimeSetting: '../system/timeSlot/index.html',
+      SystemSetting: '../system/systemSetting/index.html',
       PairingIntegralSetting: '../system/integralMatch/index.html',
-      ExhibitionInfoManagment: '../content/exhibition/index.html',
-      Wishlist: '../itb/wishlist/index.html',
+      //Wishlist: '../itb/wishlist/index.html',
+      Wishlist: '../itb/wishlist/view.html',
       Schedule: '../itb/schedule/index.html',
       MessageBox: '../itb/messageBox/index.html',
       PhotoGallary: '../itb/gallery/index.html',
-      Exhibitors: '../itb/exhibitors/index.html',
-      Buyers: '../itb/buyers/index.html',
+      Exhibitors: '../itb/exhibitors/old_index.html',
+      Buyers: '../itb/buyers/old_index.html',
       Events: '../itb/events/index.html',
+      Meetings: '../itb/events/meetings.html',
       Press: '../itb/press/index.html',
+      News: '../itb/news/index.html',
       ExhibitionInfo: '../itb/exhibitions/index.html',
       Navigation: '../itb/navigation/index.html',
       MyScore: '../itb/myScore/index.html',
+      InvitationLetterM: '../logistics/invitation/manage.html',
+      ServiceToRentM: '../logistics/serviceRental/manage.html',
+      ApplyForBoothActivityM: '../logistics/applicationForBoothActivity/manage.html',
+      MyBoothM: '../logistics/myBooth/manage.html',
+      MyTripM: '../logistics/myTrip/manage.html',
+      CateringToRentM: '../logistics/cateringRental/manage.html',
+      MyTrip: '../logistics/myTrip/trip.html',
+      MyBooth: '../logistics/myBooth/booth.html',
       InvitationLetter: '../logistics/invitation/index.html',
       ServiceToRent: '../logistics/serviceRental/index.html',
-      ApplicationForBoothActivity: '../logistics/serviceRental/index.html',
-      MyTrip: '../logistics/myTrip/index.html',
-      MyBooth: '../logistics/myBooth/index.html',
+      ApplyForBoothActivity: '../logistics/applicationForBoothActivity/index.html',
+      CateringToRent: '../logistics/cateringRental/index.html',
+      NavigationManagement: '../content/navigation/index.html',
+      VirtualDashboard: '../itb/dashboard/index.html',
+      Bookhotel: '../logistics/myTrip/hotel.html',
+      FaciaBoard: '../logistics/faciaboard/index.html',
+      EmailBanner: '../logistics/emailbanner/index.html',
+      TranslationService: '../logistics/translation/index.html',
+      FaciaBoardM: '../logistics/faciaboard/manage.html',
+      TranslationServiceM: '../logistics/translation/manage.html',
+      DigitalPressBox: '../logistics/digitalpress/index.html',
+      DigitalPressBoxM: '../logistics/digitalpress/manage.html'
   };
   opg_ts_1.default.api.GetCurrentUserInfoAndMenus(function (data) {
       var permissions = data.menus;
+      store_1.store.set('RoleName', data.RoleName);
+      var curStage = data.stage[0].name.toLowerCase();
+      store_1.store.set('Stage', curStage);
       console.dir(data);
       var menu = {}, curMainMenuId;
       for (var i = 0, l = permissions.length; i < l; i++) {
@@ -102,7 +125,7 @@ define('pages/login/main.ts', function(require, exports, module) {
           curMainMenuId = mnId;
           cur.addClass('cur').siblings('.cur').removeClass('cur');
           subMenu.bindList({
-              template: '<a id="/${id}" href="${name:=url}" target="mainFrame" data-permission="${id:=g}">${name:=t}</a>',
+              template: '<a id="menu${id}" href="${name:=url}" target="mainFrame" data-permission="${id:=g}">${name:=t}</a>',
               list: menu[mnId].childMenus,
               itemRender: {
                   g: function (v, i, row) {
@@ -115,11 +138,49 @@ define('pages/login/main.ts', function(require, exports, module) {
                       return arr.join(',');
                   },
                   t: function (v) { return menuPack[v] || v; },
-                  url: function (n) { return menuDefine[n] || 'about:blank'; },
+                  url: function (n) {
+                      if (n.toLowerCase() == 'wishlist' && curStage == 'wishlist') {
+                          return '../itb/wishlist/index.html';
+                      }
+                      return menuDefine[n] || 'about:blank';
+                  }
               },
           }).find(subMenuSelector).click();
           if (subMenuSelector != 'a:eq(0)')
               subMenuSelector = 'a:eq(0)';
+          setTimeout(function () {
+              $("#menu149").toggle();
+              $("#menu155").toggle();
+              $("#menu138").toggle();
+              $("#menu150").toggle();
+              $("#menu151").toggle();
+              $("#menu152").toggle();
+              $("#menu157").toggle();
+              $("#menu158").toggle();
+              $("#menu159").toggle();
+              $("#menu164").toggle();
+              $("#menu137").toggle();
+          }, 1000);
+          //特殊菜单纠正样式
+          setTimeout(function () {
+              $("#menu153").click(function () {
+                  $("#menu149").toggle(500);
+                  $("#menu155").toggle(500);
+                  $("#menu137").toggle(500);
+                  return false;
+              });
+              $("#menu154").click(function () {
+                  $("#menu138").toggle(500);
+                  $("#menu150").toggle(500);
+                  $("#menu151").toggle(500);
+                  $("#menu152").toggle(500);
+                  $("#menu157").toggle(500);
+                  $("#menu158").toggle(500);
+                  $("#menu159").toggle(500);
+                  $("#menu164").toggle(500);
+                  return false;
+              });
+          }, 1000);
       });
       mainMenu.bindList({
           template: '<a id="#${id}" href="#${id}">${name:=t}</a>',
@@ -147,6 +208,10 @@ define('pages/login/main.ts', function(require, exports, module) {
       else if (wViewport - wMenu < 300) {
           mainMenu.addClass('small-menu');
       }
+      $("#welcomediv").html(lpg.welcome + data.firstName + " " + data.lastName);
+      setTimeout(function () {
+          $("#mainMenu a:first").click();
+      }, 1000);
   });
   $('#liAbout').click(function () {
       console.log(Languages_1.Languages);
@@ -213,7 +278,7 @@ define('pages/login/main.ts', function(require, exports, module) {
       //  stop bubbling so we don't get bounce back
       evt.stopPropagation();
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/login/main.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/login/main.js.map?__=1552033897847
   
 
 });

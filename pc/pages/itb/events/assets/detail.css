@@ -1,0 +1,67 @@
+#main h1 {
+  margin-bottom: 1em;
+  font-size: 20px;
+}
+
+#main h3 {
+  height: 2em;
+  line-height: 2em;
+  margin-bottom: 0;
+  color: #d71711;
+  text-indent: 38px;
+  font-size: 14px;
+  font-weight: 600;
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  background-size: 14px 14px;
+}
+
+#main h3.h3type {
+  background-image: url("/itb-dist/pc/pages/itb/events/assets/ico32-bloom.png?__=436ccbd");
+}
+
+#main h3.h3time {
+  background-image: url("/itb-dist/pc/pages/itb/events/assets/ico32-clock.png?__=d39636b");
+}
+
+#main h3.h3note {
+  background-image: url("/itb-dist/pc/pages/itb/events/assets/ico32-book.png?__=269fedf");
+}
+
+#main h3.h3location {
+  background-image: url("/itb-dist/pc/pages/itb/events/assets/ico32-meeting.png?__=395b475");
+}
+
+#main .txt {
+  text-indent: 38px;
+  margin-top: -1em;
+}
+
+#main .pMsg {
+  margin: 2em 1em;
+  text-indent: 2em;
+  background-image: url("/itb-dist/pc/pages/itb/events/assets/ico32-book.png?__=269fedf");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 14px 14px;
+}
+
+#main .thumb {
+  display: inline-block;
+  width: 400px;
+  margin: 1em 30px;
+  text-align: center;
+}
+
+#main .thumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#main .mui-popup-buttons {
+  display: block;
+  height: 2em;
+  margin: 1em;
+}
+
+/*# sourceMappingURL=detail.css.map?__=1552033897847 */

@@ -10,7 +10,7 @@ define('pages/content/news/index.ts', function(require, exports, module) {
   var store_2 = require("ts/util/store.ts");
   var cache = store_2.Cache.getInstance();
   console.log('Languages:', Languages_1.Languages);
-  var infoPage = '/itb-dist/pc/pages/content/news/add.html?__=d99c031';
+  var infoPage = '/itb-dist/pc/pages/content/news/add.html?__=974f516';
   opg_ts_1.default.api({
       'list!post': 'Information/QueryInformations',
       setStick: 'Information/SetInformationStick',
@@ -55,23 +55,26 @@ define('pages/content/news/index.ts', function(require, exports, module) {
   var tb = opg_ts_1.default('#tb').table({
       api: opg_ts_1.default.api.list,
       param: { informationType: 0 },
+      fixFooter: true,
       titleBar: {
           title: "" + moduleName + lpg.list,
           buttons: tbButtons,
       },
       columns: [
           {
-              text: 'ID', width: 120,
+              text: 'ID',
               src: 'id',
+              width: 50
           },
           {
               text: "" + lpg.newsTitle,
               src: 'title',
+              width: 350
           },
           {
               text: lpg.publisher,
               src: 'from',
-              width: 150,
+              width: 150
           },
           {
               text: lpg.stick,
@@ -160,7 +163,7 @@ define('pages/content/news/index.ts', function(require, exports, module) {
           },
       });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/news/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/news/index.js.map?__=1552033897847
   
 
 });

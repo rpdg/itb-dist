@@ -1,0 +1,103 @@
+.imgBlock {
+  display: inline-block;
+  margin: 10px;
+  width: 492px;
+  height: 167px;
+  line-height: 167px;
+  border-radius: 20px;
+  border: 8px solid white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.imgBlock a {
+  display: block;
+  line-height: 167px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+}
+
+#ulBuyerList > li, .ulBuyerList > li {
+  display: inline-block;
+  line-height: 1.5em;
+  border: 1px solid #eee;
+  margin: 5px;
+  padding: 1em;
+  vertical-align: top;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  color: #888;
+  background-color: #fff;
+}
+
+#divRegionList > .ulBuyerList {
+  margin-bottom: 20px;
+}
+
+#divList > h1 {
+  margin: 0.5em 0;
+}
+
+#divList > .ulList {
+  margin-bottom: 20px;
+}
+
+#divList > .ulList > li {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #eee;
+  margin: 5px;
+  padding: 1em;
+  vertical-align: top;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  color: #888;
+  cursor: pointer;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+}
+
+#divList > .ulList > li > .ico-add {
+  display: block;
+  margin: -5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.smallicon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.mytext {
+  font-size: 26px;
+  font-weight: bold;
+  color: #c7140d;
+}
+
+.mytext2 {
+  margin-left: 22px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e92d27;
+  border-radius: 5px;
+  word-wrap: break-word;
+  width: 90%;
+}
+
+/*# sourceMappingURL=index.css.map?__=1552033897847 */

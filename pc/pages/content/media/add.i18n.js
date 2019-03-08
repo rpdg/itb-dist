@@ -1,6 +1,24 @@
 var languagePkg = {
 	'en': {
-
+mediaTitle : 'Title',
+		mediaSummary : 'Summary',
+		publisher : 'Publisher',
+		forward : 'Reprinted from',
+		publishTimeBegin : 'Publish start time',
+		publishTimeEnd : 'Publish end time',
+		cover: 'Cover',
+		selectPhoto: 'Please select the picture',
+		upload: 'Upload',
+		stick: 'Bring to top',
+		category: 'Type',
+		addSubject: 'Add item',
+		editSubject: 'Edit item',
+		pureText : 'Text only',
+		picture : 'Picture',
+		link : 'Hyperlink',
+		richText : 'Rich Text',
+		attachment : 'Attachment',
+		deleteConfirm : 'Are you sure to delete this item?',
 	},
 	'cn': {
 		mediaTitle : '媒体标题',

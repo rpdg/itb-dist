@@ -1,5 +1,21 @@
 var languagePkg = {
-	'en': {},
+	'en': {
+		moduleName: 'Events ',
+		category: 'Type',
+		type: {
+			0: 'Conference',
+			1: 'Networking'
+		},
+		topic: 'Topic',
+		publisher: 'Publisher',
+		publishTimeBegin: 'Publish start time',
+		publishTimeEnd: 'Publish end time',
+		status: 'Status',
+		stick: 'Bring to top',
+		cancelStick: 'Cancel bring to top',
+		online: 'Enable',
+		offline: 'Disable',
+	},
 	'cn': {
 		moduleName: '会议活动',
 		category: '分类',

@@ -1,4 +1,20 @@
 @charset "UTF-8";
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 aside {
   position: fixed;
   background-color: #fff;
@@ -11,15 +27,21 @@ aside#left {
   left: 10px;
   width: 450px;
   bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+aside#left #aMore, aside#left #bMore {
+  color: #d71711;
+  float: right;
 }
 
 aside#left .announcement {
-  margin: 20px 12px;
+  margin: 40px 12px;
 }
 
 aside#left .announcement > h1 {
   color: #d71711;
-  text-transform: uppercase;
   font-size: 20px;
   line-height: 48px;
 }
@@ -51,14 +73,9 @@ aside#left .announcement #an1 > .anContent {
   /** 隐藏超出的内容 **/
 }
 
-aside#left .announcement #aMore {
-  color: #d71711;
-  float: right;
-}
-
 aside#left .swiper-container {
   width: 448px;
-  height: 240px;
+  height: 320px;
 }
 
 aside#left .swiper-container .swiper-slide {
@@ -81,8 +98,20 @@ aside#left .swiper-container .swiper-slide {
 }
 
 aside#left .swiper-container .swiper-slide img {
+  display: block;
   width: 448px;
-  height: 240px;
+  height: 320px;
+}
+
+aside#left .swiper-container .swiper-slide span {
+  display: block;
+  position: relative;
+  width: 448px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: -40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
 }
 
 aside#rightTop {
@@ -109,4 +138,194 @@ aside#rightBottom {
   padding-bottom: 10px;
 }
 
-/*# sourceMappingURL=dashboard.css.map?__= */
+.redFont {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 50px;
+  height: 50px;
+  text-indent: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #c71111;
+  font-weight: bold;
+}
+
+.redFont2 {
+  display: flex;
+  margin-left: 52px;
+  margin-top: 40px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.contentleft {
+  width: 100%;
+  height: 45%;
+  padding: 5px;
+}
+
+.content-one {
+  margin-left: 10px;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.content-two {
+  margin-left: 10px;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.content-three {
+  margin-left: 10px;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.blacktitle {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.blacktitle img {
+  width: 20px;
+  height: 20px;
+  border: 0px;
+}
+
+.redtitle {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.newredtitle {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #c71111;
+}
+
+.redtitle img {
+  width: 20px;
+  height: 20px;
+  border: 0px;
+}
+
+.canclickared {
+  cursor: pointer;
+  margin-left: 20px;
+  text-align: left;
+  vertical-align: center;
+  font-size: 18px;
+  color: #c71111;
+  word-break: keep-all;
+}
+
+.bigredbutton {
+  width: 280px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #e70908;
+  border-radius: 10px;
+  box-shadow: #c71111 2px 2px 2px 2px;
+  text-align: left;
+  margin: 20px auto 50px auto;
+}
+
+.bigredbutton img {
+  border: 0;
+  width: 75px;
+  height: 90px;
+  float: left;
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+.bigredbuttonT1 {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.bigredbuttonT2 {
+  display: inline-block;
+  width: 180px;
+  margin-left: 10px;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.canclicka {
+  cursor: pointer;
+  margin-left: 20px;
+  text-align: left;
+  vertical-align: center;
+  font-size: 14px;
+  color: #333;
+  word-break: keep-all;
+}
+
+.cantclicka {
+  cursor: default;
+  margin-left: 20px;
+  text-align: left;
+  vertical-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  word-break: keep-all;
+}
+
+.imgdiv {
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.imgdivgray {
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.imgdiv img {
+  width: 16px;
+  height: 16px;
+  border: 0px;
+  vertical-align: top;
+}
+
+.imgdivgray img {
+  width: 16px;
+  height: 16px;
+  border: 0px;
+  vertical-align: top;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+
+/*# sourceMappingURL=dashboard.css.map?__=1552033897847 */

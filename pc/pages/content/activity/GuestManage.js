@@ -5,14 +5,14 @@ define('pages/content/activity/GuestManage.ts', function(require, exports, modul
   var opg_1 = require("ts/opg.ts");
   var Languages_1 = require("ts/util/Languages.ts");
   var lng = Languages_1.Languages.package;
-  var guestForm = $("<form class=\"guestForm\">\n\t<label>" + lng.guestName + ": <input type=\"text\" name=\"name\"></label><br>\n\t<label>" + lng.guestTitle + ": <input type=\"text\" name=\"title\"></label><br>\n\t<label>" + lng.guestBrief + ": <input type=\"text\" name=\"intro\"></label>\n</form>");
+  var guestForm = $("<form class=\"guestForm\">\n\t<label>" + lng.guestName + "&nbsp;<input type=\"text\" name=\"name\" style=\"float: right\"></label><br>\n\t<label>" + lng.guestTitle + "&nbsp;<input type=\"text\" name=\"title\" style=\"float: right\"></label><br>\n\t<label>" + lng.guestBrief + "&nbsp;<input type=\"text\" name=\"intro\" style=\"float: right\"></label>\n</form>");
   var GuestManage = /** @class */ (function () {
       function GuestManage(subjectId) {
           var _this = this;
           opg_1.default.api({
               getGuest: 'activity/GetActivityHonoredGuestByActivityContnetId?activityContentId=' + subjectId,
               'addGuest!post': 'activity/AddActivityHonoredGuest',
-              'delGuest!post': 'activity/DelActivityHonoredGuest',
+              'delGuest': 'activity/DelActivityHonoredGuest',
           });
           this.activityId = subjectId;
           var $tb = $('<table></table>');
@@ -58,6 +58,7 @@ define('pages/content/activity/GuestManage.ts', function(require, exports, modul
       }
       GuestManage.prototype.addGuest = function () {
           var that = this;
+          guestForm[0].reset();
           var pop = opg_1.default.confirm(guestForm, function () {
               var param = guestForm.fieldsToJson({
                   name: {
@@ -79,7 +80,7 @@ define('pages/content/activity/GuestManage.ts', function(require, exports, modul
       GuestManage.prototype.deleteGuest = function (id) {
           var that = this;
           var pop = opg_1.default.confirm(lng.deleteGuestConfirm, function () {
-              opg_1.default.api.delGuest({ activityContentId: that.activityId, userId: id }, function (data) {
+              opg_1.default.api.delGuest({ id: id }, function (data) {
                   that.tb.update();
                   pop.close();
               });
@@ -89,7 +90,7 @@ define('pages/content/activity/GuestManage.ts', function(require, exports, modul
       return GuestManage;
   }());
   exports.default = GuestManage;
-  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/GuestManage.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/GuestManage.js.map?__=1552033897847
   
 
 });

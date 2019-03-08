@@ -1,0 +1,31 @@
+.totalsumstyle {
+  color: #ff0000;
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.apply {
+  text-align: center;
+  font-weight: bold;
+}
+
+.agree {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+
+.deny {
+  color: #ff0000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.ico-handle {
+  float: right;
+  font-size: 22px;
+  color: #ccc;
+}
+
+/*# sourceMappingURL=view.css.map?__=1552033897847 */

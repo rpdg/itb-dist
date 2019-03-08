@@ -2,9 +2,12 @@ define('ts/ui/Panel.ts', function(require, exports, module) {
 
   "use strict";
   var __extends = (this && this.__extends) || (function () {
-      var extendStatics = Object.setPrototypeOf ||
-          ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-          function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+      var extendStatics = function (d, b) {
+          extendStatics = Object.setPrototypeOf ||
+              ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+              function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+          return extendStatics(d, b);
+      };
       return function (d, b) {
           extendStatics(d, b);
           function __() { this.constructor = d; }
@@ -39,29 +42,33 @@ define('ts/ui/Panel.ts', function(require, exports, module) {
               this.panel = $('<div class="panel" />');
           }
           this.panel.show();
-          this.titleBar = $('<div class="panel-title" />');
-          this.titleBar.html(cfg.title);
-          this.panel.append(this.titleBar);
+          if (cfg.title) {
+              this.titleBar = $('<div class="panel-title" />');
+              this.titleBar.html(cfg.title);
+              this.panel.append(this.titleBar);
+          }
           this.body = $('<div class="panel-body" />');
           this.panel.append(this.body);
           this.foot = $('<div class="panel-foot" />');
           this.panel.append(this.foot);
           if (cfg.btnClose) {
-              this.btnClose = $('<b class="panel-collapse" />');
-              this.titleBar.append(this.btnClose);
-              var self_1 = this;
-              this.btnClose.on('click', function () {
-                  var btn = $(this);
-                  if (!btn.hasClass('expanded')) {
-                      self_1.body.hide();
-                      self_1.foot.hide();
-                  }
-                  else {
-                      self_1.body.show();
-                      self_1.foot.show();
-                  }
-                  btn.toggleClass('expanded');
-              });
+              if (cfg.title) {
+                  var self_1 = this;
+                  this.btnClose = $('<b class="panel-collapse" />');
+                  this.titleBar.append(this.btnClose);
+                  this.btnClose.on('click', function () {
+                      var btn = $(this);
+                      if (!btn.hasClass('expanded')) {
+                          self_1.body.hide();
+                          self_1.foot.hide();
+                      }
+                      else {
+                          self_1.body.show();
+                          self_1.foot.show();
+                      }
+                      btn.toggleClass('expanded');
+                  });
+              }
           }
           if (cfg.btnSearchId) {
               this.btnSearch = $("<button id=\"" + cfg.btnSearchId + "\" class=\"" + cfg.btnClass + "\">" + cfg.btnSearchText + "</button>");
@@ -101,7 +108,7 @@ define('ts/ui/Panel.ts', function(require, exports, module) {
       return Panel;
   }(DisplayOject_1.DisplayObject));
   exports.default = Panel;
-  //# sourceMappingURL=/itb-dist/pc/ts/ui/Panel.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/ui/Panel.js.map?__=1552033897847
   
 
 });

@@ -1,18 +1,18 @@
-body { background-image: url("/itb-dist/wap/pages/login/assets/bg-login.jpg?__=eb54c03"); background-size: 100% 100%; }
+body { background-image: url("/itb-dist/wap/pages/login/assets/bg-login.jpg?__=1552030651276"); background-size: 100% 100%; }
 
-#mainSection { border-radius: 0.2rem; position: absolute; top: 50%; left: 50%; width: 9.2rem; height: 13.5rem; box-shadow: 0 10px 8px 0 rgba(255, 255, 255, 0.75); margin-top: -6.8rem; margin-left: -4.6rem; background-color: #faf7f7; background-image: url("/itb-dist/wap/img/logo-itb.png?__=83a39e6"); background-repeat: no-repeat; background-position: center 2rem; background-size: 3.8rem 1.9rem; }
+#mainSection { border-radius: 0.2rem; position: absolute; top: 50%; left: 50%; width: 9.2rem; height: 13.5rem; margin-top: -6.8rem; margin-left: -4.6rem; background-color: #faf7f7; background-image: url("/itb-dist/wap/img/logo-itb.png?__=1552030651276"); background-repeat: no-repeat; background-position: center 2rem; background-size: 3.6rem 2rem; }
 
 #mainSection #swLgn { position: absolute; top: 0.46667rem; right: 0.4rem; /*border-radius: 4px; width: 72px; border-width: 1px; .mui-switch-handle { border-radius: 5px; box-shadow: none; border: 1px solid #ddd; //height: 26px; }*/ }
 
 #form1 { position: absolute; top: 5.06667rem; left: 50%; width: 6.88rem; margin-left: -3.44rem; }
 
-#form1 #username, #form1 #password { border: 2px solid; border-color: #e0e0e0; border-radius: 3px; background-repeat: no-repeat; background-size: 22px 22px; background-position: 8px center; text-indent: 32px; }
+#form1 #username, #form1 #password { border: 2px solid; border-color: #e0e0e0; border-radius: 3px; background-repeat: no-repeat; background-size: 22px 22px; background-position: 8px center; padding-left: 32px; }
 
 #form1 #username:focus, #form1 #password:focus { border-color: #d71711; }
 
-#form1 #username { background-image: url("/itb-dist/wap/pages/login/assets/ico32-user.png?__=d92aa41"); }
+#form1 #username { background-image: url("/itb-dist/wap/pages/login/assets/ico32-user.png?__=1552030651276"); }
 
-#form1 #password { background-image: url("/itb-dist/wap/pages/login/assets/ico32-lock.png?__=83a6c76"); }
+#form1 #password { background-image: url("/itb-dist/wap/pages/login/assets/ico32-lock.png?__=1552030651276"); }
 
 #form1 .mui-radio.mui-left input[type='radio'], #form1 .mui-checkbox.mui-left input[type='checkbox'] { left: 0; }
 
@@ -26,10 +26,10 @@ body { background-image: url("/itb-dist/wap/pages/login/assets/bg-login.jpg?__=e
 
 #form1 .mui-radio input[type='radio']:checked:before, #form1 .mui-checkbox input[type='checkbox']:checked:before { content: '\e443'; }
 
-#form1 #btnLogin { width: 100%; height: 42px; font-size: 18px; font-weight: 600; margin-top: 0.5rem; text-transform: uppercase; }
+#form1 #btnLogin { width: 100%; height: 42px; font-size: 18px; font-weight: 600; margin-top: 0.5rem; }
 
 #form1 .linkBlack { color: #333; font-size: 15px; }
 
 #form1 #guestLogin { float: right; }
 
-/*# sourceMappingURL=login.css.map?__= */
+/*# sourceMappingURL=login.css.map?__=1552030651276 */

@@ -66,6 +66,7 @@ define('pages/content/activity/index.ts', function(require, exports, module) {
           {
               text: lpg.topic,
               src: 'title',
+              width: 400
           },
           {
               text: lpg.publisher,
@@ -87,7 +88,7 @@ define('pages/content/activity/index.ts', function(require, exports, module) {
           {
               text: lpg.process,
               src: 'id',
-              width: 180,
+              width: 240,
               align: 'left',
               render: function (id, index, row) {
                   var html = "<button data-id=\"" + id + "\" data-index=\"" + row[':index'] + "\" class=\"btn-mini btn-info btnEdit\">" + lpg.edit + "</button> ";
@@ -109,13 +110,13 @@ define('pages/content/activity/index.ts', function(require, exports, module) {
       ],
       pagination: true,
   });
-  var infoPage = '/itb-dist/pc/pages/content/activity/edit.html?__=6ec26f5';
+  var infoPage = '/itb-dist/pc/pages/content/activity/edit.html?__=5c1d024';
   //Add
   $('#btnAdd').click(function () {
       var pop = opg_ts_1.default.popTop("<iframe src=\"" + infoPage + "\" />", {
           title: "" + lpg.add + moduleName,
           btnMax: true,
-          width: 800,
+          width: 1000,
           height: 550,
           onClose: function () {
               tb.update();
@@ -132,7 +133,7 @@ define('pages/content/activity/index.ts', function(require, exports, module) {
       var pop = opg_ts_1.default.popTop("<iframe src=\"" + src + "\" />", {
           title: lpg.edit + ": " + row.title,
           btnMax: true,
-          width: 800,
+          width: 1000,
           height: 550,
           onClose: function () {
               cache.remove('row');
@@ -160,7 +161,7 @@ define('pages/content/activity/index.ts', function(require, exports, module) {
       var btn = $(this), activityId = btn.data('id');
       opg_ts_1.default.api.cancelStick({ activityId: activityId }, function () { return tb.update(); });
   });
-  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/activity/index.js.map?__=1552033897847
   
 
 });

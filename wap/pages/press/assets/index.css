@@ -1,0 +1,7 @@
+#ulBuyerList { width: 9.33333rem; height: 3.13333rem; border-radius: 0.10667rem; margin: 20px auto; }
+
+#ulBuyerList li { height: 1.70667rem; line-height: 1.70667rem; font-size: 0.37333rem; padding: 0 0.66667rem; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); background-color: #fff; }
+
+#ulBuyerList li a:active { color: #d71711; }
+
+/*# sourceMappingURL=index.css.map?__=1552030651276 */

@@ -20,8 +20,8 @@
 
 #fullSizeViewer #closer { position: absolute; color: #fff; font-size: 1rem; top: 0.5rem; right: 0.5rem; }
 
-#fullSizeViewer #divImgFullSize { margin: 2.6rem auto 0; width: 9.5rem; height: 9.5rem; border: none; }
+#fullSizeViewer #divImgFullSize { margin: 2.6rem auto 0; width: 9.5rem; height: 9.5rem; border: none; color: white; font-size: 16px; }
 
 #fullSizeViewer #divImgFullSize #imgFullSize { max-height: 100%; max-width: 100%; border: 3px solid #fff; }
 
-/*# sourceMappingURL=gallery.css.map?__= */
+/*# sourceMappingURL=gallery.css.map?__=1552030651276 */

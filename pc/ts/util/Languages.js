@@ -1,11 +1,12 @@
 define('ts/util/Languages.ts', function(require, exports, module) {
 
   "use strict";
+  /// <reference path="../../@types/jquery.d.ts" />
   Object.defineProperty(exports, "__esModule", { value: true });
   var store_1 = require("ts/util/store.ts");
   var LanguageNames = {
       cn: 'cn',
-      en: 'en',
+      en: 'en'
   };
   var LanguagePKey = 'lngPkg';
   var defaultLanguagePackage = {
@@ -26,7 +27,7 @@ define('ts/util/Languages.ts', function(require, exports, module) {
           nextPage: 'next ',
           please: 'please ',
           confirm: 'confirm',
-          title: 'title',
+          title: 'title'
       },
       cn: {
           yes: '是',
@@ -45,7 +46,7 @@ define('ts/util/Languages.ts', function(require, exports, module) {
           nextPage: '下页',
           please: '请',
           confirm: '确认',
-          title: '标题',
+          title: '标题'
       }
   };
   var Languages = {
@@ -64,10 +65,10 @@ define('ts/util/Languages.ts', function(require, exports, module) {
               callback(Languages.package);
       },
       names: LanguageNames,
-      package: null,
+      package: null
   };
   exports.Languages = Languages;
-  //# sourceMappingURL=/itb-dist/pc/ts/util/Languages.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/util/Languages.js.map?__=1552033897847
   
 
 });

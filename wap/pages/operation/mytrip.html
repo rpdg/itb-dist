@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ITB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script>!function(){var a="@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
+	
+	    <link rel="stylesheet" href="/itb-dist/wap/css/mui.css?__=5eb3e79" />
+    <link rel="stylesheet" href="/itb-dist/wap/css/app.css?__=a8d5d58" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/operation/assets/mytrip.css?__=ff53aa7" />
+    <link rel="stylesheet" href="/itb-dist/wap/pages/operation/assets/mui.picker.min.css?__=97fa754" />
+
+	<script>
+		window.CONFIG = {
+			apiServer: 'http://120.27.236.138:8080/api/'
+		};
+	</script>
+
+	
+</head>
+<body class="">
+<div id="opgAjaxLoading"><span class="mui-spinner"></span></div>
+
+<div id="outterFrame">
+
+
+<div class="mui-bar mui-bar-nav">
+    <a class="mui-icon mui-icon-left-nav mui-pull-left" href='../dashboard/index.html'></a>
+    <h1 class="mui-title templateContainer">
+        <script type="text/html">
+            <%=pageTitle%>
+        </script>
+    </h1>
+</div>
+
+
+<div class="mui-content" >
+    <div id="cn1" style="display: none;">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a href="#"><span class="title">机票/火车票</span></a>
+        </li>
+    </ul>
+
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">ITB China 2018全程接待特邀买家请先自行购买往返上海参会的机票/火车票，待展会结束且买家满足报销条件之后，主办方将给予报销。</li>
+            <li class="mui-table-view-cell">具体预订要求及报销范围，请查阅http://cn.itb-china.com/buyer-qa-2/</li>
+            <li class="mui-table-view-cell">请务必填写以下信息，以供展后报销使用：</li>
+        </ul>
+    </div>
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="#" style="color: red;">请填写您预定的航班或火车班次的信息<br />【从居住地来上海】</a>
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>出行方式</label>
+                <select id="comemethod" name="comemethod">
+                    <option value="">-请选择-</option>
+                    <option value="飞机">飞机</option>
+                    <option value="火车">火车</option>
+                </select>
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>出发城市</label>
+                <input type="text" id="comecity" name="comecity" class="mui-input-clear" placeholder="出发城市">
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>出发日期</label>
+                <button id='comedate' name="comedate" data-options='{"type":"date"}' class="btn txt-date">选择日期时间 ...</button>
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>航班或火车班次</label>
+                <input type="text" id="comemethodinfo" name="comemethodinfo" class="mui-input-clear" placeholder="航班或火车班次">
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>抵达上海的时间</label>
+                <button id='comearrivedate' name="comearrivedate" data-options='' class="btn txt-date">选择日期时间 ...</button>
+            </li>
+
+        </ul>
+    </div>
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="#" style="color: red;">请填写您预定的航班或火车班次的信息<br />【从上海回居住地】</a>
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>出行方式</label>
+                <select id="leavemethod" name="leavemethod">
+                    <option value="">-请选择-</option>
+                    <option value="飞机">飞机</option>
+                    <option value="火车">火车</option>
+                </select>
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>到达城市</label>
+                <input type="text" id="leavecity" name="leavecity" class="mui-input-clear" placeholder="到达城市">
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>出发日期</label>
+                <button id='leavedate' name="leavedate" data-options='{"type":"date"}' class="btn txt-date">选择日期时间 ...</button>
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>航班或火车班次</label>
+                <input type="text" id="leavemethodinfo" name="leavemethodinfo" class="mui-input-clear" placeholder="航班或火车班次">
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>离开上海的时间</label>
+                <button id='leavearrivedate' name="leavearrivedate" data-options='' class="btn txt-date">选择日期时间 ...</button>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="#" style="color: red;">请提供您机票/火车票报销的收款账户信息</a>
+
+            </li>
+            <li class="mui-table-view-cell mui-input-row">
+                <label>收款方式</label>
+                <select id="paymethod" name="paymethod">
+                    <option value="">-请选择-</option>
+                    <option value="支付宝">支付宝</option>
+                    <option value="银行">银行</option>
+                </select>
+            </li>
+
+            <li class="mui-table-view-cell mui-input-row zhifubao" style="display: none;">
+                <label>收款人支付宝账户名称</label>
+                <input type="text" id="zhifubaoname" name="zhifubaoname" class="mui-input-clear" placeholder="收款人支付宝账户名称">
+            </li>
+            <li  class="mui-table-view-cell mui-input-row zhifubao" style="display: none;">
+                <label>收款人支付宝账号</label>
+                <input type="text" id="zhifubaoaccount" name="zhifubaoaccount" class="mui-input-clear" placeholder="收款人支付宝账号">
+            </li>
+
+            <li  class="mui-table-view-cell mui-input-row bank" style="display: none;">
+                <label>收款人银行账户名称</label>
+                <input type="text" id="bankaccountname" name="bankaccountname" class="mui-input-clear" placeholder="收款人银行账户名称">
+            </li>
+            <li class="mui-table-view-cell mui-input-row bank" style="display: none;">
+                <label>收款人银行账号</label>
+                <input type="text" id="bankaccount" name="bankaccount" class="mui-input-clear" placeholder="收款人银行账号">
+            </li>
+            <li class="mui-table-view-cell mui-input-row bank" style="display: none;">
+                <label>收款人银行开户行</label>
+                <input type="text" id="bankname" name="bankname" class="mui-input-clear" placeholder="精确到支行">
+            </li>
+
+        </ul>
+    </div>
+
+        <div style=" padding: 2px 10px;">
+            <button type="button" id="savebtn" class="mui-btn mui-btn-danger mui-btn-block">提交</button>
+        </div>
+
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a href="#"><span class="title">酒店预订</span></a>
+        </li>
+    </ul>
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">请扫一扫以下二维码，进入ITB China 2018全程接待特邀买家酒店预订系统。</li>
+            <li class="mui-table-view-cell"><img src="/itb-dist/wap/pages/operation/assets/crcode.jpg?__=1552030651276" style="border:0;width:185px;" /> </li>
+            <li class="mui-table-view-cell">上述酒店预订时间为2018年4月4日-5月6日，如逾期未订，ITB China主办方将视为该买家主动放弃主办方提供的住宿接待之待遇。</li>
+            <li class="mui-table-view-cell">具体预订及报销须知，请查阅http://cn.itb-china.com/buyer-qa/</li>
+        </ul>
+    </div>
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a href="#"><span class="title">班车及餐饮</span></a>
+        </li>
+    </ul>
+
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">ITB China向全程接待特邀买家提供上海本地的班车服务，包括：</li>
+            <li class="mui-table-view-cell">- 上海虹桥机场/浦东机场/虹桥火车站接送机服务</li>
+            <li class="mui-table-view-cell">- 开展期间，买家酒店往返展馆的班车服务</li>
+            <li class="mui-table-view-cell">具体班车服务信息，请查阅http://cn.itb-china.com/buyer-qa-3/</li>
+            <li class="mui-table-view-cell">开展期间，特邀买家可在展会现场享受的免费餐饮服务，包括：</li>
+            <li class="mui-table-view-cell">- 展会三天买家工作午餐（主办方提供午餐券）</li>
+            <li class="mui-table-view-cell">- 买家休息室内供应的餐点小食</li>
+            <li class="mui-table-view-cell">具体餐饮服务信息，请查阅http://cn.itb-china.com/buyer-qa-3/</li>
+        </ul>
+    </div>
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a href="#"><span class="title">差旅报销</span></a>
+        </li>
+    </ul>
+
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">已通过审核的全程接待特邀买家在开展期间，准时出席与展商的预约洽谈，签到后累计积分值达到21000分者（即准时完成21个与参展商的预约洽谈），即可获得全程接待特邀买家的差旅报销待遇。</li>
+            <li class="mui-table-view-cell">具体报销方式与注意事项，请查阅http://cn.itb-china.com/buyer-qa-6/</li>
+            <li class="mui-table-view-cell">与差旅报销相关的买家积分与奖励计划，请查阅http://cn.itb-china.com/buyer-qa-5/</li>
+        </ul>
+    </div>
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a href="#"><span class="title">其他常见问题</span></a>
+        </li>
+    </ul>
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">1. 特邀买家若取消参展，该如何操作？</li>
+            <li class="mui-table-view-cell">所有参观行程取消必须提前发送电子邮件至buyer@itb-China.com以书面形式通知ITB CHINA主办方。</li>
+            <li class="mui-table-view-cell">如果买家在预订机票/火车票和酒店之后取消参观展会的行程或在到达日期时未能到场或“缺席”约谈及相关活动，ITB CHINA主办方将不会给予任何差旅费用报销。</li>
+            <li class="mui-table-view-cell">买家如未能出席任何事先约定的买家活动，包括与展商的约谈、ITB CHINA官方活动（如社交联谊活动），将被视为“缺席”。</li>
+            <li class="mui-table-view-cell">注意: 因行程取消或缺席所产生的酒店/交通费用或退票费用将由该买家自行承担。</li>
+            <li class="mui-table-view-cell">2. 若买家本人无法参展,可否让同事代替？</li>
+            <li class="mui-table-view-cell">买家与展商的预约配对系统上线之后（即4月4日后），将不接受买家参会人员更换。</li>
+            <li class="mui-table-view-cell">若买家无法参加展会，请发送邮件至 buyer@itb-China.com告知主办方，该买家将被视为自动放弃本届展会的全程接待特邀买家之待遇。</li>
+        </ul>
+    </div>
+
+
+
+    </div>
+
+    <div id="en1" class="mui-card" style="display: none;">
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">ITB China 2018 will launch the Chinese Buyer Trip Program. Please switch to the Chinese page for further reference.</li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+<footer class="footer-bar templateContainer">
+	<script type="text/html">
+		<a href="../dashboard/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/homeG.png?__=1552030651276" alt=""><br><%=FOOTER['b1']%>
+		</a>
+		<a href="../navigation/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/floorplanG.png?__=1552030651276" alt=""><br><%=FOOTER['b2']%>
+		</a>
+		<a href="../record/index.html" class="foot-G">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/recordG.png?__=1552030651276" alt="">
+			<div><%=FOOTER['b3']%></div>
+		</a>
+		<a href="../moments/index.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/momentsGs.png?__=1552030651276" alt=""><br><%=FOOTER['b4']%>
+		</a>
+		<a href="../schedule/mine.html">
+			<img src="/itb-dist/wap/pages/dashboard/assets/icon/scheduleG.png?__=1552030651276" alt=""><br><%=FOOTER['b5']%>
+		</a>
+	</script>
+</foote>
+
+<script src="/itb-dist/wap/js/libs.js?__=af44dfd"></script>
+<script src="/itb-dist/wap/pages/operation/mytrip.i18n.js?__=962ce64"></script>
+
+
+<script type="text/javascript" src="/itb-dist/wap/js/util.js?__=a479366"></script>
+<script type="text/javascript" src="/itb-dist/wap/js/api.js?__=722b967"></script>
+<script type="text/javascript" src="/itb-dist/wap/pages/operation/mytrip.js?__=af0d33c"></script>
+<script>
+	/*window.addEventListener('pageshow', function (e) {
+		// 通过persisted属性判断是否存在 BF Cache
+		if (e.persisted) {
+			location.reload();
+		}
+	});*/
+
+	var lngPk4Footer = {
+		en : {
+			b1 : 'Home',
+			b2 : 'Floorplan',
+			b3 : 'Record',
+			b4 : 'Moments',
+			b5 : 'Schedule',
+		},
+		cn:{
+			b1 : 'cn-aa',
+			b2 : 'cn-bb',
+			b3 : 'bbb',
+			b4 : 'bbb',
+			b5 : 'bbb',
+		}
+	};
+
+	var Languages = require('js/util.ts').Languages;
+
+	Languages.init(languagePkg, function (lngPackage) {
+		lngPackage['FOOTER'] = lngPk4Footer[lngPackage['$current']];
+		$('.templateContainer').each(function (index , elem) {
+			var tmpl = $('script' , this).html();
+			var render = template.compile(tmpl);
+			elem.innerHTML = render(lngPackage);
+		});
+	});
+
+
+
+    (function($) {
+        $.init();
+        var result = $('#result')[0];
+        var btns = $('.btn');
+        btns.each(function(i, btn) {
+            btn.addEventListener('tap', function() {
+                var optionsJson = this.getAttribute('data-options') || '{}';
+                var options = JSON.parse(optionsJson);
+                var id = this.getAttribute('id');
+                /*
+                 * 首次显示时实例化组件
+                 * 示例为了简洁，将 options 放在了按钮的 dom 上
+                 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                 */
+                var picker = new $.DtPicker(options);
+                picker.show(function(rs) {
+                    /*
+                     * rs.value 拼合后的 value
+                     * rs.text 拼合后的 text
+                     * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                     * rs.m 月，用法同年
+                     * rs.d 日，用法同年
+                     * rs.h 时，用法同年
+                     * rs.i 分（minutes 的第二个字母），用法同年
+                     */
+                    document.getElementById(id).innerText = rs.text;
+                    /*
+                     * 返回 false 可以阻止选择框的关闭
+                     * return false;
+                     */
+                    /*
+                     * 释放组件资源，释放后将将不能再操作组件
+                     * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                     * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                     * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                     */
+                    picker.dispose();
+                });
+            }, false);
+        });
+    })(mui);
+
+</script>
+<script src="/itb-dist/wap/pages/operation/assets/mui.picker.min.js?__=bb17267"></script>
+<script>
+
+
+	mui.ready(() => {
+		require('pages/operation/mytrip.ts');
+	});
+
+
+	$('body').on('tap', 'a', function () {
+		location.href = this.href;
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

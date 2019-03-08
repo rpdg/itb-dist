@@ -213,7 +213,7 @@ define('pages/content/exhibition/index.ts', function(require, exports, module) {
   }
   //
   if (permission.AddExhibitionInfo) {
-      var infoPage_1 = '/itb-dist/pc/pages/content/exhibition/add.html?__=';
+      var infoPage_1 = '/itb-dist/pc/pages/content/exhibition/add.html?__=1552033897847';
       $('#btnAdd').click(function () {
           var src = utils_1.url.setParam(infoPage_1, { categoryId: currentCategoryId });
           var pop = opg_ts_1.default.popTop("<iframe src=\"" + src + "\" />", {
@@ -266,7 +266,7 @@ define('pages/content/exhibition/index.ts', function(require, exports, module) {
           opg_ts_1.default.api.cancelStick({ informationId: informationId }, function () { return tb.update(); });
       });
   }
-  //# sourceMappingURL=/itb-dist/pc/pages/content/exhibition/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/exhibition/index.js.map?__=1552033897847
   
 
 });

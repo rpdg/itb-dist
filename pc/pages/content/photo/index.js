@@ -12,6 +12,7 @@ define('pages/content/photo/index.ts', function(require, exports, module) {
       'editType!POST': 'phototype/UpPhotoType',
       delType: 'phototype/DelPhotoType',
       getPhotosByTypeId: 'photo/GetPhotosByTypeId',
+      getPhotosByTag: 'photo/QueryPhotosByTitle',
       delPhotosByTypeId: 'photo/DelPhotosByTypeId',
       'delPhotosByIds!POST': 'photo/DelPhotosByIds',
   });
@@ -35,15 +36,25 @@ define('pages/content/photo/index.ts', function(require, exports, module) {
   });
   var ul = $('#photos');
   var currentCategoryId = 0;
-  function showPhotos(typeid) {
-      opg_ts_1.default.api.getPhotosByTypeId({ typeid: typeid }, function (data) {
-          ul.bindList({
-              list: data,
-              template: '<li><img src="${url}" alt="${title}"><p><label><input type="checkbox" name="photo" value="${id}"> ${title}</label></p></li>'
-          });
+  function bindPhotoList(data) {
+      ul.bindList({
+          list: data,
+          itemRender: {
+              gName: function (v) { return v.substr(v.lastIndexOf('/') + 1); },
+          },
+          template: '<li><img src="${url}" alt="${title}"><p><label><input type="checkbox" name="photo" value="${id}"> ${title}</label><br>${url:=gName}</p></li>',
       });
   }
+  function showPhotos(typeid) {
+      opg_ts_1.default.api.getPhotosByTypeId({ typeid: typeid }, function (data) { return bindPhotoList(data); });
+  }
   showPhotos(currentCategoryId);
+  var iptPhotoTag = $('#iptPhotoTag');
+  $('#btnSearch').click(function () {
+      var title = iptPhotoTag.val();
+      if (title)
+          opg_ts_1.default.api.getPhotosByTag({ title: title }, function (data) { return bindPhotoList(data); });
+  });
   //防止在第二层添加节点
   /*function removeRadioBox() {
       tree.jq.find(':radio').each((i, elem) => {
@@ -118,7 +129,7 @@ define('pages/content/photo/index.ts', function(require, exports, module) {
   //
   if (permission.PhotoOperation) {
       $('#photoManage').show();
-      var infoPage_1 = '/itb-dist/pc/pages/content/photo/add.html?__=';
+      var infoPage_1 = '/itb-dist/pc/pages/content/photo/add.html?__=1552033897847';
       $('#btnAdd').click(function () {
           var src = utils_1.url.setParam(infoPage_1, { typeId: currentCategoryId });
           var pop = opg_ts_1.default.popTop("<iframe src=\"" + src + "\" />", {
@@ -129,17 +140,17 @@ define('pages/content/photo/index.ts', function(require, exports, module) {
               buttons: {
                   save: {
                       className: 'btn-success',
-                      text: lpg.save,
+                      text: lpg.savePhotoTags,
                       onClick: function (i, ifr) {
                           ifr.save(pop);
                           return true;
-                      }
+                      },
                   },
-                  cancel: lpg.cancel
+                  cancel: lpg.cancel,
               },
               onClose: function () {
                   showPhotos(currentCategoryId);
-              }
+              },
           });
       });
       $('#btnDeleteSelected').click(function () {
@@ -153,7 +164,7 @@ define('pages/content/photo/index.ts', function(require, exports, module) {
                       showPhotos(currentCategoryId);
                   });
               }, {
-                  title: lpg.plsConfirm
+                  title: lpg.plsConfirm,
               });
           }
       });
@@ -163,11 +174,11 @@ define('pages/content/photo/index.ts', function(require, exports, module) {
                   showPhotos(currentCategoryId);
               });
           }, {
-              title: lpg.plsConfirm
+              title: lpg.plsConfirm,
           });
       });
   }
-  //# sourceMappingURL=/itb-dist/pc/pages/content/photo/index.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/pages/content/photo/index.js.map?__=1552033897847
   
 
 });

@@ -1,5 +1,15 @@
 var languagePkg = {
-	'en': {},
+	'en': {
+		role : 'Role ID',
+		roleName : 'Role Name',
+		userNameKeyword : 'Keyword',
+		realName : 'User Name',
+		user: 'User ID',
+		addUser: 'Add User',
+		userRole: 'User Role',
+		userLoginName: 'Login Name',
+		nullSelectWarn: 'Please select the user you want to modify.',
+	},
 	'cn': {
 		role : '角色',
 		roleName : '角色名称',

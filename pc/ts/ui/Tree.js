@@ -2,9 +2,12 @@ define('ts/ui/Tree.ts', function(require, exports, module) {
 
   "use strict";
   var __extends = (this && this.__extends) || (function () {
-      var extendStatics = Object.setPrototypeOf ||
-          ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-          function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+      var extendStatics = function (d, b) {
+          extendStatics = Object.setPrototypeOf ||
+              ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+              function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+          return extendStatics(d, b);
+      };
       return function (d, b) {
           extendStatics(d, b);
           function __() { this.constructor = d; }
@@ -203,7 +206,7 @@ define('ts/ui/Tree.ts', function(require, exports, module) {
               _getUl: function (id, i, row) {
                   if ((row[self.childSrc] && row[self.childSrc].length) || row.hasChildren) {
                       var style = (id in self._cachedExpandedLeaf) ? '' : ' style="display: none;"';
-                      return "<ul id=\"" + self.treeName + ("Ul_" + id + "\" " + style + "></ul>");
+                      return "<ul id=\"" + self.treeName + ("Ul_" + id + "\" data-parent=\"" + id + "\" " + style + "></ul>");
                   }
                   return '';
               },
@@ -268,7 +271,7 @@ define('ts/ui/Tree.ts', function(require, exports, module) {
       return Tree;
   }(DisplayOject_1.AjaxDisplayObject));
   exports.default = Tree;
-  //# sourceMappingURL=/itb-dist/pc/ts/ui/Tree.js.map?__=
+  //# sourceMappingURL=/itb-dist/pc/ts/ui/Tree.js.map?__=1552033897847
   
 
 });
